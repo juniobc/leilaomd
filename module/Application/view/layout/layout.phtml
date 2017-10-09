@@ -1,55 +1,324 @@
 <?= $this->doctype() ?>
 
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="utf-8">
-        <?= $this->headTitle('ZF Skeleton Application')->setSeparator(' - ')->setAutoEscape(false) ?>
+        <?= $this->headTitle('Leilão MD - Leilão Online')->setSeparator(' - ')->setAutoEscape(false) ?>
 
         <?= $this->headMeta()
-            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
-            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge, chrome=1')
+			->appendHttpEquiv('cache-control', 'public')
+			->appendName('description', 'Somos especializados em leilões eletrônicos 
+			judiciais e extrajudiciais. Leilões de bens imóveis e móveis em todo Brasil abaixo do valor de mercado!')
+			->appendName('author', 'Leilão MD')
+			->appendName('copyright', 'Copyright © Leilão MD 2017 - 2020')
+			->appendName('audience', 'all')
+			->appendName('language', 'pt_br')
+			->appendName('content-language', 'pt_br')
+			->appendName('robots', 'index, follow')
+			->appendName('application-name', 'Leilão MD')
+			->appendName('theme-color', '#009cd7')
+			->appendName('apple-mobile-web-app-title', 'Leilão MD')
         ?>
 
         <!-- Le styles -->
         <?= $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'])
-            ->prependStylesheet($this->basePath('css/style.css'))
-            ->prependStylesheet($this->basePath('css/bootstrap-theme.min.css'))
-            ->prependStylesheet($this->basePath('css/bootstrap.min.css'))
+            /*->prependStylesheet($this->basePath('css/style.css'))*/
+			->prependStylesheet($this->basePath('css/application/responsive.css'))
+			->prependStylesheet($this->basePath('css/application/main.css'))			
+			->prependStylesheet($this->basePath('fonts/fontAwesome/css/font-awesome.min.css'))
+			/*->prependStylesheet($this->basePath('css/bootstrap-theme.min.css'))
+            ->prependStylesheet($this->basePath('css/bootstrap.min.css'))*/
         ?>
 
         <!-- Scripts -->
         <?= $this->headScript()
             ->prependFile($this->basePath('js/bootstrap.min.js'))
+			->prependFile($this->basePath('js/jquery.yiilistview.js'))
             ->prependFile($this->basePath('js/jquery-3.1.0.min.js'))
         ?>
     </head>
-    <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="<?= $this->url('home') ?>">
-                        <img src="<?= $this->basePath('img/zf-logo-mark.svg') ?>" height="28" alt="Zend Framework <?= \Application\Module::VERSION ?>"/>&nbsp;Skeleton Application
-                    </a>
-                </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="<?= $this->url('home') ?>">Home</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div class="container">
-            <?= $this->content ?>
-            <hr>
-            <footer>
-                <p>&copy; 2005 - <?= date('Y') ?> by Zend Technologies Ltd. All rights reserved.</p>
-            </footer>
-        </div>
-        <?= $this->inlineScript() ?>
+    <body cz-shortcut-listen="true">
+	
+	<div id="page">
+	
+		<div id="main-nav">
+		
+			<div class="container">
+			
+				<div class="row">
+					<div class="brand span4">
+					<a style="display: block; " href="/"><img style="width: 285px;!important" 
+					src="https://cdn.megaleiloes.com.br/assets/img/megaleiloes_2X.png" alt="Mega Leilões"></a>
+					</div>
+					<div class="widgets span8 pull-right visible-desktop">
+						<style>
+						#main-nav .widgets .signup {
+						width: 130px;
+						padding: 16px 20px;
+						color: #FFF;
+						font-weight: 700;
+						font-size: 14px;
+						text-align: center;
+						border-top-right-radius: 2px;
+						border-bottom-right-radius: 2px;
+						border: 0;
+						background-color: #008BBF;
+						display: inline-block;
+						}
+						#main-nav .widgets .signup:hover {
+						background: #00adef;
+						color: #fff;
+						}
+						#main-nav .widgets .signup .small {
+						font-size: 11px;
+						font-weight: 400;
+						}
+						#main-nav .widgets .broker-partner-banner {
+						display: inline-block;
+						}
+						#main-nav .widgets .broker-partner-banner img {
+						height: 94px;
+						}
+						</style>
+						<div class="pull-right" style="margin-top: 10px;">
+							<form style="float: left; margin-right: 20px;" class="form-inline" id="yw1" action="/login" method="post">
+								<div class="title" style="color: #999;">Acesse sua conta</div>
+								<input style="width: 180px; margin-bottom: 2px; border-color: #F1F1F1;" placeholder="Nome de usuário ou email" 
+								name="Login[username]" id="Login_username" type="text" maxlength="45">
+								<br>
+								<input style="width: 109px; border-color: #F1F1F1;" placeholder="Senha" name="Login[password]" id="Login_password" 
+								type="password" maxlength="45">
+								<input value="https://www.megaleiloes.com.br/" name="Login[returnUrl]" id="Login_returnUrl" 
+								type="hidden">
+								<button style="width: 68px; border: 1px solid #DDD; margin: 0;" class="btn" id="yw2" type="submit" name="yt0">Entrar</button>
+								<br>
+								<a href="/recuperar-senha">Esqueceu sua senha?</a>
+							</form>
+							<a class="btn signup light-btn" href="/cadastro">CRIAR CONTA <i class="icon-chevron-right"></i>
+							<span class="small">Cadastre-se agora e participe dos leilões.</span></a>
+						</div>
+
+						<div class="pull-right clearfix" style="clear: both;">
+						<a href="https://www.megaleiloes.com.br/auditorio" class="auditorium-btn" style="margin-top: 11px;" 
+						onclick="openAuditorium('https://www.megaleiloes.com.br/auditorio', 'Auditório');return false;">Acessar Auditório</a>
+						</div>            
+					</div>
+				</div>
+			
+			</div>
+		
+		</div>
+		
+		
+		<div id="main-nav-tabs">
+			<div class="container">
+				<div id="sti">
+					<ul id="yw5" class="nav nav-tabs">
+						<li class="active"><a data-toggle="tab" href="#sti_tab_1">POPULAR</a></li>
+						<li id="tab-free-search"><a data-toggle="tab" href="#sti_tab_2">BUSCAR</a></li>
+						<li><a target="_blank" href="http://eepurl.com/cN5dS5">Newsletter</a></li>
+						<li><a href="/contato">Contato</a></li>
+						<li title="Entrar" class="pull-right hidden-desktop"><a href="/login"><i class="icon-signin"></i> </a></li>
+					</ul>
+					<div class="tab-content">
+						<div id="sti_tab_1" class="tab-pane fade active in">
+							<div class="search-categories" style="">
+								<div class="row-fluid">
+									<a class="span1" href="https://www.megaleiloes.com.br/aberto-lances" title="Abertos para lances">
+									<i class="icon-legal"></i><span>Abertos para Lance</span></a>
+									<a class="span1" href="https://www.megaleiloes.com.br/leiloes-judiciais" title="Leilões Judiciais">
+										<span class="cat-j">Leilões<br>Judiciais</span>
+									</a>
+									<a class="span1" href="https://www.megaleiloes.com.br/leiloes-extrajudiciais" title="Leilões Extrajudiciais">
+										<span class="cat-e">Leilões<br>Extrajudiciais</span>
+									</a>
+									<a class="span1" href="https://www.megaleiloes.com.br/imoveis/casas" title="Casas">
+										<i class="icon-home"></i><span>Casas</span>
+									</a>
+									<a class="span1" href="https://www.megaleiloes.com.br/imoveis/apartamentos" title="Apartamentos">
+										<i class="icon-building"></i>
+										<span class="visible-phone visible-desktop">Apartamentos</span>
+										<span class="visible-tablet">Aptos</span>
+									</a>
+									<a class="span1" href="https://www.megaleiloes.com.br/imoveis/terrenos-e-lotes" title="Terrenos e Lotes">
+										<i class="icon-flag"></i><span>Terrenos<br>e Lotes</span>
+									</a>
+									<a class="span1" href="https://www.megaleiloes.com.br/imoveis/imoveis-comerciais" title="Imóveis Comerciais">
+										<i class="icon-suitcase"></i><span>Imóveis<br>Comerciais</span>
+									</a>
+									<a class="span1" href="https://www.megaleiloes.com.br/imoveis/imoveis-industriais" title="Imóveis Industriais">
+										<i class="icon-tasks"></i><span>Imóveis<br>Indústriais</span>
+									</a>
+									<a class="span1" href="https://www.megaleiloes.com.br/veiculos" title="Veículos">
+										<i class="icon-truck"></i><span>Veículos</span>
+									</a>
+									<a class="span1" href="https://www.megaleiloes.com.br/bens-de-consumo" title="Bens de consumo">
+										<i class="icon-laptop"></i><span>Bens<br>de Consumo</span>
+									</a>
+									<a class="span1" href="https://www.megaleiloes.com.br/bancos" title="Leilões de Bancos">
+										<i class="icon-briefcase"></i><span>Leilões de Bancos</span>
+									</a>
+									<a class="span1 visible-desktop" href="https://www.megaleiloes.com.br/mais-acessados" title="Lotes mais acessados">
+										<i class="icon-eye-open"></i><span>Lotes mais<br>Acessados</span>
+									</a>
+									<a class="span1" href="https://www.megaleiloes.com.br/leiloes-realizados" title="Últimos realizados">
+										<i class="icon-thumbs-up"></i><span>Leilões<br>Realizados</span>
+									</a>
+								</div>
+								<form class="form-vertical" id="search-simple-form" action="/search/index" method="GET">
+									<div class="row-fluid">
+									<div class="span3">
+									<select class="span12" name="Search[category]" id="Search_category">
+									<option value="">Todas as categorias</option>
+									<option value="imoveis">Imóveis</option>
+									<option value="veiculos">Veículos</option>
+									<option value="industrial">Industrial</option>
+									<option value="bens-de-consumo">Bens de Consumo</option>
+									<option value="outros">Outros</option>
+									</select>    </div>
+									<div class="span3">
+									<select class="span12" disabled="disabled" name="Search[subcategory]" id="Search_subcategory">
+									<option value="">Todas subcategorias</option>
+									</select>    </div>
+									<div class="span2">
+									<select class="span12" name="Search[state]" id="Search_state">
+									<option value="">Todos os Estados</option>
+									<option value="ce">Ceará</option>
+									<option value="df">Distrito Federal</option>
+									<option value="go">Goiás</option>
+									<option value="mt">Mato Grosso</option>
+									<option value="ms">Mato Grosso do Sul</option>
+									<option value="mg">Minas Gerais</option>
+									<option value="pa">Pará</option>
+									<option value="pb">Paraíba</option>
+									<option value="pr">Paraná</option>
+									<option value="pi">Piauí</option>
+									<option value="rj">Rio de Janeiro</option>
+									<option value="rs">Rio Grande do Sul</option>
+									<option value="sp">São Paulo</option>
+									<option value="se">Sergipe</option>
+									</select>    </div>
+
+									<div class="span2">
+									<select class="span12" disabled="disabled" name="Search[city]" id="Search_city">
+									<option value="">Todas as cidades</option>
+									</select>    </div>
+
+									<div class="span2">
+									<button class="btn btn-block btn-primary" type="submit" id="fast-search"><i class="icon-white icon-search" style="font-size: 14px;"></i> Filtrar</button>
+									</div>
+									</div>
+
+								</form>
+							</div>
+						</div>
+						<div id="sti_tab_2" class="tab-pane fade"><form class="inline-form form-vertical" id="search-text-form" action="/pesquisa/text" method="GET">
+						<div class="row-fluid">
+						<div class="span10"><input placeholder="Busca por palavra chave. Ex: Código do leilão; Código do lote; Rua; Bairro; Cidade; Categoria; Subcategoria; Outros..." class="span12" maxlength="255" name="Search[q]" id="Search_q" type="text"></div>
+						<div class="span2">
+						<input type="hidden" value="2" name="type" id="type">        <button class="btn btn-block btn-primary" type="submit"><i class="icon-white icon-search"></i> BUSCAR</button>
+						</div>
+						</div>
+
+						</form>
+						</div>
+						<div id="sti_tab_3" class="tab-pane fade"></div>
+						<div id="sti_tab_4" class="tab-pane fade"></div>
+						<div id="sti_tab_5" class="tab-pane fade"></div>
+					</div>
+				</div> 
+			</div>
+		</div>
+		
+		<div id="content" class="container">
+		
+			<?= $this->content ?>
+		
+		</div>
+		
+		
+		
+		<div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="span2">
+						<ul>
+							<li class="title">Mega Leilões</li>
+							<li><a href="/empresa">Empresa</a></li>
+							<li><a href="/ajuda">Ajuda</a></li>
+							<li><a href="/application/contato">Contato</a></li>
+							<li><a href="/mapa-site">Mapa do Site</a></li>
+						</ul>
+					</div>
+					<div class="span2">
+					
+						<ul>
+							<li class="title">Area do Cliente</li>
+							<li><a href="/cadastro" class="cadastro-btn">Cadastre-se</a></li>
+							<li><a href="/login">Fazer login</a></li>
+							<li><a href="/recuperar-senha">Recuperar senha</a></li>
+						</ul>
+
+					</div>
+					<div class="span2">
+						<ul>
+							<li class="title">Suporte</li>
+							<li><a href="/ajuda#regras-basicas">Regras básicas</a></li>
+							<li><a href="/ajuda#duvidas-frequentes">Dúvidas frequentes</a></li>
+							<li><a href="/ajuda#seguranca">Segurança</a></li>
+						</ul>
+					</div>
+					<div class="span2">
+						<ul>
+							<li class="title">Nossos canais</li>
+							<li>
+								<i class="icon icon-envelope"></i> 
+								<a href="http://eepurl.com/cN5dS5" target="_blank">Newsletter</a>
+							</li>
+							<li>
+								<i class="icon icon-facebook-sign"></i> 
+								<a href="http://www.facebook.com/megaleiloes" target="_blank">Facebook</a>
+							</li>
+							<li>
+								<i class="icon icon-youtube-play"></i> 
+								<a href="http://www.youtube.com/channel/UCis4tTiR6O5kn-WdEIS2YIg" target="_blank">YouTube</a>
+							</li>
+							<li>
+								<i class="icon icon-twitter"></i> 
+								<a href="http://twitter.com/megaleiloesbr" target="_blank">Twitter</a>
+							</li>
+							<li>
+								<i class="icon icon-phone"></i> +55 (11) 3149-4600
+							</li>
+						</ul>
+					</div>
+
+					<div class="span2 pull-right">
+						<img src="https://cdn.megaleiloes.com.br/assets/img/poder_judiciario.png" width="134" height="68" 
+						style="margin-right: 30px;" alt="Site e sistema homologado pelo tribunal de justíça." 
+						title="Site e sistema homologado pelo tribunal de justíça." data-toggle="tooltip"><br class="visible-tablet">
+					</div>
+				</div>
+				<div class="copy">Copyright © Mega Leilões 2013. Todos os direitos reservados.</div>
+			</div>
+			
+		</div>
+		
+		
+		
+		
+	
+	</div>
+		
+	
+		
+	
+	
+	
+	
+	
+        
     </body>
 </html>

@@ -7,11 +7,11 @@
 
 namespace ApplicationTest\Controller;
 
-use Application\Controller\IndexController;
+use Application\Controller\ContatoController;
 use Zend\Stdlib\ArrayUtils;
 use Zend\Test\PHPUnit\Controller\AbstractHttpControllerTestCase;
 
-class IndexControllerTest extends AbstractHttpControllerTestCase
+class ContatoControllerTest extends AbstractHttpControllerTestCase
 {
     public function setUp()
     {
@@ -34,9 +34,9 @@ class IndexControllerTest extends AbstractHttpControllerTestCase
         $this->dispatch('/', 'GET');
         $this->assertResponseStatusCode(200);
         $this->assertModuleName('application');
-        $this->assertControllerName(IndexController::class); // as specified in router's controller name alias
-        $this->assertControllerClass('IndexController');
-        $this->assertMatchedRouteName('home');
+        $this->assertControllerName(ContatoController::class); // as specified in router's controller name alias
+        $this->assertControllerClass('ContatoController');
+        $this->assertMatchedRouteName('contato');
     }
 
     /*public function testIndexActionViewModelTemplateRenderedWithinLayout()

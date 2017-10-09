@@ -19,17 +19,17 @@ return [
                 'options' => [
                     'route'    => '/',
                     'defaults' => [
-                        'controller' => Controller\IndexController::class,
+                        'controller' => Controller\HomeController::class,
                         'action'     => 'index',
                     ],
                 ],
             ],
-            'application' => [
-                'type'    => Segment::class,
+			'contato' => [
+                'type' => Literal::class,
                 'options' => [
-                    'route'    => '/application[/:action]',
+                    'route'    => '/contato',
                     'defaults' => [
-                        'controller' => Controller\IndexController::class,
+                        'controller' => Controller\ContatoController::class,
                         'action'     => 'index',
                     ],
                 ],
@@ -38,7 +38,8 @@ return [
     ],
     'controllers' => [
         'factories' => [
-            Controller\IndexController::class => InvokableFactory::class,
+            Controller\HomeController::class => InvokableFactory::class,
+            Controller\ContatoController::class => InvokableFactory::class,
         ],
     ],
     'view_manager' => [
@@ -49,7 +50,6 @@ return [
         'exception_template'       => 'error/index',
         'template_map' => [
             'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
-            'application/index/index' => __DIR__ . '/../view/application/index/index.phtml',
             'error/404'               => __DIR__ . '/../view/error/404.phtml',
             'error/index'             => __DIR__ . '/../view/error/index.phtml',
         ],
