@@ -34,12 +34,23 @@ return [
                     ],
                 ],
             ],
+			'leilao' => [
+                'type' => Literal::class,
+                'options' => [
+                    'route'    => '/leilao',
+                    'defaults' => [
+                        'controller' => Controller\LeilaoController::class,
+                        'action'     => 'index',
+                    ],
+                ],
+            ],
         ],
     ],
     'controllers' => [
         'factories' => [
             Controller\HomeController::class => InvokableFactory::class,
             Controller\ContatoController::class => InvokableFactory::class,
+			Controller\LeilaoController::class => InvokableFactory::class,
         ],
     ],
     'view_manager' => [
