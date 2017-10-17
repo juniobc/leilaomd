@@ -1,3 +1,5 @@
+<?=$this->headLink()->setStylesheet('css/application/leilao.css');?>
+
 <h1 class="page-header" style="">Apartamento 51 m² - Jardim Umarizal - São Paulo - SP - J16190</h1>
 
 <div class="breadcrumbs">
@@ -31,7 +33,7 @@
 
 <div id="page-batch-detail">
 <div class="row" style="margin-bottom: 20px;">
-	<div class="span7">
+	<div class="span8">
 		<div id="main-carousel" class="carousel slide">
 			<ol class="carousel-indicators">
 				<li data-target="#main-carousel" data-slide-to="0" class=""></li>
@@ -40,19 +42,22 @@
 			<div class="carousel-inner">
 				<div class="item">
 					<img src="https://cdn.megaleiloes.com.br/public/batches/16190/06dc17aa8f03e10b2ab8b356a18ddb89_670x380.jpg" 
-					alt="Apartamento 51 m² - Jardim Umarizal - São Paulo - SP">
+					alt="Apartamento 51 m² - Jardim Umarizal - São Paulo - SP" style="width:100%">
 				</div>
 				<div class="item active">
 					<img src="https://cdn.megaleiloes.com.br/public/batches/16190/9ba3b3647812c79fe956c54c924a6296_670x380.jpg" 
-					alt="Apartamento 51 m² - Jardim Umarizal - São Paulo - SP">
+					alt="Apartamento 51 m² - Jardim Umarizal - São Paulo - SP" style="width:100%">
 				</div>
 			</div>
 			<a class="carousel-control left" href="#main-carousel" data-slide="prev">‹</a>
 			<a class="carousel-control right" href="#main-carousel" data-slide="next">›</a>
 		</div>
+		
+		
+
 	</div>
 	
-	<div class="span5">
+	<div class="span4">
 		<div class="label label-success" style="padding: 10px; font-size: 12px; display: block; margin-bottom: 20px;">
 			<span>ABERTO PARA LANCES</span>
 			<div class="pull-right">1<sup>a</sup> <span style=" text-transform: uppercase;">Praça</span></div>
@@ -94,6 +99,45 @@
 				</span>
 			</div>
 		</div>
+		
+		<div style="text-align: center; margin-top:20px">
+			<a class="btn btn-social-icon btn-facebook media-social">
+			<span class="fa fa-facebook"></span>
+			</a>
+			<a class="btn btn-social-icon btn-instagram media-social">
+			<span class="fa fa-instagram"></span>
+			</a>
+			<a class="btn btn-social-icon btn-google media-social">
+			<span class="fa fa-google"></span>
+			</a>
+			<a class="btn btn-social-icon btn-twitter media-social">
+			<span class="fa fa-twitter"></span>
+			</a>
+			<a class="btn btn-social-icon btn-pinterest media-social">
+			<span class="fa fa-pinterest"></span>
+			</a>
+			<a class="btn btn-social-icon btn-youtube-square media-social">
+			<span class="fa fa-youtube-square"></span>
+			</a>
+		</div>
+		
+		<!--<a class="btn btn-block btn-social btn-facebook">
+		<span class="fa fa-facebook"></span> Sign in with Twitter
+		</a>
+		<a class="btn btn-block btn-social btn-instagram">
+		<span class="fa fa-instagram"></span> Sign in with Twitter
+		</a>
+		<a class="btn btn-block btn-social btn-google">
+		<span class="fa fa-google"></span> Sign in with Twitter
+		</a>
+		<a class="btn btn-block btn-social btn-twitter">
+		<span class="fa fa-twitter"></span> Sign in with Twitter
+		</a>
+		<a class="btn btn-block btn-social btn-pinterest">
+		<span class="fa fa-pinterest"></span> Sign in with Twitter
+		</a>-->
+		
+		
 		<div class="stats" style="margin-top: 20px;">
 			<div class="share" data-url="https://www.megaleiloes.com.br/imoveis/sp/apartamento-51-m2-jardim-umarizal-sao-paulo-sp-j16190" 
 			data-title="Apartamento 51 m² - Jardim Umarizal - São Paulo - SP" data-description="Viste nosso site e saiba mais.">		
@@ -103,7 +147,7 @@
 </div>
 
 <div class="row">
-	<div class="span9">
+	<div class="span8">
 		<table class="table table-nomargin">
 			<tbody>
 				<tr>
@@ -176,132 +220,373 @@
 			</tbody>
 		</table>
 	</div>
-	<div class="span3">
-	<div id="buttons">
-	<a class="signup btn btn-danger light-btn" href="/cadastro">CRIAR CONTA <i class="icon-chevron-right"></i><br><span class="small">Cadastre-se e participe dos leilões.</span></a>
-	<br>
+	<div class="span4">
+		<div id="buttons">
+			<a class="signup btn btn-danger light-btn" href="/cadastro">
+				CRIAR CONTA <i class="icon-chevron-right"></i><br><span class="small">Cadastre-se e participe dos leilões.</span>
+			</a>
+			
+			<br>
 
-	<a class="btn btn-block btn-success btn-auditorium-view" data-type="batch" data-id="16190" data-auction="7052" href="javascript:void(0);"><i class="icon icon-legal"></i> Acompanhe a disputa</a></div>
+			<a class="btn btn-block btn-success btn-auditorium-view" data-type="batch" data-id="16190" data-auction="7052" href="javascript:void(0);">
+				<i class="icon icon-legal"></i> Acompanhe a disputa
+			</a>
+		</div>
+		
+		<div class="label label-success" style="padding: 10px; font-size: 12px; display: block; margin-bottom: 20px; margin-top: 20px;">
+			<span>SOLICITE MAIS INFORMAÇÕES</span>
+		</div>
+		
+		<form class="form-vertical" id="contact-form" action="/contato" method="post">
+			<label for="Contact_name" class="required">Nome</label>
+			<input class="span4" name="Contact[name]" id="Contact_name" type="text">
+			<span class="help-block error" id="Contact_name_em_" style="display: none"></span>
 
-	<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="https://staticxx.facebook.com/connect/xd_arbiter/r/K6RbmRhg2m2.js?version=42#channel=f1478742093105c&amp;origin=https%3A%2F%2Fwww.megaleiloes.com.br" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
-	<script>(function (d, s, id) {
-	var js, fjs = d.getElementsByTagName(s)[0];
-	if (d.getElementById(id))
-	return;
-	js = d.createElement(s);
-	js.id = id;
-	js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=173756463006965";
-	fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
-	<div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/megaleiloes/" data-height="170" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" style="margin-top: 30px;" fb-xfbml-state="rendered" fb-iframe-plugin-query="adapt_container_width=true&amp;app_id=173756463006965&amp;container_width=270&amp;height=170&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fmegaleiloes%2F&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=true&amp;small_header=true"><span style="vertical-align: bottom; width: 270px; height: 154px;"><iframe name="f1f398088d14ad4" width="1000px" height="170px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:page Facebook Social Plugin" src="https://www.facebook.com/v2.5/plugins/page.php?adapt_container_width=true&amp;app_id=173756463006965&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FK6RbmRhg2m2.js%3Fversion%3D42%23cb%3Df1433349c5cb944%26domain%3Dwww.megaleiloes.com.br%26origin%3Dhttps%253A%252F%252Fwww.megaleiloes.com.br%252Ff1478742093105c%26relation%3Dparent.parent&amp;container_width=270&amp;height=170&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fmegaleiloes%2F&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=true&amp;small_header=true" style="border: none; visibility: visible; width: 270px; height: 154px;" class=""></iframe></span></div>
-
+			<label for="Contact_email" class="required">Email</label>
+			<input class="span4" name="Contact[email]" id="Contact_email" type="text">
+			<span class="help-block error" id="Contact_email_em_" style="display: none"></span>
+			
+			<label for="Contact_body" class="required">Mensagem </label>
+			<textarea rows="7" cols="8" class="span4" name="Contact[body]" id="Contact_body"></textarea>
+			<span class="help-block error" id="Contact_body_em_" style="display: none"></span>
+			
+			<div class="form-actions">
+				<input class="btn btn-primary" type="submit" name="yt1" value="Enviar mensagem">            
+				<button class="btn" id="yw2" type="reset" name="yt2">Limpar</button>        
+			</div>
+		</form>
 	</div>
 </div>
 
 <a id="cvp"></a>
-<div style="margin: 20px 0 40px;" id="batch-detail-tabs"><ul id="yw3" class="nav nav-tabs"><li class="active"><a data-toggle="tab" href="#batch-detail-tabs_tab_1">Mapa</a></li><li><a data-toggle="tab" href="#batch-detail-tabs_tab_2">Histórico de lances</a></li><li><a data-toggle="tab" href="#batch-detail-tabs_tab_3">Condições de Venda e Pagamento</a></li><li><a data-toggle="tab" href="#batch-detail-tabs_tab_4">Manifestações</a></li></ul><div class="tab-content"><div id="batch-detail-tabs_tab_1" class="tab-pane fade active in"><div id="map" class="google-maps" style="width: 1170px; height: 350px; position: relative; overflow: hidden;"><div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);"><div class="gm-style" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px;"><div tabindex="0" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;) 8 8, default;"><div style="z-index: 1; position: absolute; top: 0px; left: 0px; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="width: 256px; height: 256px; position: absolute; left: 606px; top: -150px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 350px; top: -150px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 350px; top: 106px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 606px; top: 106px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 94px; top: -150px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 94px; top: 106px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 862px; top: -150px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 862px; top: 106px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -162px; top: 106px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -162px; top: -150px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 1118px; top: -150px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 1118px; top: 106px;"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 606px; top: -150px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 350px; top: -150px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 350px; top: 106px;"><canvas draggable="false" height="256" width="256" style="user-select: none; position: absolute; left: 0px; top: 0px; height: 256px; width: 256px;"></canvas></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 606px; top: 106px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 94px; top: -150px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 94px; top: 106px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 862px; top: -150px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 862px; top: 106px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -162px; top: 106px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -162px; top: -150px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 1118px; top: -150px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 1118px; top: 106px;"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="position: absolute; left: 350px; top: -150px; transition: opacity 200ms ease-out;"><img draggable="false" alt="" src="https://khms0.googleapis.com/kh?v=744&amp;hl=pt-BR&amp;x=24256&amp;y=37194&amp;z=16" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 350px; top: 106px; transition: opacity 200ms ease-out;"><img draggable="false" alt="" src="https://khms0.googleapis.com/kh?v=744&amp;hl=pt-BR&amp;x=24256&amp;y=37195&amp;z=16" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 606px; top: 106px; transition: opacity 200ms ease-out;"><img draggable="false" alt="" src="https://khms1.googleapis.com/kh?v=744&amp;hl=pt-BR&amp;x=24257&amp;y=37195&amp;z=16" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 606px; top: -150px; transition: opacity 200ms ease-out;"><img draggable="false" alt="" src="https://khms1.googleapis.com/kh?v=744&amp;hl=pt-BR&amp;x=24257&amp;y=37194&amp;z=16" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 94px; top: -150px; transition: opacity 200ms ease-out;"><img draggable="false" alt="" src="https://khms1.googleapis.com/kh?v=744&amp;hl=pt-BR&amp;x=24255&amp;y=37194&amp;z=16" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 94px; top: 106px; transition: opacity 200ms ease-out;"><img draggable="false" alt="" src="https://khms1.googleapis.com/kh?v=744&amp;hl=pt-BR&amp;x=24255&amp;y=37195&amp;z=16" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 862px; top: -150px; transition: opacity 200ms ease-out;"><img draggable="false" alt="" src="https://khms0.googleapis.com/kh?v=744&amp;hl=pt-BR&amp;x=24258&amp;y=37194&amp;z=16" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 862px; top: 106px; transition: opacity 200ms ease-out;"><img draggable="false" alt="" src="https://khms0.googleapis.com/kh?v=744&amp;hl=pt-BR&amp;x=24258&amp;y=37195&amp;z=16" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -162px; top: 106px; transition: opacity 200ms ease-out;"><img draggable="false" alt="" src="https://khms0.googleapis.com/kh?v=744&amp;hl=pt-BR&amp;x=24254&amp;y=37195&amp;z=16" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -162px; top: -150px; transition: opacity 200ms ease-out;"><img draggable="false" alt="" src="https://khms0.googleapis.com/kh?v=744&amp;hl=pt-BR&amp;x=24254&amp;y=37194&amp;z=16" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 1118px; top: -150px; transition: opacity 200ms ease-out;"><img draggable="false" alt="" src="https://khms1.googleapis.com/kh?v=744&amp;hl=pt-BR&amp;x=24259&amp;y=37194&amp;z=16" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 1118px; top: 106px; transition: opacity 200ms ease-out;"><img draggable="false" alt="" src="https://khms1.googleapis.com/kh?v=744&amp;hl=pt-BR&amp;x=24259&amp;y=37195&amp;z=16" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div></div><div class="gm-style-pbc" style="z-index: 2; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; opacity: 0;"><p class="gm-style-pbt"></p></div><div style="z-index: 3; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px;"><div style="z-index: 1; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px;"></div></div><div style="z-index: 4; position: absolute; top: 0px; left: 0px; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"></div></div></div><div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;"><a target="_blank" href="https://maps.google.com/maps?ll=-23.620713,-46.752774&amp;z=16&amp;t=k&amp;hl=pt-BR&amp;gl=US&amp;mapclient=apiv3" title="Clique para ver esta área no Google Maps" style="position: static; overflow: visible; float: none; display: inline;"><div style="width: 66px; height: 26px; cursor: pointer;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/google_white5.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 66px; height: 26px; user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></a></div><div style="background-color: white; padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 256px; height: 148px; position: absolute; left: 435px; top: 85px;"><div style="padding: 0px 0px 10px; font-size: 16px;">Dados do mapa</div><div style="font-size: 13px;">Imagens ©2017 , CNES / Airbus, DigitalGlobe</div><div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/mapcnt6.png" draggable="false" style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div><div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 191px; bottom: 0px; width: 212px;"><div draggable="false" class="gm-style-cc" style="user-select: none; height: 14px; line-height: 14px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a style="color: rgb(68, 68, 68); text-decoration: none; cursor: pointer; display: none;">Dados do mapa</a><span style="">Imagens ©2017 , CNES / Airbus, DigitalGlobe</span></div></div></div><div class="gmnoscreen" style="position: absolute; right: 0px; bottom: 0px;"><div style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">Imagens ©2017 , CNES / Airbus, DigitalGlobe</div></div><div class="gmnoprint gm-style-cc" draggable="false" style="z-index: 1000001; user-select: none; height: 14px; line-height: 14px; position: absolute; right: 112px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a href="https://www.google.com/intl/pt-BR_US/help/terms_maps.html" target="_blank" style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">Termos de Uso</a></div></div><div style="cursor: pointer; width: 25px; height: 25px; overflow: hidden; margin: 10px 14px; position: absolute; top: 0px; right: 0px;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/sv9.png" draggable="false" class="gm-fullscreen-control" style="position: absolute; left: -52px; top: -86px; width: 164px; height: 175px; user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div draggable="false" class="gm-style-cc" style="user-select: none; height: 14px; line-height: 14px; position: absolute; right: 0px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a target="_new" title="Informar erros no mapa ou nas imagens para o Google" href="https://www.google.com/maps/@-23.6207127,-46.7527737,16z/data=!3m1!1e3!10m1!1e1!12b1?source=apiv3&amp;rapsrc=apiv3" style="font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;">Informar erro no mapa</a></div></div><div class="gmnoprint gm-bundled-control gm-bundled-control-on-bottom" draggable="false" controlwidth="28" controlheight="93" style="margin: 10px; user-select: none; position: absolute; bottom: 107px; right: 28px;"><div class="gmnoprint" controlwidth="28" controlheight="55" style="position: absolute; left: 0px; top: 38px;"><div draggable="false" style="user-select: none; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; cursor: pointer; background-color: rgb(255, 255, 255); width: 28px; height: 55px;"><div title="Aumentar o zoom" aria-label="Aumentar o zoom" tabindex="0" style="position: relative; width: 28px; height: 27px; left: 0px; top: 0px;"><div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/tmapctrl.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;"></div></div><div style="position: relative; overflow: hidden; width: 67%; height: 1px; left: 16%; background-color: rgb(230, 230, 230); top: 0px;"></div><div title="Diminuir o zoom" aria-label="Diminuir o zoom" tabindex="0" style="position: relative; width: 28px; height: 27px; left: 0px; top: 0px;"><div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/tmapctrl.png" draggable="false" style="position: absolute; left: 0px; top: -15px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;"></div></div></div></div><div class="gm-svpc" controlwidth="28" controlheight="28" style="background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; width: 28px; height: 28px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;) 8 8, default; position: absolute; left: 0px; top: 0px;"><div style="position: absolute; left: 1px; top: 1px;"></div><div style="position: absolute; left: 1px; top: 1px;"><div aria-label="Controle do Pegman no Street View" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/cb_scout5.png" draggable="false" style="position: absolute; left: -147px; top: -26px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div aria-label="O Pegman está sobre o mapa" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/cb_scout5.png" draggable="false" style="position: absolute; left: -147px; top: -52px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div aria-label="Controle do Pegman no Street View" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/cb_scout5.png" draggable="false" style="position: absolute; left: -147px; top: -78px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div><div class="gmnoprint" controlwidth="28" controlheight="0" style="display: none; position: absolute;"><div title="Girar o mapa em 90 graus" style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; cursor: pointer; background-color: rgb(255, 255, 255); display: none;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/tmapctrl4.png" draggable="false" style="position: absolute; left: -141px; top: 6px; width: 170px; height: 54px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gm-tilt" style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; top: 0px; cursor: pointer; background-color: rgb(255, 255, 255);"><img src="https://maps.gstatic.com/mapfiles/api-3/images/tmapctrl4.png" draggable="false" style="position: absolute; left: -141px; top: -13px; width: 170px; height: 54px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div><div class="gmnoprint" style="margin: 10px; z-index: 0; position: absolute; cursor: pointer; left: 0px; top: 0px;"><div class="gm-style-mtc" style="float: left;"><div draggable="false" title="Mostrar mapa de ruas" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(86, 86, 86); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 8px; border-bottom-left-radius: 2px; border-top-left-radius: 2px; -webkit-background-clip: padding-box; background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; min-width: 28px;">Mapa</div><div style="background-color: white; z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; position: absolute; left: 0px; top: 29px; text-align: left; display: none;"><div draggable="false" title="Mostrar mapa de ruas com relevo" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap;"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;"><img src="https://maps.gstatic.com/mapfiles/mv/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">Relevo</label></div></div></div><div class="gm-style-mtc" style="float: left;"><div draggable="false" title="Mostrar imagens de satélite" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 8px; border-bottom-right-radius: 2px; border-top-right-radius: 2px; -webkit-background-clip: padding-box; background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-left: 0px; min-width: 37px; font-weight: 500;">Satélite</div><div style="background-color: white; z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; position: absolute; right: 0px; top: 29px; text-align: left; display: none;"><div draggable="false" title="Mostrar imagens com nomes de rua" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap;"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;"><img src="https://maps.gstatic.com/mapfiles/mv/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">Marcadores</label></div></div></div></div></div></div></div></div><div id="batch-detail-tabs_tab_2" class="tab-pane fade"><div id="auctionbatchbid-grid" class="grid-view">
-<div class="top">
+
+<div class="row" style="margin-top:20px">
+
+	<div class="span12">
+	
+		<div id="map" class="google-maps" style="width: 1170px; height: 350px; position: relative; overflow: hidden;">
+            <div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);">
+               <div class="gm-style" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px;">
+                  <div tabindex="0" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; 
+                     cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;) 8 8, default;">
+                     <div style="z-index: 1; position: absolute; top: 0px; left: 0px; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);">
+                        <div style="position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;">
+                           <div style="position: absolute; left: 0px; top: 0px; z-index: 0;">
+                              <div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;">
+                                 <div style="width: 256px; height: 256px; position: absolute; left: 606px; top: -150px;"></div>
+                                 <div style="width: 256px; height: 256px; position: absolute; left: 350px; top: -150px;"></div>
+                                 <div style="width: 256px; height: 256px; position: absolute; left: 350px; top: 106px;"></div>
+                                 <div style="width: 256px; height: 256px; position: absolute; left: 606px; top: 106px;"></div>
+                                 <div style="width: 256px; height: 256px; position: absolute; left: 94px; top: -150px;"></div>
+                                 <div style="width: 256px; height: 256px; position: absolute; left: 94px; top: 106px;"></div>
+                                 <div style="width: 256px; height: 256px; position: absolute; left: 862px; top: -150px;"></div>
+                                 <div style="width: 256px; height: 256px; position: absolute; left: 862px; top: 106px;"></div>
+                                 <div style="width: 256px; height: 256px; position: absolute; left: -162px; top: 106px;"></div>
+                                 <div style="width: 256px; height: 256px; position: absolute; left: -162px; top: -150px;"></div>
+                                 <div style="width: 256px; height: 256px; position: absolute; left: 1118px; top: -150px;"></div>
+                                 <div style="width: 256px; height: 256px; position: absolute; left: 1118px; top: 106px;"></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div>
+                        <div style="position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div>
+                        <div style="position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;">
+                           <div style="position: absolute; left: 0px; top: 0px; z-index: -1;">
+                              <div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;">
+                                 <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 606px; top: -150px;"></div>
+                                 <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 350px; top: -150px;"></div>
+                                 <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 350px; top: 106px;">
+                                    <canvas draggable="false" height="256" width="256" style="user-select: none; position: absolute; left: 0px; top: 0px; height: 256px; width: 256px;"></canvas>
+                                 </div>
+                                 <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 606px; top: 106px;"></div>
+                                 <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 94px; top: -150px;"></div>
+                                 <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 94px; top: 106px;"></div>
+                                 <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 862px; top: -150px;"></div>
+                                 <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 862px; top: 106px;"></div>
+                                 <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -162px; top: 106px;"></div>
+                                 <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -162px; top: -150px;"></div>
+                                 <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 1118px; top: -150px;"></div>
+                                 <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 1118px; top: 106px;"></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div style="position: absolute; left: 0px; top: 0px; z-index: 0;">
+                           <div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;">
+                              <div style="position: absolute; left: 350px; top: -150px; transition: opacity 200ms ease-out;">
+                                 <img draggable="false" alt="" src="https://khms0.googleapis.com/kh?v=744&amp;hl=pt-BR&amp;x=24256&amp;y=37194&amp;z=16" 
+                                    style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                              </div>
+                              <div style="position: absolute; left: 350px; top: 106px; transition: opacity 200ms ease-out;">
+                                 <img draggable="false" alt="" src="https://khms0.googleapis.com/kh?v=744&amp;hl=pt-BR&amp;x=24256&amp;y=37195&amp;z=16" 
+                                    style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                              </div>
+                              <div style="position: absolute; left: 606px; top: 106px; transition: opacity 200ms ease-out;">
+                                 <img draggable="false" alt="" src="https://khms1.googleapis.com/kh?v=744&amp;hl=pt-BR&amp;x=24257&amp;y=37195&amp;z=16" 
+                                    style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                              </div>
+                              <div style="position: absolute; left: 606px; top: -150px; transition: opacity 200ms ease-out;">
+                                 <img draggable="false" alt="" src="https://khms1.googleapis.com/kh?v=744&amp;hl=pt-BR&amp;x=24257&amp;y=37194&amp;z=16" 
+                                    style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                              </div>
+                              <div style="position: absolute; left: 94px; top: -150px; transition: opacity 200ms ease-out;">
+                                 <img draggable="false" alt="" src="https://khms1.googleapis.com/kh?v=744&amp;hl=pt-BR&amp;x=24255&amp;y=37194&amp;z=16" 
+                                    style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                              </div>
+                              <div style="position: absolute; left: 94px; top: 106px; transition: opacity 200ms ease-out;">
+                                 <img draggable="false" alt="" src="https://khms1.googleapis.com/kh?v=744&amp;hl=pt-BR&amp;x=24255&amp;y=37195&amp;z=16" 
+                                    style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                              </div>
+                              <div 
+                                 style="position: absolute; left: 862px; top: -150px; transition: opacity 200ms ease-out;"><img draggable="false" alt="" 
+                                 src="https://khms0.googleapis.com/kh?v=744&amp;hl=pt-BR&amp;x=24258&amp;y=37194&amp;z=16" 
+                                 style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                              <div 
+                                 style="position: absolute; left: 862px; top: 106px; transition: opacity 200ms ease-out;"><img draggable="false"
+                                 alt="" src="https://khms0.googleapis.com/kh?v=744&amp;hl=pt-BR&amp;x=24258&amp;y=37195&amp;z=16" 
+                                 style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                              <div 
+                                 style="position: absolute; left: -162px; top: 106px; transition: opacity 200ms ease-out;"><img draggable="false" alt="" 
+                                 src="https://khms0.googleapis.com/kh?v=744&amp;hl=pt-BR&amp;x=24254&amp;y=37195&amp;z=16" 
+                                 style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                              <div 
+                                 style="position: absolute; left: -162px; top: -150px; transition: opacity 200ms ease-out;"><img draggable="false" alt="" 
+                                 src="https://khms0.googleapis.com/kh?v=744&amp;hl=pt-BR&amp;x=24254&amp;y=37194&amp;z=16" 
+                                 style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                              <div 
+                                 style="position: absolute; left: 1118px; top: -150px; transition: opacity 200ms ease-out;"><img draggable="false" alt="" 
+                                 src="https://khms1.googleapis.com/kh?v=744&amp;hl=pt-BR&amp;x=24259&amp;y=37194&amp;z=16" 
+                                 style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                              <div 
+                                 style="position: absolute; left: 1118px; top: 106px; transition: opacity 200ms ease-out;"><img draggable="false" alt="" 
+                                 src="https://khms1.googleapis.com/kh?v=744&amp;hl=pt-BR&amp;x=24259&amp;y=37195&amp;z=16" 
+                                 style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div 
+                        class="gm-style-pbc" style="z-index: 2; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; opacity: 0;">
+                        <p 
+                           class="gm-style-pbt"></p>
+                     </div>
+                     <div style="z-index: 3; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px;">
+                        <div style="z-index: 1; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px;"></div>
+                     </div>
+                     <div style="z-index: 4; position: absolute; top: 0px; left: 0px; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);">
+                        <div style="position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div>
+                        <div style="position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;">
+                        </div>
+                        <div style="position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"></div>
+                        <div style="position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;">
+                        </div>
+                     </div>
+                  </div>
+                  <div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;">
+                     <a target="_blank" href="https://maps.google.com/maps?ll=-23.620713,-46.752774&amp;z=16&amp;t=k&amp;hl=pt-BR&amp;gl=US&amp;mapclient=apiv3" 
+                        title="Clique para ver esta área no Google Maps" style="position: static; overflow: visible; float: none; display: inline;">
+                        <div style="width: 66px; height: 26px; cursor: pointer;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/google_white5.png" draggable="false" 
+                           style="position: absolute; left: 0px; top: 0px; width: 66px; height: 26px; user-select: none; border: 0px; padding: 0px; margin: 0px;"></div>
+                     </a>
+                  </div>
+                  <div style="background-color: white; padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 256px; height: 148px; position: absolute; left: 435px; top: 85px;">
+                     <div style="padding: 0px 0px 10px; font-size: 16px;">Dados do mapa</div>
+                     <div style="font-size: 13px;">Imagens ©2017 , CNES / Airbus, DigitalGlobe</div>
+                     <div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/mapcnt6.png" draggable="false" style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                  </div>
+                  <div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 191px; bottom: 0px; width: 212px;">
+                     <div draggable="false" class="gm-style-cc" style="user-select: none; height: 14px; line-height: 14px;">
+                        <div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;">
+                           <div style="width: 1px;"></div>
+                           <div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div>
+                        </div>
+                        <div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a style="color: rgb(68, 68, 68); text-decoration: none; cursor: pointer; display: none;">Dados do mapa</a><span style="">Imagens ©2017 , CNES / Airbus, DigitalGlobe</span></div>
+                     </div>
+                  </div>
+                  <div class="gmnoscreen" style="position: absolute; right: 0px; bottom: 0px;">
+                     <div style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">Imagens ©2017 , CNES / Airbus, DigitalGlobe</div>
+                  </div>
+                  <div class="gmnoprint gm-style-cc" draggable="false" style="z-index: 1000001; user-select: none; height: 14px; line-height: 14px; position: absolute; right: 112px; bottom: 0px;">
+                     <div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;">
+                        <div style="width: 1px;"></div>
+                        <div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div>
+                     </div>
+                     <div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a href="https://www.google.com/intl/pt-BR_US/help/terms_maps.html" target="_blank" style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">Termos de Uso</a></div>
+                  </div>
+                  <div style="cursor: pointer; width: 25px; height: 25px; overflow: hidden; margin: 10px 14px; position: absolute; top: 0px; right: 0px;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/sv9.png" draggable="false" class="gm-fullscreen-control" style="position: absolute; left: -52px; top: -86px; width: 164px; height: 175px; user-select: none; border: 0px; padding: 0px; margin: 0px;"></div>
+                  <div draggable="false" class="gm-style-cc" style="user-select: none; height: 14px; line-height: 14px; position: absolute; right: 0px; bottom: 0px;">
+                     <div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;">
+                        <div style="width: 1px;"></div>
+                        <div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div>
+                     </div>
+                     <div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a target="_new" title="Informar erros no mapa ou nas imagens para o Google" href="https://www.google.com/maps/@-23.6207127,-46.7527737,16z/data=!3m1!1e3!10m1!1e1!12b1?source=apiv3&amp;rapsrc=apiv3" style="font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;">Informar erro no mapa</a></div>
+                  </div>
+                  <div class="gmnoprint gm-bundled-control gm-bundled-control-on-bottom" draggable="false" controlwidth="28" controlheight="93" style="margin: 10px; user-select: none; position: absolute; bottom: 107px; right: 28px;">
+                     <div class="gmnoprint" controlwidth="28" controlheight="55" style="position: absolute; left: 0px; top: 38px;">
+                        <div draggable="false" style="user-select: none; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; cursor: pointer; background-color: rgb(255, 255, 255); width: 28px; height: 55px;">
+                           <div title="Aumentar o zoom" aria-label="Aumentar o zoom" tabindex="0" style="position: relative; width: 28px; height: 27px; left: 0px; top: 0px;">
+                              <div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/tmapctrl.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;"></div>
+                           </div>
+                           <div style="position: relative; overflow: hidden; width: 67%; height: 1px; left: 16%; background-color: rgb(230, 230, 230); top: 0px;"></div>
+                           <div title="Diminuir o zoom" aria-label="Diminuir o zoom" tabindex="0" style="position: relative; width: 28px; height: 27px; left: 0px; top: 0px;">
+                              <div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/tmapctrl.png" draggable="false" style="position: absolute; left: 0px; top: -15px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;"></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="gm-svpc" controlwidth="28" controlheight="28" style="background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; width: 28px; height: 28px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;) 8 8, default; position: absolute; left: 0px; top: 0px;">
+                        <div style="position: absolute; left: 1px; top: 1px;"></div>
+                        <div style="position: absolute; left: 1px; top: 1px;">
+                           <div aria-label="Controle do Pegman no Street View" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/cb_scout5.png" draggable="false" style="position: absolute; left: -147px; top: -26px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                           <div aria-label="O Pegman está sobre o mapa" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/cb_scout5.png" draggable="false" style="position: absolute; left: -147px; top: -52px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                           <div aria-label="Controle do Pegman no Street View" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/cb_scout5.png" draggable="false" style="position: absolute; left: -147px; top: -78px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                        </div>
+                     </div>
+                     <div class="gmnoprint" controlwidth="28" controlheight="0" style="display: none; position: absolute;">
+                        <div title="Girar o mapa em 90 graus" style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; cursor: pointer; background-color: rgb(255, 255, 255); display: none;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/tmapctrl4.png" draggable="false" style="position: absolute; left: -141px; top: 6px; width: 170px; height: 54px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                        <div class="gm-tilt" style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; top: 0px; cursor: pointer; background-color: rgb(255, 255, 255);"><img src="https://maps.gstatic.com/mapfiles/api-3/images/tmapctrl4.png" draggable="false" style="position: absolute; left: -141px; top: -13px; width: 170px; height: 54px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                     </div>
+                  </div>
+                  <div class="gmnoprint" style="margin: 10px; z-index: 0; position: absolute; cursor: pointer; left: 0px; top: 0px;">
+                     <div class="gm-style-mtc" style="float: left;">
+                        <div draggable="false" title="Mostrar mapa de ruas" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(86, 86, 86); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 8px; border-bottom-left-radius: 2px; border-top-left-radius: 2px; -webkit-background-clip: padding-box; background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; min-width: 28px;">Mapa</div>
+                        <div style="background-color: white; z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; position: absolute; left: 0px; top: 29px; text-align: left; display: none;">
+                           <div draggable="false" title="Mostrar mapa de ruas com relevo" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap;">
+                              <span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;">
+                                 <div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;"><img src="https://maps.gstatic.com/mapfiles/mv/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;"></div>
+                              </span>
+                              <label style="vertical-align: middle; cursor: pointer;">Relevo</label>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="gm-style-mtc" style="float: left;">
+                        <div draggable="false" title="Mostrar imagens de satélite" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 8px; border-bottom-right-radius: 2px; border-top-right-radius: 2px; -webkit-background-clip: padding-box; background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-left: 0px; min-width: 37px; font-weight: 500;">Satélite</div>
+                        <div style="background-color: white; z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; position: absolute; right: 0px; top: 29px; text-align: left; display: none;">
+                           <div draggable="false" title="Mostrar imagens com nomes de rua" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap;">
+                              <span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;">
+                                 <div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;"><img src="https://maps.gstatic.com/mapfiles/mv/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;"></div>
+                              </span>
+                              <label style="vertical-align: middle; cursor: pointer;">Marcadores</label>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+	
+	
+	</div>
+
 </div>
-<table class="items table table-striped table-valign-middle">
-<thead>
-<tr>
-<th id="auctionbatchbid-grid_c0">Usuário</th><th id="auctionbatchbid-grid_c1"><a class="sort-link" href="/imoveis/sp/apartamento-51-m2-jardim-umarizal-sao-paulo-sp-j16190?sort=auto_bid">Automático </a></th><th id="auctionbatchbid-grid_c2">Placa</th><th id="auctionbatchbid-grid_c3"><a class="sort-link" href="/imoveis/sp/apartamento-51-m2-jardim-umarizal-sao-paulo-sp-j16190?sort=date_create">Criado em </a></th><th id="auctionbatchbid-grid_c4"><a class="sort-link" href="/imoveis/sp/apartamento-51-m2-jardim-umarizal-sao-paulo-sp-j16190?sort=bid_value">Valor do lance </a></th><th id="auctionbatchbid-grid_c5">Comissão</th><th id="auctionbatchbid-grid_c6">Total</th></tr>
-</thead>
-<tbody>
-<tr><td colspan="7" class="empty"><span class="empty">Nenhum resultado encontrado.</span></td></tr>
-</tbody>
-</table>
-<div class="bottom"></div><div class="keys" style="display:none" title="/imoveis/sp/apartamento-51-m2-jardim-umarizal-sao-paulo-sp-j16190"></div>
-</div></div><div id="batch-detail-tabs_tab_3" class="tab-pane fade"><textarea style="height: 400px; width: 99%; background: #fff; border: none; cursor: default;" readonly="readonly" name="contract" id="contract">CONDIÇÕES DE VENDA E PAGAMENTO
 
-7ª Vara Cível do Foro Regional de Santo Amaro/SP
-
-DAS REGRAS DO LEILÃO/PRAÇA - As regras aqui dispostas são estabelecidas pelo MM. Juiz de Direito da 7ª Vara Cível do Foro Regional de Santo Amaro/SP, de acordo com a legislação pertinente e normas referentes a leilões judiciais eletrônicos.
-
-DA ACEITAÇÃO DESTAS REGRAS – Para participar dos leilões divulgados no Portal da MEGA LEILÕES GESTOR JUDICIAL o usuário deverá ACEITAR os termos e condições adiante estabelecidos:
-
-DAS CONDIÇÕES PARA OFERTAR LANCES – O usuário deverá ser capaz de exercer atos da vida civil, conforme determina a legislação em vigor – menores de 18 anos não serão admitidos a participar dos leilões/praças.
-
-O usuário declara ter capacidade, autoridade e legitimidade para assumir as responsabilidades e obrigações descritas neste documento.
-
-Mesmo que o usuário tenha capacidade civil e jurídica para contratar, necessariamente deverá ter a livre disposição de seus bens para ofertar lances nos leilões divulgados no Portal da Mega Leilões – Gestor Judicial. 
-
-Não poderão ofertar lances:
-
-1.	tutores, curadores, testamenteiros, administradores, síndicos ou liquidantes, quanto aos bens confiados a sua guarda e responsabilidade;
-2.	os mandatários, quanto aos bens de cuja administração ou alienação estejam encarregados;
-3.	o juiz, os membros do Ministério Público e da Defensoria Pública, o escrivão, o depositário, o avaliador e o oficial de justiça;
-4. 	menores, serventuários da justiça ligados ao leilão, leiloeiro/pregoeiro/porteiro de auditório e equipe, parentes e/ou afins dos mesmos.
-
-DOS BENS IMÓVEIS – Os imóveis serão vendidos em caráter "AD CORPUS", sendo que as áreas mencionadas nos Editais, Catálogos e outros veículos de comunicação são meramente enunciativas e repetitivas das dimensões constantes do registro imobiliário, não sendo cabível qualquer pleito com relação ao cancelamento da arrematação, abatimento de preço ou complemento de área, por eventual divergência entre o que constar da descrição do imóvel e a realidade existente. Através do Portal www.megaleiloes.com.br o usuário tem acesso as fotos e a descrição detalhada do imóvel a ser apregoado.
-
-DOS BENS MÓVEIS – Os bens móveis serão vendidos no estado em que se encontram, sendo que as descrições mencionadas nos Editais, Catálogos e outros veículos de comunicação são meramente enunciativas, não sendo cabível qualquer pleito com relação ao cancelamento da arrematação ou abatimento de preço, por eventual divergência entre o que constar na descrição do bem e a realidade existente. Através do Portal www.megaleiloes.com.br o usuário tem acesso as fotos e a descrição detalhada do imóvel a ser apregoado.
-
-O arrematante adquire os bens no estado de conservação em que os mesmos se encontram e declara que tem pleno conhecimento de suas condições e instalações, nada tendo a reclamar quanto a eventual vício, ainda que oculto, ou defeito decorrente de uso, a qualquer título e a qualquer tempo, assumindo a responsabilidade pela eventual regularização que se fizer necessária.
-
-O arrematante deverá se cientificar previamente das restrições impostas aos imóveis apregoados pelas legislações municipal, estadual e federal, no tocante ao uso do solo ou zoneamento e, ainda, das obrigações decorrentes das convenções e especificações de condomínio, quando for o caso, as quais estará obrigado a respeitar em decorrência da arrematação do imóvel.
-
-DA VISITAÇÃO - Constituiu ônus dos interessados em participar da praça vistoriar o imóvel a ser apregoado antes da arrematação. As visitas deverão ser agendadas junto a MEGA LEILÕES GESTOR JUDICIAL, mediante o envio de solicitação formal via e-mail contato@megaleiloes.com.br, com a informação do bem de interesse, nome, telefone, RG e CPF/MF do visitante.
-
-DA PRAÇA – O 1º Leilão terá início no dia 09/10/2017 às 11:00h e se encerrará dia 11/10/2017 às 11:00h, onde somente serão aceitos lances iguais ou superiores ao valor da avaliação; não havendo lance igual ou superior ao valor da avaliação, seguir-se-á sem interrupção o 2º Leilão, que terá início no dia 11/10/2017 às 11:01h e se encerrará no dia 01/11/2017 às 11:00h, onde serão aceitos lances com no mínimo 50% do valor da avaliação.
-
-DO LEILOEIRO – A praça será realizada pelo Leiloeiro Oficial Sr. Fernando José Cerello Gonçalves Pereira, matriculado na Junta Comercial do Estado de São Paulo JUCESP sob o nº 844, por MEIO ELETRÔNICO através do Portal www.megaleiloes.com.br.
-
-DOS LANCES – Os lances serão ofertados somente através do Portal www.megaleiloes.com.br e divulgados on line, em tempo real, de modo a viabilizar a preservação do tempo real das ofertas.
-
-DO LANCE CONDICIONAL - Caso a oferta vencedora seja abaixo do valor de avaliação, sua concretização ficará condicionada à autorização do Juízo responsável.
-
-DO LANCE AUTOMÁTICO - É uma facilidade do Portal Mega Leilões – Gestor Judicial que permite a programação de lances automáticos até um limite máximo pré-determinado pelo ofertante. Com esta opção, caso outro participante oferte um lance maior, o sistema gerará outro lance acrescido de um incremento mínimo, até o limite máximo definido. Este mecanismo permite que o usuário possa ofertar lances até o limite estipulado, sem a necessidade de acompanhamento da praça.
-
-DA IRRETRATABILIDADE DO LANCE – Os lances ofertados são irretratáveis e irrevogáveis.
-
-DO TEMPO EXTRA - Toda vez que um lance é ofertado durante os últimos 03 (três) minutos de apregoamento de um lote, será concedido um tempo extra, retroagindo o cronômetro disponível na seção “tela de lance” do Portal MEGA LEILÕES - GESTOR JUDICIAL a 3 (três) minutos do encerramento, de forma a permitir que todos os interessados tenham tempo hábil para ofertar novos lances.
-
-DOS DÉBITOS – Eventuais ônus sobre o imóvel correrão por conta do arrematante, exceto eventuais débitos de IPTU e demais taxas e impostos que serão sub-rogados no valor da arrematação nos termos do art. 130, “caput” e parágrafo único, do CTN, bem como por qualquer ônus relativo à baixa da hipoteca, nos termos do artigo 1.499, do Código Civil.
-
-DA COMISSÃO DO LEILOEIRO OFICIAL - O arrematante deverá pagar ao Leiloeiro Oficial, a título de comissão, o valor correspondente a 5% (cinco por cento) sobre o preço de arrematação do imóvel.
-
-A comissão do leiloeiro não está inclusa no valor do lance e não será devolvida ao arrematante em nenhuma hipótese, salvo se a arrematação for desfeita por determinação judicial, por razões alheias à vontade do arrematante.
-
-DO PAGAMENTO – O arrematante deverá efetuar o pagamento do preço do imóvel arrematado no prazo de até 24 (vinte quatro) horas após o leilão, através do pagamento da guia de depósito judicial do Banco do Brasil em favor do Juízo correspondente, a qual será disponibilizada ao arrematante através do Portal www.megaleiloes.com.br, sob pena de se desfazer a arrematação.
-
-O pagamento da comissão do Leiloeiro Oficial deverá ser realizado igualmente em até 24 (vinte e quatro) horas a contar do encerramento da praça, através de boleto bancário a ser disponibilizado ao arrematante através de e-mail ou do Portal www.megaleiloes.com.br, na seção “Minha Conta”.
-
-DA PROPOSTA - Os interessados poderão apresentar proposta de pagamento parcelado, encaminhando parecer por escrito para o e-mail: proposta@megaleiloes.com.br (Art. 895, I e II, CPC). A apresentação de proposta não suspende o leilão (Art. 895, § 6º, CPC) e o pagamento do lance à vista sempre prevalecerá sobre o parcelado, ainda que mais vultoso (Art. 895, § 7º, CPC). PENALIDADES PELO DESCUMPRIMENTO DAS PROPOSTAS - Em caso de atraso no pagamento de qualquer das prestações, incidirá multa de dez por cento sobre a soma da parcela inadimplida com as parcelas vincendas; O inadimplemento autoriza o exequente a pedir a resolução da arrematação ou promover, em face do arrematante, a execução do valor devido, devendo ambos os pedidos serem formulados nos autos da execução em que se deu a arrematação; (Art. 895, § 4º e 5º do CPC).
-
-DO AUTO DE ARREMATAÇÃO - O Auto de Arrematação será assinado pelo juiz após a comprovação efetiva do pagamento do valor da arrematação e da comissão do leiloeiro, dispensadas as demais assinaturas referidas no artigo 694, do Código de Processo Civil, conforme dispõe o artigo 20 do Provimento CSM nº 1.625/2009 do Tribunal de Justiça do Estado de São Paulo.
-
-Após a realização do depósito judicial, o arrematante deverá encaminhar o respectivo comprovante por fax: 11 - 3149-4609 ou por e-mail (sandra@megaleiloes.com.br), para que esse documento seja juntado aos autos do processo.
-
-Assim que forem confirmados os pagamentos realizados pelo arrematante, e cumpridos os trâmites legais, será expedido o competente Mandado Judicial, para que sejam efetuados os devidos registros públicos (artigo 140, parágrafo quarto, da Lei nº 11.101/2.005).
-
-Desfeita a arrematação pelo Juiz, por motivos alheios à vontade do arrematante, serão integralmente restituídos ao mesmo os valores pagos e relativos ao preço dos bens arrematados e à comissão do Leiloeiro.
-
-DA FALTA DE PAGAMENTO – O não pagamento do preço do imóvel arrematado e da comissão do Leiloeiro Oficial, no prazo aqui estipulado, configurará desistência ou arrependimento por parte do arrematante, ficando este impedido de participar de novos leilões judiciais (artigo 695, do Código de Processo Civil), bem como obrigado a pagar o valor da comissão devida ao Leiloeiro (5%).
-
-O Leiloeiro Oficial poderá emitir título de crédito para a cobrança da sua comissão, encaminhando-o a protesto, por falta de pagamento, se for o caso, sem prejuízo da execução prevista no artigo 39, do Decreto nº 21.981/32.
-
-DO REGISTRO – O usuário autoriza o registro da presente “Condições de Venda e Pagamento” perante qualquer Cartório de Registro de títulos e documentos de São Paulo /SP.
-
-DA ENTREGA DOS BENS – A transferência dos bens será feita através do Juízo responsável e o registro do imóvel para o nome do arrematante ocorrerá após a retirada em cartório da Carta de Arrematação, nos termos do art. 693 e § único do Código de Processo Civil.
-
-DA RETIRADA – Correrão por conta do arrematante as despesas ou custos relativos à remoção, transporte e transferência patrimonial do(s) bem(ns) arrematado(s). 
-Para retirar o(s) bem(ns) arrematado(s), o arrematante deverá primeiramente retirar em cartório o respectivo “Mandado de Entrega do Bem”. 
-As demais condições obedecerão ao que dispõe o Código de Processo Civil, a Lei nº 5.741/71, o Decreto nº 21.981/32, com as alterações introduzidas pelo Decreto nº 22.427/33 e a Instrução Normativa nº 113 de 28 de Abril de 2010, que regulamenta a profissão de Leiloeiro Oficial, bem como caput do artigo 335, do Código Penal.
-
-RELAÇÃO DO IMÓVEL
-
-Matrícula nº 194.409 do 11º Cartório de Registro de Imóveis de São Paulo/SP - IMÓVEL: Apartamento nº 41 localizado no 4º andar do bloco BL-17, integrante do empreendimento denominado Condomínio  Residencial Parque das Orquídeas, situado à Rua Jaracatiá nº 431 antigo s/nº, Estrada de Campo Limpo nº 6.056 e Estrada dos Mirandas s/nº, no 29º Subdistrito-Santo Amaro, tendo o bloco acesso à Rua Jaracatiá através da Rua 3 (de circulação interna), possuindo a área útil de 51,715375 m2, a área comum de 29,180971 m2 já incluída a correspondente a uma vaga indeterminada no estacionamento descoberto, e a área total de 80,896346 m2, correspondendo-lhe a fração ideal de 0,03434066% no terreno do condomínio. Consta no R.5 desta matrícula que o imóvel objeto desta matrícula foi hipotecado à CAIXA ECONÔMICA FEDERAL - CEF. Consta no R.6 desta matrícula que nos autos da Ação de Prestação de Contas, Processo nº 544/92, em trâmite na 32ª Vara Cível do Foro Central da Comarca de São Paulo/SP, requerida por MARCO ANTONIO BASSO e outro contra ANTONIO JACKSON PEREIRA, foi penhorado o imóvel objeto desta matrícula, sendo nomeado depositário o executado. Consta no R.7 desta matrícula que nos autos da Reclamação Trabalhista, Processo nº 2161/1997, em trâmite na 56ª Vara do Trabalho da Comarca de São Paulo/SP - TRT 2ª Região, requerida por GENIVAL DA SILVA OLIVEIRA contra COMPANHIA PAULISTA DE PINTURAS LTDA e outros, foi penhorado o imóvel objeto desta matrícula, sendo nomeado depositário JOSÉ WYRON CORREIA DINIZ. Observação: Cumpre informar que há recurso pendente de julgamento (Agravo de Instrumento nº 2162211-56.2017.8.26.0000 - 28ª Câmara de Direito Privado). Contribuinte nº 169.009.0695-7 (em área maior). Valor da Avaliação do Imóvel: R$ 215.000,00 (duzentos e quinze mil reais) para maio de 2016, que será atualizado até a data da alienação conforme tabela de atualização monetária do TJ/SP.</textarea></div><div id="batch-detail-tabs_tab_4" class="tab-pane fade"><div id="manifestations-grid" class="grid-view">
-<table class="items table table-valign-middle">
-<thead>
-<tr>
-<th id="manifestations-grid_c0">Descrição</th><th id="manifestations-grid_c1">Usuário</th><th id="manifestations-grid_c2">Criado em</th></tr>
-</thead>
-<tbody>
-<tr><td colspan="3" class="empty"><span class="empty">Nenhum resultado encontrado.</span></td></tr>
-</tbody>
-</table> <div class="keys" style="display:none" title="/imoveis/sp/apartamento-51-m2-jardim-umarizal-sao-paulo-sp-j16190"></div>
+<div style="margin: 20px 0 40px;" id="batch-detail-tabs">
+   <ul id="yw3" class="nav nav-tabs">
+      <li><a data-toggle="tab" href="#batch-detail-tabs_tab_2">Histórico de lances</a></li>
+      <li><a data-toggle="tab" href="#batch-detail-tabs_tab_3">Condições de Venda e Pagamento</a></li>
+      <li><a data-toggle="tab" href="#batch-detail-tabs_tab_4">Manifestações</a></li>
+   </ul>
+   <div class="tab-content">
+      <div id="batch-detail-tabs_tab_2" class="tab-pane fade active in">
+         <div id="auctionbatchbid-grid" class="grid-view">
+            <div class="top">
+            </div>
+            <table class="items table table-striped table-valign-middle">
+               <thead>
+                  <tr>
+                     <th id="auctionbatchbid-grid_c0">Usuário</th>
+                     <th id="auctionbatchbid-grid_c1"><a class="sort-link" href="/imoveis/sp/apartamento-51-m2-jardim-umarizal-sao-paulo-sp-j16190?sort=auto_bid">Automático </a></th>
+                     <th id="auctionbatchbid-grid_c2">Placa</th>
+                     <th id="auctionbatchbid-grid_c3"><a class="sort-link" href="/imoveis/sp/apartamento-51-m2-jardim-umarizal-sao-paulo-sp-j16190?sort=date_create">Criado em </a></th>
+                     <th id="auctionbatchbid-grid_c4"><a class="sort-link" href="/imoveis/sp/apartamento-51-m2-jardim-umarizal-sao-paulo-sp-j16190?sort=bid_value">Valor do lance </a></th>
+                     <th id="auctionbatchbid-grid_c5">Comissão</th>
+                     <th id="auctionbatchbid-grid_c6">Total</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td colspan="7" class="empty"><span class="empty">Nenhum resultado encontrado.</span></td>
+                  </tr>
+               </tbody>
+            </table>
+            <div class="bottom"></div>
+            <div class="keys" style="display:none" title="/imoveis/sp/apartamento-51-m2-jardim-umarizal-sao-paulo-sp-j16190"></div>
+         </div>
+      </div>
+      <div id="batch-detail-tabs_tab_3" class="tab-pane fade">
+         <textarea style="height: 400px; width: 99%; background: #fff; border: none; cursor: default;" readonly="readonly" name="contract" id="contract">CONDIÇÕES DE VENDA E PAGAMENTO
+         7ª Vara Cível do Foro Regional de Santo Amaro/SP
+         DAS REGRAS DO LEILÃO/PRAÇA - As regras aqui dispostas são estabelecidas pelo MM. Juiz de Direito da 7ª Vara Cível do Foro Regional de Santo Amaro/SP, de acordo com a legislação pertinente e normas referentes a leilões judiciais eletrônicos.
+         DA ACEITAÇÃO DESTAS REGRAS – Para participar dos leilões divulgados no Portal da MEGA LEILÕES GESTOR JUDICIAL o usuário deverá ACEITAR os termos e condições adiante estabelecidos:
+         DAS CONDIÇÕES PARA OFERTAR LANCES – O usuário deverá ser capaz de exercer atos da vida civil, conforme determina a legislação em vigor – menores de 18 anos não serão admitidos a participar dos leilões/praças.
+         O usuário declara ter capacidade, autoridade e legitimidade para assumir as responsabilidades e obrigações descritas neste documento.
+         Mesmo que o usuário tenha capacidade civil e jurídica para contratar, necessariamente deverá ter a livre disposição de seus bens para ofertar lances nos leilões divulgados no Portal da Mega Leilões – Gestor Judicial. 
+         Não poderão ofertar lances:
+         1.	tutores, curadores, testamenteiros, administradores, síndicos ou liquidantes, quanto aos bens confiados a sua guarda e responsabilidade;
+         2.	os mandatários, quanto aos bens de cuja administração ou alienação estejam encarregados;
+         3.	o juiz, os membros do Ministério Público e da Defensoria Pública, o escrivão, o depositário, o avaliador e o oficial de justiça;
+         4. 	menores, serventuários da justiça ligados ao leilão, leiloeiro/pregoeiro/porteiro de auditório e equipe, parentes e/ou afins dos mesmos.
+         DOS BENS IMÓVEIS – Os imóveis serão vendidos em caráter "AD CORPUS", sendo que as áreas mencionadas nos Editais, Catálogos e outros veículos de comunicação são meramente enunciativas e repetitivas das dimensões constantes do registro imobiliário, não sendo cabível qualquer pleito com relação ao cancelamento da arrematação, abatimento de preço ou complemento de área, por eventual divergência entre o que constar da descrição do imóvel e a realidade existente. Através do Portal www.megaleiloes.com.br o usuário tem acesso as fotos e a descrição detalhada do imóvel a ser apregoado.
+         DOS BENS MÓVEIS – Os bens móveis serão vendidos no estado em que se encontram, sendo que as descrições mencionadas nos Editais, Catálogos e outros veículos de comunicação são meramente enunciativas, não sendo cabível qualquer pleito com relação ao cancelamento da arrematação ou abatimento de preço, por eventual divergência entre o que constar na descrição do bem e a realidade existente. Através do Portal www.megaleiloes.com.br o usuário tem acesso as fotos e a descrição detalhada do imóvel a ser apregoado.
+         O arrematante adquire os bens no estado de conservação em que os mesmos se encontram e declara que tem pleno conhecimento de suas condições e instalações, nada tendo a reclamar quanto a eventual vício, ainda que oculto, ou defeito decorrente de uso, a qualquer título e a qualquer tempo, assumindo a responsabilidade pela eventual regularização que se fizer necessária.
+         O arrematante deverá se cientificar previamente das restrições impostas aos imóveis apregoados pelas legislações municipal, estadual e federal, no tocante ao uso do solo ou zoneamento e, ainda, das obrigações decorrentes das convenções e especificações de condomínio, quando for o caso, as quais estará obrigado a respeitar em decorrência da arrematação do imóvel.
+         DA VISITAÇÃO - Constituiu ônus dos interessados em participar da praça vistoriar o imóvel a ser apregoado antes da arrematação. As visitas deverão ser agendadas junto a MEGA LEILÕES GESTOR JUDICIAL, mediante o envio de solicitação formal via e-mail contato@megaleiloes.com.br, com a informação do bem de interesse, nome, telefone, RG e CPF/MF do visitante.
+         DA PRAÇA – O 1º Leilão terá início no dia 09/10/2017 às 11:00h e se encerrará dia 11/10/2017 às 11:00h, onde somente serão aceitos lances iguais ou superiores ao valor da avaliação; não havendo lance igual ou superior ao valor da avaliação, seguir-se-á sem interrupção o 2º Leilão, que terá início no dia 11/10/2017 às 11:01h e se encerrará no dia 01/11/2017 às 11:00h, onde serão aceitos lances com no mínimo 50% do valor da avaliação.
+         DO LEILOEIRO – A praça será realizada pelo Leiloeiro Oficial Sr. Fernando José Cerello Gonçalves Pereira, matriculado na Junta Comercial do Estado de São Paulo JUCESP sob o nº 844, por MEIO ELETRÔNICO através do Portal www.megaleiloes.com.br.
+         DOS LANCES – Os lances serão ofertados somente através do Portal www.megaleiloes.com.br e divulgados on line, em tempo real, de modo a viabilizar a preservação do tempo real das ofertas.
+         DO LANCE CONDICIONAL - Caso a oferta vencedora seja abaixo do valor de avaliação, sua concretização ficará condicionada à autorização do Juízo responsável.
+         DO LANCE AUTOMÁTICO - É uma facilidade do Portal Mega Leilões – Gestor Judicial que permite a programação de lances automáticos até um limite máximo pré-determinado pelo ofertante. Com esta opção, caso outro participante oferte um lance maior, o sistema gerará outro lance acrescido de um incremento mínimo, até o limite máximo definido. Este mecanismo permite que o usuário possa ofertar lances até o limite estipulado, sem a necessidade de acompanhamento da praça.
+         DA IRRETRATABILIDADE DO LANCE – Os lances ofertados são irretratáveis e irrevogáveis.
+         DO TEMPO EXTRA - Toda vez que um lance é ofertado durante os últimos 03 (três) minutos de apregoamento de um lote, será concedido um tempo extra, retroagindo o cronômetro disponível na seção “tela de lance” do Portal MEGA LEILÕES - GESTOR JUDICIAL a 3 (três) minutos do encerramento, de forma a permitir que todos os interessados tenham tempo hábil para ofertar novos lances.
+         DOS DÉBITOS – Eventuais ônus sobre o imóvel correrão por conta do arrematante, exceto eventuais débitos de IPTU e demais taxas e impostos que serão sub-rogados no valor da arrematação nos termos do art. 130, “caput” e parágrafo único, do CTN, bem como por qualquer ônus relativo à baixa da hipoteca, nos termos do artigo 1.499, do Código Civil.
+         DA COMISSÃO DO LEILOEIRO OFICIAL - O arrematante deverá pagar ao Leiloeiro Oficial, a título de comissão, o valor correspondente a 5% (cinco por cento) sobre o preço de arrematação do imóvel.
+         A comissão do leiloeiro não está inclusa no valor do lance e não será devolvida ao arrematante em nenhuma hipótese, salvo se a arrematação for desfeita por determinação judicial, por razões alheias à vontade do arrematante.
+         DO PAGAMENTO – O arrematante deverá efetuar o pagamento do preço do imóvel arrematado no prazo de até 24 (vinte quatro) horas após o leilão, através do pagamento da guia de depósito judicial do Banco do Brasil em favor do Juízo correspondente, a qual será disponibilizada ao arrematante através do Portal www.megaleiloes.com.br, sob pena de se desfazer a arrematação.
+         O pagamento da comissão do Leiloeiro Oficial deverá ser realizado igualmente em até 24 (vinte e quatro) horas a contar do encerramento da praça, através de boleto bancário a ser disponibilizado ao arrematante através de e-mail ou do Portal www.megaleiloes.com.br, na seção “Minha Conta”.
+         DA PROPOSTA - Os interessados poderão apresentar proposta de pagamento parcelado, encaminhando parecer por escrito para o e-mail: proposta@megaleiloes.com.br (Art. 895, I e II, CPC). A apresentação de proposta não suspende o leilão (Art. 895, § 6º, CPC) e o pagamento do lance à vista sempre prevalecerá sobre o parcelado, ainda que mais vultoso (Art. 895, § 7º, CPC). PENALIDADES PELO DESCUMPRIMENTO DAS PROPOSTAS - Em caso de atraso no pagamento de qualquer das prestações, incidirá multa de dez por cento sobre a soma da parcela inadimplida com as parcelas vincendas; O inadimplemento autoriza o exequente a pedir a resolução da arrematação ou promover, em face do arrematante, a execução do valor devido, devendo ambos os pedidos serem formulados nos autos da execução em que se deu a arrematação; (Art. 895, § 4º e 5º do CPC).
+         DO AUTO DE ARREMATAÇÃO - O Auto de Arrematação será assinado pelo juiz após a comprovação efetiva do pagamento do valor da arrematação e da comissão do leiloeiro, dispensadas as demais assinaturas referidas no artigo 694, do Código de Processo Civil, conforme dispõe o artigo 20 do Provimento CSM nº 1.625/2009 do Tribunal de Justiça do Estado de São Paulo.
+         Após a realização do depósito judicial, o arrematante deverá encaminhar o respectivo comprovante por fax: 11 - 3149-4609 ou por e-mail (sandra@megaleiloes.com.br), para que esse documento seja juntado aos autos do processo.
+         Assim que forem confirmados os pagamentos realizados pelo arrematante, e cumpridos os trâmites legais, será expedido o competente Mandado Judicial, para que sejam efetuados os devidos registros públicos (artigo 140, parágrafo quarto, da Lei nº 11.101/2.005).
+         Desfeita a arrematação pelo Juiz, por motivos alheios à vontade do arrematante, serão integralmente restituídos ao mesmo os valores pagos e relativos ao preço dos bens arrematados e à comissão do Leiloeiro.
+         DA FALTA DE PAGAMENTO – O não pagamento do preço do imóvel arrematado e da comissão do Leiloeiro Oficial, no prazo aqui estipulado, configurará desistência ou arrependimento por parte do arrematante, ficando este impedido de participar de novos leilões judiciais (artigo 695, do Código de Processo Civil), bem como obrigado a pagar o valor da comissão devida ao Leiloeiro (5%).
+         O Leiloeiro Oficial poderá emitir título de crédito para a cobrança da sua comissão, encaminhando-o a protesto, por falta de pagamento, se for o caso, sem prejuízo da execução prevista no artigo 39, do Decreto nº 21.981/32.
+         DO REGISTRO – O usuário autoriza o registro da presente “Condições de Venda e Pagamento” perante qualquer Cartório de Registro de títulos e documentos de São Paulo /SP.
+         DA ENTREGA DOS BENS – A transferência dos bens será feita através do Juízo responsável e o registro do imóvel para o nome do arrematante ocorrerá após a retirada em cartório da Carta de Arrematação, nos termos do art. 693 e § único do Código de Processo Civil.
+         DA RETIRADA – Correrão por conta do arrematante as despesas ou custos relativos à remoção, transporte e transferência patrimonial do(s) bem(ns) arrematado(s). 
+         Para retirar o(s) bem(ns) arrematado(s), o arrematante deverá primeiramente retirar em cartório o respectivo “Mandado de Entrega do Bem”. 
+         As demais condições obedecerão ao que dispõe o Código de Processo Civil, a Lei nº 5.741/71, o Decreto nº 21.981/32, com as alterações introduzidas pelo Decreto nº 22.427/33 e a Instrução Normativa nº 113 de 28 de Abril de 2010, que regulamenta a profissão de Leiloeiro Oficial, bem como caput do artigo 335, do Código Penal.
+         RELAÇÃO DO IMÓVEL
+         Matrícula nº 194.409 do 11º Cartório de Registro de Imóveis de São Paulo/SP - IMÓVEL: Apartamento nº 41 localizado no 4º andar do bloco BL-17, 
+		 integrante do empreendimento denominado Condomínio  Residencial Parque das Orquídeas, situado à Rua Jaracatiá nº 431 antigo s/nº, 
+		 Estrada de Campo Limpo nº 6.056 e Estrada dos Mirandas s/nº, no 29º Subdistrito-Santo Amaro, tendo o bloco acesso à 
+		 Rua Jaracatiá através da Rua 3 (de circulação interna), possuindo a área útil de 51,715375 m2, a área comum de 29,180971 m2 já incluída a correspondente a uma vaga 
+		 indeterminada no estacionamento descoberto, e a área total de 80,896346 m2, correspondendo-lhe a fração ideal de 0,03434066% no terreno do condomínio. Consta no R.5 
+		 desta matrícula que o imóvel objeto desta matrícula foi hipotecado à CAIXA ECONÔMICA FEDERAL - CEF. Consta no R.6 desta matrícula que nos autos da Ação de Prestação de Contas, 
+		 Processo nº 544/92, em trâmite na 32ª Vara Cível do Foro Central da Comarca de São Paulo/SP, requerida por MARCO ANTONIO BASSO e outro contra ANTONIO JACKSON PEREIRA, 
+		 foi penhorado o imóvel objeto desta matrícula, sendo nomeado depositário o executado. Consta no R.7 desta matrícula que nos autos da Reclamação Trabalhista, 
+		 Processo nº 2161/1997, em trâmite na 56ª Vara do Trabalho da Comarca de São Paulo/SP - TRT 2ª Região, requerida por GENIVAL DA SILVA OLIVEIRA contra COMPANHIA PAULISTA DE 
+		 PINTURAS LTDA e outros, foi penhorado o imóvel objeto desta matrícula, sendo nomeado depositário JOSÉ WYRON CORREIA DINIZ. Observação: Cumpre informar que há recurso 
+		 pendente de julgamento (Agravo de Instrumento nº 2162211-56.2017.8.26.0000 - 28ª Câmara de Direito Privado). Contribuinte nº 169.009.0695-7 (em área maior). Valor da Avaliação 
+		 do Imóvel: R$ 215.000,00 (duzentos e quinze mil reais) para maio de 2016, que será atualizado até a data da alienação conforme tabela de atualização monetária do TJ/SP.
+		 </textarea>
+      </div>
+      <div id="batch-detail-tabs_tab_4" class="tab-pane fade">
+         <div id="manifestations-grid" class="grid-view">
+            <table class="items table table-valign-middle">
+               <thead>
+                  <tr>
+                     <th id="manifestations-grid_c0">Descrição</th>
+                     <th id="manifestations-grid_c1">Usuário</th>
+                     <th id="manifestations-grid_c2">Criado em</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td colspan="3" class="empty"><span class="empty">Nenhum resultado encontrado.</span></td>
+                  </tr>
+               </tbody>
+            </table>
+            <div class="keys" style="display:none" title="/imoveis/sp/apartamento-51-m2-jardim-umarizal-sao-paulo-sp-j16190"></div>
+         </div>
+      </div>
+   </div>
 </div>
-</div></div></div>
 
 </div>
