@@ -44,6 +44,19 @@ return [
                     ],
                 ],
             ],
+			'blog' => [
+                'type'    => Segment::class,
+                'options' => [
+                    'route' => '/blog[/:action]',
+                    'constraints' => [
+                        'action' => '[a-zA-Z][a-zA-Z0-9_-]*'
+                    ],
+                    'defaults' => [
+                        'controller' => Controller\BlogController::class,
+                        'action'     => 'index',
+                    ],
+                ],
+            ],
         ],
     ],
     'controllers' => [
@@ -51,6 +64,7 @@ return [
             Controller\HomeController::class => InvokableFactory::class,
             Controller\ContatoController::class => InvokableFactory::class,
 			Controller\LeilaoController::class => InvokableFactory::class,
+			Controller\BlogController::class => InvokableFactory::class,
         ],
     ],
     'view_manager' => [
