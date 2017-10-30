@@ -1,5 +1,19 @@
 /*Adicionado por Sebastião Junio*/
 
+
+.margem{
+	margin:10px 10px 10px 10px;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+.fundo_classes {
+    margin-top: 7px;
+    background-color: #DDDDDD;
+    padding: 12px;
+    width: 100%;
+}
+
 .w-100{
 	width: 100% !important;
 }
@@ -97,7 +111,7 @@ div.card-block  > a.pull-right{
 	transform: scale(1.1) rotate(360deg);
 }
  
-.social-icons .fa-adn{background-color:#504e54;} 
+/*.social-icons .fa-adn{background-color:#504e54;} 
 .social-icons .fa-apple{background-color:#aeb5c5;} 
 .social-icons .fa-android{background-color:#A5C63B;}  
 .social-icons .fa-bitbucket,.social-icons .fa-bitbucket-square{background-color:#003366;} 
@@ -129,7 +143,42 @@ div.card-block  > a.pull-right{
 .social-icons .fa-weibo{background-color:#D72B2B;}
 .social-icons .fa-windows{background-color:#12B6F3;}
 .social-icons .fa-xing,.social-icons .fa-xing-square{background-color:#00555C;} 
-.social-icons .fa-youtube,.social-icons .fa-youtube-play,.social-icons .fa-youtube-square{background-color:#C52F30;}
+.social-icons .fa-youtube,.social-icons .fa-youtube-play,.social-icons .fa-youtube-square{background-color:#C52F30;}*/
+
+
+.social-icons .fa-adn{background-color:#3C599F;} 
+.social-icons .fa-apple{background-color:#3C599F;} 
+.social-icons .fa-android{background-color:#3C599F;}  
+.social-icons .fa-bitbucket,.social-icons .fa-bitbucket-square{background-color:#3C599F;} 
+.social-icons .fa-bitcoin,.social-icons .fa-btc{background-color:#3C599F;} 
+.social-icons .fa-css3{background-color:#3C599F;} 
+.social-icons .fa-dribbble{background-color:#3C599F;}  
+.social-icons .fa-dropbox{background-color:#3C599F;}
+.social-icons .fa-facebook,.social-icons .fa-facebook-square{background-color:#3C599F;}  
+.social-icons .fa-flickr{background-color:#3C599F;}
+.social-icons .fa-foursquare{background-color:#3C599F;}
+.social-icons .fa-github,.social-icons .fa-github-alt,.social-icons .fa-github-square{background-color:#3C599F;} 
+.social-icons .fa-google-plus,.social-icons .fa-google-plus-square{background-color:#3C599F;} 
+.social-icons .fa-html5{background-color:#3C599F;}
+.social-icons .fa-instagram{background-color:#3C599F;}
+.social-icons .fa-linkedin,.social-icons .fa-linkedin-square{background-color:#3C599F;} 
+.social-icons .fa-linux{background-color:#3C599F;color:#333;}
+.social-icons .fa-maxcdn{background-color:#3C599F;}
+.social-icons .fa-pagelines{background-color:#3C599F;color:#3C599F;}
+.social-icons .fa-pinterest,.social-icons .fa-pinterest-square{background-color:#3C599F;} 
+.social-icons .fa-renren{background-color:#3C599F;}
+.social-icons .fa-skype{background-color:#3C599F;}
+.social-icons .fa-stack-exchange{background-color:#3C599F;}
+.social-icons .fa-stack-overflow{background-color:#3C599F;}
+.social-icons .fa-trello{background-color:#3C599F;}
+.social-icons .fa-tumblr,.social-icons .fa-tumblr-square{background-color:#3C599F;} 
+.social-icons .fa-twitter,.social-icons .fa-twitter-square{background-color:#3C599F;} 
+.social-icons .fa-vimeo-square{background-color:#3C599F;}
+.social-icons .fa-vk{background-color:#3C599F;}
+.social-icons .fa-weibo{background-color:#3C599F;}
+.social-icons .fa-windows{background-color:#3C599F;}
+.social-icons .fa-xing,.social-icons .fa-xing-square{background-color:#3C599F;} 
+.social-icons .fa-youtube,.social-icons .fa-youtube-play,.social-icons .fa-youtube-square{background-color:#3C599F;}
 
 
 /*Fim adicionado*/
@@ -2014,12 +2063,13 @@ table th[class*=span],
 }
 .dropdown-menu {
     position: absolute;
-    top: 100%;
+    /*top: 100%;*/
     left: 0;
     z-index: 1000;
     display: none;
     float: left;
-    min-width: 160px;
+    /*min-width: 160px;*/
+	min-width: 201px;
     padding: 5px 0;
     margin: 2px 0 0;
     list-style: none;
@@ -3522,25 +3572,26 @@ input[type=submit].btn.btn-mini {
 .navbar .nav>li>a {
     float: none;
     padding: 10px 15px;
-    color: #777;
+    color: white;
     text-decoration: none;
-    text-shadow: 0 1px 0 #fff
+    text-shadow: 0 1px 0 white
 }
 .navbar .nav .dropdown-toggle .caret {
-    margin-top: 8px
+    margin-top: 8px;
+	margin-left:100px;
 }
 .navbar .nav>li>a:focus,
 .navbar .nav>li>a:hover {
     background-color: transparent;
-    color: #333;
+    color: white;
     text-decoration: none;
-    border-bottom: 2px solid #009cd7;
+    border-bottom: 2px solid white;
     padding-bottom: 8px
 }
 .navbar .nav>.active>a,
 .navbar .nav>.active>a:hover,
 .navbar .nav>.active>a:focus {
-    color: #555;
+    color: white;
     text-decoration: none;
     -webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, .125);
     -moz-box-shadow: inset 0 3px 8px rgba(0, 0, 0, .125);
@@ -9222,6 +9273,7 @@ body {
 }
 #main-nav-tabs {
     background-color: #00adef;
+	margin-top:30px;
     margin-bottom: 30px
 }
 #main-nav-tabs .nav-tabs>li>a {

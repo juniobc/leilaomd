@@ -81,9 +81,15 @@
 						#main-nav .widgets .broker-partner-banner img {
 						height: 94px;
 						}
+						
 						</style>
-						<div class="pull-right" style="margin-top: 10px;">
-							<form style="float: left; margin-right: 20px;" class="form-inline" id="yw1" action="/login" method="post">
+						<div class="pull-left clearfix" style="">
+							<a class="auditorium-btn" style="margin-top: 20px; height:50px" >Acessar </br> Auditório</a>
+							<a class="auditorium-btn" style="margin-top: 3px;" >Leilão no Ar</a>
+						</div>
+						
+						<div class="" style="margin-top: 10px;">
+							<form style="float: left; margin: 10px 20px 20px 20px;" class="form-inline" id="yw1" action="/login" method="post">
 								<div class="title" style="color: #999;">Acesse sua conta</div>
 								<input style="width: 180px; margin-bottom: 2px; border-color: #F1F1F1;" placeholder="Nome de usuário ou email" 
 								name="Login[username]" id="Login_username" type="text" maxlength="45">
@@ -96,14 +102,13 @@
 								<br>
 								<a href="/recuperar-senha">Esqueceu sua senha?</a>
 							</form>
-							<a class="btn signup light-btn" href="/cadastro">CRIAR CONTA <i class="icon-chevron-right"></i>
+							<a class="btn signup light-btn" href="/cadastro" style="margin-top:10px">CRIAR CONTA <i class="icon-chevron-right"></i>
 							<span class="small">Cadastre-se agora e participe dos leilões.</span></a>
+							<a class="btn signup light-btn" href="/cadastro" style="margin: 10px 0px 0px 10px; height:63px"><p>UNIDADE GOIÂNIA</p>
+							<span class="large" style="font-size:18px">(62) 4101-0528</span></a>
 						</div>
 
-						<div class="pull-right clearfix" style="clear: both;">
-						<a href="https://www.megaleiloes.com.br/auditorio" class="auditorium-btn" style="margin-top: 11px;" 
-						onclick="openAuditorium('https://www.megaleiloes.com.br/auditorio', 'Auditório');return false;">Acessar Auditório</a>
-						</div>            
+						            
 					</div>
 				</div>
 			
@@ -113,6 +118,45 @@
 		
 		
 		<div id="main-nav-tabs">
+			<div class="container">
+				<div class="navbar">
+					<ul class="nav">
+
+						<li class=""><a href="#">NOSSOS SITES:</a></li>
+						<li>
+						<div class="btn-toolbar">
+						<div class="btn-group">
+						<a class="btn dropdown-toggle" data-toggle="dropdown">	Leiloes MD <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+						<li><a href="#">Leiloes goias</a></li>
+						<li><a href="#">Leiloes Brasilia</a></li>
+						<li><a href="#">Leiloes teste</a></li>
+						</ul>
+						</div>
+						</div>
+
+						</li>
+
+						
+					  
+					</ul>
+					
+					<ul class="nav pull-right">
+					  <li class="active"><a href="/">INICIO</a></li>
+					  <li><a href="/empresa">EMPRESA</a></li>
+					  <li><a href="/servicos">SERVIÇOS</a></li>
+					  <li><a href="/leilao">LEILÕES</a></li>
+					  <li><a href="/blog">BLOG</a></li>
+					  <li><a href="/contato">CONTATO</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
+		<!--<div id="main-nav-tabs">
 			<div class="container">
 				<div id="sti">
 					<ul id="yw5" class="nav nav-tabs">
@@ -190,7 +234,7 @@
 					</div>
 				</div> 
 			</div>
-		</div>
+		</div>-->
 		
 		<div id="content" class="container">
 		

@@ -57,6 +57,19 @@ return [
                     ],
                 ],
             ],
+			'servico' => [
+                'type'    => Segment::class,
+                'options' => [
+                    'route' => '/servicos[/:action]',
+                    'constraints' => [
+                        'action' => '[a-zA-Z][a-zA-Z0-9_-]*'
+                    ],
+                    'defaults' => [
+                        'controller' => Controller\ServicoController::class,
+                        'action'     => 'index',
+                    ],
+                ],
+            ],
         ],
     ],
     'controllers' => [
@@ -65,6 +78,7 @@ return [
             Controller\ContatoController::class => InvokableFactory::class,
 			Controller\LeilaoController::class => InvokableFactory::class,
 			Controller\BlogController::class => InvokableFactory::class,
+			Controller\ServicoController::class => InvokableFactory::class,
         ],
     ],
     'view_manager' => [
