@@ -16,4 +16,9 @@ class LeilaoController extends AbstractActionController
     {
         return new ViewModel();
     }
+	
+	public function paginaAction()
+    {
+        return new ViewModel();
+    }
 }

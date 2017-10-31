@@ -35,9 +35,12 @@ return [
                 ],
             ],
 			'leilao' => [
-                'type' => Literal::class,
+                'type'    => Segment::class,
                 'options' => [
-                    'route'    => '/leilao',
+                    'route' => '/leilao[/:action]',
+                    'constraints' => [
+                        'action' => '[a-zA-Z][a-zA-Z0-9_-]*'
+                    ],
                     'defaults' => [
                         'controller' => Controller\LeilaoController::class,
                         'action'     => 'index',

@@ -1,3 +1,5 @@
+
+
 <?= $this->doctype() ?>
 
 <html lang="pt-br">
@@ -117,7 +119,7 @@
 		</div>
 		
 		
-		<div id="main-nav-tabs">
+		<div id="main-nav-tabs" class="hidden-phone">
 			<div class="container">
 				<div class="navbar">
 					<ul class="nav">
@@ -151,6 +153,36 @@
 					</ul>
 				</div>
 			</div>
+		</div>
+		
+		<div id="menu-phone" class="visible-phone">
+		
+			<div class="container">
+				<ul class="nav nav-tabs nav-stacked text-center">
+					<li class=""><a href="/">Inicio</a></li>
+					<li><a href="/empresa">Empresa</a></li>
+					<li><a href="/servicos">Serviço</a></li>
+					<li><a href="/leilao">Leilões</a></li>
+					<li><a href="/blog">Blog</a></li>
+					<li><a href="/contato">Contato</a></li>
+					<li style="text-align:left; color:white"><a>
+						Nossos Sites: 
+						<select style="margin-left:10px; width:216px">
+						
+							<option>Leilão MD</option>
+							<option>Leilão MD</option>
+							<option>Leilão MD</option>
+							<option>Leilão MD</option>
+							<option>Leilão MD</option>
+							<option>Leilão MD</option>
+						
+						</select>
+						
+					
+					</a></li>
+				</ul>		
+			</div>
+		
 		</div>
 		
 		
@@ -243,6 +275,26 @@
 		</div>
 		
 		
+		<div id="main-nav-tabs-baixo" class="hidden-phone" style="display: none">
+			<div class="container">
+				<div class="navbar">
+					<ul class="nav">
+					  <li class=""><a></a></li>
+					  <li class=""><a></a></li>
+					  <li class=""><a></a></li>
+					  <li class=""><a></a></li>
+					  <li class=""><a>UNIDADES:</a></li>
+					  <li><a>LEILÕES DO LEILOEIRO - GOIÂNIA</a></li>
+					  <li><a>LEILÕES DO LEILOEIRO - BRASILIA</a></li>
+					  <li><a>LEILÕES DO LEILOEIRO - UBERLANDIA</a></li>
+					</ul>
+					
+					
+				</div>
+			</div>
+		</div>
+		
+		
 		
 		<div class="footer">
 			<div class="container">
@@ -308,21 +360,9 @@
 				<div class="copy">Copyright © Mega Leilões 2013. Todos os direitos reservados.</div>
 			</div>
 			
-		</div>
-		
-		
-		
-		
+		</div>		
 	
 	</div>
-		
 	
-		
-	
-	
-	
-	
-	
-        
     </body>
 </html>

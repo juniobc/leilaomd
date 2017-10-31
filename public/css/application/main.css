@@ -1,5 +1,32 @@
 /*Adicionado por Sebastião Junio*/
 
+#menu-phone .nav-stacked{
+	background-color:#009cd7;
+	cursor:pointer;
+}
+
+#menu-phone .nav-tabs>li>a{
+	color: #fff !important;
+    background-color: #009cd7;
+}
+
+#menu-phone .nav-tabs>.active>a, .nav-tabs>.active>a:hover, .nav-tabs>.active>a:focus{
+	color: #fff;
+    background-color: #009cd7;
+}
+
+#menu-phone .nav-tabs.nav-stacked>li>a:hover, .nav-tabs.nav-stacked>li>a:focus{
+	
+	color: #fff !important;
+    background-color: #009cd7;
+	
+}
+
+
+#menu-phone .nav>li>a:hover, .nav>li>a:focus{
+	color: #fff !important;
+    background-color: #009cd7;
+}
 
 .margem{
 	margin:10px 10px 10px 10px;
@@ -31,7 +58,10 @@
 
 .box_color{
 	
-	background-color: #F7F7F7;
+	/*background-color: #F7F7F7;*/
+	background-color: yellow;
+	text-align: justify;
+	text-justify: inter-word;
 	
 }
 
@@ -1523,8 +1553,9 @@ select:focus:invalid:focus {
     box-shadow: 0 0 6px #f8b9b7
 }
 .form-actions {
-    padding: 20px 0;
-    margin-bottom: 20px;
+	margin-top:15px;
+    /*padding: 20px 0;
+    margin-bottom: 20px;*/
     zoom: 1
 }
 .form-actions:before,
@@ -3125,7 +3156,7 @@ input[type=submit].btn.btn-mini {
 .nav-tabs>.active>a,
 .nav-tabs>.active>a:hover,
 .nav-tabs>.active>a:focus {
-    color: #555;
+    color: #555 !important;
     background-color: #fff;
     border: 1px solid #ddd;
     border-bottom-color: transparent;
@@ -9271,6 +9302,11 @@ body {
     border: 1px solid #00adef;
     border-bottom-width: 0;
 }
+#main-nav-tabs-baixo {
+    background-color: #00adef;
+	margin-top:30px;
+    margin-bottom: 30px
+}
 #main-nav-tabs {
     background-color: #00adef;
 	margin-top:30px;
@@ -9445,7 +9481,7 @@ span.cat-1::before {
     margin-bottom: 4px;
 }
 .search-categories form {
-    margin-top: 15px;
+    margin-top: 0px;
 }
 .search-categories .btn-block {
     border: 1px solid #008BBF;
