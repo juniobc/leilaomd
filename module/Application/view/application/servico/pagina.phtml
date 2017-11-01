@@ -51,14 +51,19 @@
 	
 	<div class="span4">
 		
-		<div class="label label-success" style="padding: 10px; font-size: 12px; display: block; margin-bottom: 10px;">
+		<div class="label label-success marcador hidden-phone" >
 			<span>Quero Saber Mais</span>
-		</div>		
+		</div>
 		
-		<form class="form-vertical " id="contact-form" action="/contato" method="post" style="padding:10px">
+		<div class="label label-success marcador visible-phone" style="margin-top:20px" >
+			<span>Quero Saber Mais</span>
+		</div>	
+		
+		<form class="form-vertical " id="contact-form" action="/contato" method="post">
 			
 			<label for="unidade" class="required"><b>Unidade</b></label>
-			<select name="" id="unidade" style="width:350px">
+			<!--select name="" id="unidade" style="width:320px">-->
+			<select class="span3" name="" id="unidade">
 			
 				<option value="">Selecione uma Unidade</option>
 				<option value="">2</option>
@@ -70,7 +75,8 @@
 			</select>
 
 			<label for="Contact_email" class="required"><b>Serviço</b></label>
-			<select name="" id="unidade" style="width:350px">
+			<!--select name="" id="unidade" style="width:320px">-->
+			<select class="span3" name="" id="unidade">
 			
 				<option value="">Selecione um Serviço</option>
 				<option value="">2</option>
@@ -82,7 +88,8 @@
 			</select>
 			
 			<label for="Contact_email" class="required"><b>Onde conheceu o Serviço</b></label>
-			<select name="" id="unidade" style="width:350px">
+			<!--select name="" id="unidade" style="width:320px">-->
+			<select class="span3" name="" id="unidade">
 			
 				<option value="">Selecione</option>
 				<option value="">2</option>
@@ -94,19 +101,23 @@
 			</select>
 			
 			<label for="Contact_name" class="required"><b>Nome</b></label>
-			<input class="span3" name="Contact[name]" id="Contact_name" type="text" style="width:340px">
+			<!--<input class="span3" name="Contact[name]" id="Contact_name" type="text" style="width:310px">-->
+			<input class="span3" name="Contact[name]" id="Contact_name" type="text">
 			<span class="help-block error" id="Contact_name_em_" style="display: none"></span>
 			
 			<label for="Contact_name" class="required"><b>Sobrenome</b></label>
-			<input class="span3" name="Contact[name]" id="Contact_name" type="text" style="width:340px">
+			<!--<input class="span3" name="Contact[name]" id="Contact_name" type="text" style="width:310px">-->
+			<input class="span3" name="Contact[name]" id="Contact_name" type="text">
 			<span class="help-block error" id="Contact_name_em_" style="display: none"></span>
 			
 			<label for="Contact_name" class="required"><b>Email</b></label>
-			<input class="span3" name="Contact[name]" id="Contact_name" type="text" style="width:340px">
+			<!--<input class="span3" name="Contact[name]" id="Contact_name" type="text" style="width:310px">-->
+			<input class="span3" name="Contact[name]" id="Contact_name" type="text">
 			<span class="help-block error" id="Contact_name_em_" style="display: none"></span>
 			
 			<label for="Contact_name" class="required"><b>Telefone</b></label>
-			<input class="span3" name="Contact[name]" id="Contact_name" type="text" style="width:340px">
+			<!--<input class="span3" name="Contact[name]" id="Contact_name" type="text" style="width:310px">-->
+			<input class="span3" name="Contact[name]" id="Contact_name" type="text">
 			<span class="help-block error" id="Contact_name_em_" style="display: none"></span>
 			
 			<div class="form-actions">
@@ -121,8 +132,8 @@
 			<span>Atendemos</span>
 		</div>	
 		
-		<div class="right-text px-3">
-			<p class="card-text">
+		<div class="right-text px-3 box_color">
+			<p class="card-text margem">
 			
 				Goiânia, Águas Lindas, Anápolis, Aparecida de Goiânia, Caldas Novas, Catalão, Ceres, Cidade Oriental, Cristalina, Formosa, Goianésia,
 				Goiás, Goiatuba, Inhumas, Ipameri, Ipóra, Itaberaí, Itumbiara, Jaraguá, Jataí, Jussara, Luziânia, Mineiros, Minaçu, Morrinhos, Niquelândia,

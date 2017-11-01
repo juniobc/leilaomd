@@ -1,5 +1,20 @@
 /*Adicionado por Sebastião Junio*/
 
+.marcador{	
+	padding: 10px !important; 
+	font-size: 12px !important; 
+	display: block !important; 
+	margin-bottom: 10px !important;	
+}
+
+.marcador-topo{
+	padding: 10px !important; 
+	font-size: 12px !important; 
+	display: block !important; 
+	margin-bottom: 10px !important;	
+	margin-top:20px !important;
+}
+
 #menu-phone .nav-stacked{
 	background-color:#009cd7;
 	cursor:pointer;
@@ -29,15 +44,15 @@
 }
 
 .margem{
-	margin:10px 10px 10px 10px;
+	padding:10px 10px 10px 10px;
 	text-align: justify;
 	text-justify: inter-word;
 }
 
 .fundo_classes {
-    margin-top: 7px;
+    margin-top: 12px;
     background-color: #DDDDDD;
-    padding: 12px;
+    /*padding: 12px;*/
     width: 100%;
 }
 
@@ -56,10 +71,19 @@
 	
 }
 
+.box_color2{
+	
+	background-color: #DDDDDD;
+	/*background-color: yellow;*/
+	text-align: justify;
+	text-justify: inter-word;
+	
+}
+
 .box_color{
 	
-	/*background-color: #F7F7F7;*/
-	background-color: yellow;
+	background-color: #F7F7F7;
+	/*background-color: yellow;*/
 	text-align: justify;
 	text-justify: inter-word;
 	
