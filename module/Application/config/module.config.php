@@ -73,6 +73,16 @@ return [
                     ],
                 ],
             ],
+			'empresa' => [
+                'type' => Literal::class,
+                'options' => [
+                    'route'    => '/empresa',
+                    'defaults' => [
+                        'controller' => Controller\EmpresaController::class,
+                        'action'     => 'index',
+                    ],
+                ],
+            ],
         ],
     ],
     'controllers' => [
@@ -82,6 +92,7 @@ return [
 			Controller\LeilaoController::class => InvokableFactory::class,
 			Controller\BlogController::class => InvokableFactory::class,
 			Controller\ServicoController::class => InvokableFactory::class,
+			Controller\EmpresaController::class => InvokableFactory::class,
         ],
     ],
     'view_manager' => [
