@@ -1,3 +1,5 @@
+<div class="container">
+
 <div style="margin-bottom: 20px;" class="hidden-phone carousel slide" id="main-carousel">
 	<ol class="carousel-indicators">
 		<li data-target="#main-carousel" data-slide-to="0" class=""></li>
@@ -93,47 +95,132 @@
 
 </div>
 
+</div>
 
-<div id="main-nav-tabs">
+<div id="main-nav-tabs" class="hidden-phone">
+	<div class="container">
+					<div class="search-categories " style="width:119%">
+						<form class="form-vertical " id="search-simple-form" action="/search/index" method="GET">
+							<div class="row-fluid">
+								<div class="span2">
+									<select class="span12" name="Search[category]" id="Search_category">
+										<option value="">Tipo de Leilão</option>
+										<option value="outros">Outros</option>
+									</select>    
+								</div>
+								<div class="span2">
+									<select class="span12" disabled="disabled" name="Search[subcategory]" id="Search_subcategory">
+										<option value="">Estado</option>
+									</select>    
+								</div>
+								<div class="span2">
+									<select class="span12" name="Search[state]" id="Search_state">
+									<option value="">Cidade</option>
+									</select>    
+								</div>
+
+								<div class="span2">
+									<select class="span12" disabled="disabled" name="Search[city]" id="Search_city">
+									<option value="">Bairro</option>
+									</select>    
+								</div>
+
+								<div class="span2" style="margin-top:20px">
+								<button class="btn btn-block btn-primary" type="submit" id="fast-search"><i class="icon-white icon-search" style="font-size: 14px;"></i> Filtrar</button>
+								</div>
+							</div>
+							
+							<div class="row-fluid">
+								<div class="span2">
+									<select class="span12" name="Search[category]" id="Search_category">
+										<option value="">Status do Leilao</option>
+										<option value="outros">Outros</option>
+									</select>    
+								</div>
+								<div class="span2">
+									<select class="span12" name="Search[state]" id="Search_state">
+									<option value="">Produto</option>
+									</select>    
+								</div>
+
+								<div class="span2">
+									<select class="span12" disabled="disabled" name="Search[city]" id="Search_city">
+									<option value="">Categoria</option>
+									</select>    
+								</div>
+								
+								<div class="span2">
+									<select class="span12" disabled="disabled" name="Search[city]" id="Search_city">
+									<option value="">Sub Categoria</option>
+									</select>    
+								</div>
+							
+							</div>
+
+						</form>
+					</div>
+	</div>
+</div>
+
+
+<div id="main-nav-tabs" class="visible-phone">
 	<div class="container">
 		<div id="sti">
 			<div class="tab-content">
 				<div id="sti_tab_1" class="tab-pane fade active in">
-					<div class="search-categories" style="">
-						<form class="form-vertical" id="search-simple-form" action="/search/index" method="GET">
+					<div class="search-categories " style="">
+						<form class="form-vertical " id="search-simple-form" action="/search/index" method="GET">
 							<div class="row-fluid">
-							<div class="span2">
-								<select class="span12" name="Search[category]" id="Search_category">
-									<option value="">Tipo de Leilão</option>
-									<option value="outros">Outros</option>
-								</select>    
-							</div>
-							<div class="span2">
-								<select class="span12" disabled="disabled" name="Search[subcategory]" id="Search_subcategory">
-									<option value="">Status do Leilao</option>
-								</select>    
-							</div>
-							<div class="span2">
-								<select class="span12" name="Search[state]" id="Search_state">
-								<option value="">Produto</option>
-								</select>    
-							</div>
+								<div class="span2">
+									<select class="span12" name="Search[category]" id="Search_category">
+										<option value="">Tipo de Leilão</option>
+										<option value="outros">Outros</option>
+									</select>    
+								</div>
+								<div class="span2">
+									<select class="span12" disabled="disabled" name="Search[subcategory]" id="Search_subcategory">
+										<option value="">Estado</option>
+									</select>    
+								</div>
+								<div class="span2">
+									<select class="span12" name="Search[state]" id="Search_state">
+									<option value="">Cidade</option>
+									</select>    
+								</div>
 
-							<div class="span2">
-								<select class="span12" disabled="disabled" name="Search[city]" id="Search_city">
-								<option value="">Categoria</option>
-								</select>    
-							</div>
-							
-							<div class="span2">
-								<select class="span12" disabled="disabled" name="Search[city]" id="Search_city">
-								<option value="">Cidade</option>
-								</select>    
-							</div>
+								<div class="span2">
+									<select class="span12" disabled="disabled" name="Search[city]" id="Search_city">
+									<option value="">Bairro</option>
+									</select>    
+								</div>
+								
+								<div class="span2">
+									<select class="span12" name="Search[category]" id="Search_category">
+										<option value="">Status do Leilao</option>
+										<option value="outros">Outros</option>
+									</select>    
+								</div>
+								<div class="span2">
+									<select class="span12" name="Search[state]" id="Search_state">
+									<option value="">Produto</option>
+									</select>    
+								</div>
 
-							<div class="span2">
-							<button class="btn btn-block btn-primary" type="submit" id="fast-search"><i class="icon-white icon-search" style="font-size: 14px;"></i> Filtrar</button>
-							</div>
+								<div class="span2">
+									<select class="span12" disabled="disabled" name="Search[city]" id="Search_city">
+									<option value="">Categoria</option>
+									</select>    
+								</div>
+								
+								<div class="span2">
+									<select class="span12" disabled="disabled" name="Search[city]" id="Search_city">
+									<option value="">Sub Categoria</option>
+									</select>    
+								</div>
+
+								<div class="span2" style="margin-top:20px">
+								<button class="btn btn-block btn-primary" type="submit" id="fast-search"><i class="icon-white icon-search" style="font-size: 14px;"></i> Filtrar</button>
+								</div>
 							</div>
 
 						</form>
@@ -144,6 +231,7 @@
 	</div>
 </div>
 
+<div id="content" class="container">
 
 <div class="cards-list-alt" id="batches-list">
 
@@ -478,225 +566,275 @@
 </div>
 
 
-<div class="hidden-phone" id="">
+	<div class="hidden-phone" id="">
 
-	<div class="top">
-	
-		<div><h3>Pesquisa Rapida</h3></div>
+		<div class="top">
 		
-		<hr class="divisão_hr">
+			<div><h3>Pesquisa Rapida</h3></div>
+			
+			<hr class="divisão_hr">
+
+		</div>
+		
+		<div class="row " style="margin-top:20px ">
+			
+			<div class="span2 text-center box_color2" style="height:45px">
+				<div class="fundo_classes" style="">
+					<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
+					<span style="cursor: pointer; margin-top:20px">Leiloes Judiciais</span>
+					</b></font>
+				</div>
+			</div>
+			
+			<div class="span2 text-center box_color2" style="height:45px">
+				<div class="fundo_classes" style="">
+					<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
+					<span style="cursor: pointer; margin-top:20px">Leiloes Judiciais</span>
+					</b></font>
+				</div>
+			</div>
+			
+			<div class="span2 text-center box_color2" style="height:45px">
+				<div class="fundo_classes" style="">
+					<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
+					<span style="cursor: pointer; margin-top:20px">Leiloes Judiciais</span>
+					</b></font>
+				</div>
+			</div>
+			
+			<div class="span2 text-center box_color2" style="height:45px">
+				<div class="fundo_classes" style="">
+					<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
+					<span style="cursor: pointer; margin-top:20px">Leiloes Judiciais</span>
+					</b></font>
+				</div>
+			</div>
+			
+			<div class="span2 text-center box_color2" style="height:45px">
+				<div class="fundo_classes" style="">
+					<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
+					<span style="cursor: pointer; margin-top:20px">Leiloes Judiciais</span>
+					</b></font>
+				</div>
+			</div>
+			
+			<div class="span2 text-center box_color2" style="height:45px">
+				<div class="fundo_classes" style="">
+					<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
+					<span style="cursor: pointer; margin-top:20px">Leiloes Judiciais</span>
+					</b></font>
+				</div>
+			</div>
+		
+		</div>
+		
+		<div class="row " style="margin-top:20px ">
+			
+			<div class="span2 text-center box_color2" style="height:45px">
+				<div class="fundo_classes" style="">
+					<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
+					<span style="cursor: pointer; margin-top:20px">Leiloes Judiciais</span>
+					</b></font>
+				</div>
+			</div>
+			
+			<div class="span2 text-center box_color2" style="height:45px">
+				<div class="fundo_classes" style="">
+					<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
+					<span style="cursor: pointer; margin-top:20px">Leiloes Judiciais</span>
+					</b></font>
+				</div>
+			</div>
+			
+			<div class="span2 text-center box_color2" style="height:45px">
+				<div class="fundo_classes" style="">
+					<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
+					<span style="cursor: pointer; margin-top:20px">Leiloes Judiciais</span>
+					</b></font>
+				</div>
+			</div>
+			
+			<div class="span2 text-center box_color2" style="height:45px">
+				<div class="fundo_classes" style="">
+					<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
+					<span style="cursor: pointer; margin-top:20px">Leiloes Judiciais</span>
+					</b></font>
+				</div>
+			</div>
+			
+			<div class="span2 text-center box_color2" style="height:45px">
+				<div class="fundo_classes" style="">
+					<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
+					<span style="cursor: pointer; margin-top:20px">Leiloes Judiciais</span>
+					</b></font>
+				</div>
+			</div>
+			
+			<div class="span2 text-center box_color2" style="height:45px">
+				<div class="fundo_classes" style="">
+					<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
+					<span style="cursor: pointer; margin-top:20px">Leiloes Judiciais</span>
+					</b></font>
+				</div>
+			</div>
+		
+		</div>
+		
+		<div class="row " style="margin-top:20px ">
+			
+			<div class="span2 text-center box_color2" style="height:45px">
+				<div class="fundo_classes" style="">
+					<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
+					<span style="cursor: pointer; margin-top:20px">Leiloes Judiciais</span>
+					</b></font>
+				</div>
+			</div>
+			
+			<div class="span2 text-center box_color2" style="height:45px">
+				<div class="fundo_classes" style="">
+					<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
+					<span style="cursor: pointer; margin-top:20px">Leiloes Judiciais</span>
+					</b></font>
+				</div>
+			</div>
+			
+			<div class="span2 text-center box_color2" style="height:45px">
+				<div class="fundo_classes" style="">
+					<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
+					<span style="cursor: pointer; margin-top:20px">Leiloes Judiciais</span>
+					</b></font>
+				</div>
+			</div>
+			
+			<div class="span2 text-center box_color2" style="height:45px">
+				<div class="fundo_classes" style="">
+					<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
+					<span style="cursor: pointer; margin-top:20px">Leiloes Judiciais</span>
+					</b></font>
+				</div>
+			</div>
+			
+			<div class="span2 text-center box_color2" style="height:45px">
+				<div class="fundo_classes" style="">
+					<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
+					<span style="cursor: pointer; margin-top:20px">Leiloes Judiciais</span>
+					</b></font>
+				</div>
+			</div>
+			
+			<div class="span2 text-center box_color2" style="height:45px">
+				<div class="fundo_classes" style="">
+					<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
+					<span style="cursor: pointer; margin-top:20px">Leiloes Judiciais</span>
+					</b></font>
+				</div>
+			</div>
+		
+		</div>
+	</div>
+
+	<div class="visible-phone" id="">
+
+		<div class="top">
+		
+			<div><h3>Pesquisa Rapida</h3></div>
+			
+			<hr class="divisão_hr">
+
+		</div>
+		
+		<div class="row box_color2" style="margin-top:20px; height:45px">
+			
+			<div class="span12 text-center box_color2" >
+				<div class="fundo_classes" style="">
+					<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
+					<span style="cursor: pointer;">Leiloes Judiciais</span>
+					</b></font>
+				</div>
+			</div>
+			
+		
+		</div>
+		
+		<div class="row box_color2" style="margin-top:20px; height:45px">
+			
+			<div class="span12 text-center box_color2" >
+				<div class="fundo_classes" style="">
+					<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
+					<span style="cursor: pointer;">Leiloes Judiciais</span>
+					</b></font>
+				</div>
+			</div>
+			
+		
+		</div>
+		
+		<div class="row box_color2" style="margin-top:20px; height:45px">
+			
+			<div class="span12 text-center box_color2" >
+				<div class="fundo_classes" style="">
+					<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
+					<span style="cursor: pointer;">Leiloes Judiciais</span>
+					</b></font>
+				</div>
+			</div>
+			
+		
+		</div>
+		
+		<div class="row box_color2" style="margin-top:20px; height:45px">
+			
+			<div class="span12 text-center box_color2" >
+				<div class="fundo_classes" style="">
+					<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
+					<span style="cursor: pointer;">Leiloes Judiciais</span>
+					</b></font>
+				</div>
+			</div>
+			
+		
+		</div>
+		
+		<div class="row box_color2" style="margin-top:20px; height:45px">
+			
+			<div class="span12 text-center box_color2" >
+				<div class="fundo_classes" style="">
+					<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
+					<span style="cursor: pointer;">Leiloes Judiciais</span>
+					</b></font>
+				</div>
+			</div>
+			
+		
+		</div>
+		
+		<div class="row box_color2" style="margin-top:20px; height:45px">
+			
+			<div class="span12 text-center box_color2" >
+				<div class="fundo_classes" style="">
+					<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
+					<span style="cursor: pointer;">Leiloes Judiciais</span>
+					</b></font>
+				</div>
+			</div>
+			
+		
+		</div>
+		
+		<div class="row box_color2" style="margin-top:20px; height:45px">
+			
+			<div class="span12 text-center box_color2" >
+				<div class="fundo_classes" style="">
+					<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
+					<span style="cursor: pointer;">Leiloes Judiciais</span>
+					</b></font>
+				</div>
+			</div>
+			
+		
+		</div>
 
 	</div>
-	
-	<div class="row " style="margin-top:20px ">
-        
-		<div class="span3 text-center box_color2" style="height:45px">
-			<div class="fundo_classes" style="">
-				<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
-				<span style="cursor: pointer; margin-top:20px">Leiloes Judiciais</span>
-				</b></font>
-			</div>
-		</div>
-		
-		<div class="span3 text-center box_color2" style="height:45px">
-			<div class="fundo_classes" style="">
-				<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
-				<span style="cursor: pointer; margin-top:20px">Leiloes Judiciais</span>
-				</b></font>
-			</div>
-		</div>
-		
-		<div class="span3 text-center box_color2" style="height:45px">
-			<div class="fundo_classes" style="">
-				<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
-				<span style="cursor: pointer; margin-top:20px">Leiloes Judiciais</span>
-				</b></font>
-			</div>
-		</div>
-		
-		<div class="span3 text-center box_color2" style="height:45px">
-			<div class="fundo_classes" style="">
-				<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
-				<span style="cursor: pointer; margin-top:20px">Leiloes Judiciais</span>
-				</b></font>
-			</div>
-		</div>
-    
-    </div>
-	
-	<div class="row " style="margin-top:20px">
-        
-		<div class="span3 text-center box_color2" style="height:45px">
-			<div class="fundo_classes" style="">
-				<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
-				<span style="cursor: pointer; margin-top:20px">Leiloes Judiciais</span>
-				</b></font>
-			</div>
-		</div>
-		
-		<div class="span3 text-center box_color2" style="height:45px">
-			<div class="fundo_classes" style="">
-				<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
-				<span style="cursor: pointer; margin-top:20px">Leiloes Judiciais</span>
-				</b></font>
-			</div>
-		</div>
-		
-		<div class="span3 text-center box_color2" style="height:45px">
-			<div class="fundo_classes" style="">
-				<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
-				<span style="cursor: pointer; margin-top:20px">Leiloes Judiciais</span>
-				</b></font>
-			</div>
-		</div>
-		
-		<div class="span3 text-center box_color2" style="height:45px">
-			<div class="fundo_classes" style="">
-				<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
-				<span style="cursor: pointer; margin-top:20px">Leiloes Judiciais</span>
-				</b></font>
-			</div>
-		</div>
-    
-    </div>
-	
-	<div class="row " style="margin-top:20px">
-        
-		<div class="span3 text-center box_color2" style="height:45px">
-			<div class="fundo_classes" style="">
-				<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
-				<span style="cursor: pointer; margin-top:20px">Leiloes Judiciais</span>
-				</b></font>
-			</div>
-		</div>
-		
-		<div class="span3 text-center box_color2" style="height:45px">
-			<div class="fundo_classes" style="">
-				<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
-				<span style="cursor: pointer; margin-top:20px">Leiloes Judiciais</span>
-				</b></font>
-			</div>
-		</div>
-		
-		<div class="span3 text-center box_color2" style="height:45px">
-			<div class="fundo_classes" style="">
-				<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
-				<span style="cursor: pointer; margin-top:20px">Leiloes Judiciais</span>
-				</b></font>
-			</div>
-		</div>
-		
-		<div class="span3 text-center box_color2" style="height:45px">
-			<div class="fundo_classes" style="">
-				<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
-				<span style="cursor: pointer; margin-top:20px">Leiloes Judiciais</span>
-				</b></font>
-			</div>
-		</div>
-    
-    </div>
-</div>
-
-<div class="visible-phone" id="">
-
-	<div class="top">
-	
-		<div><h3>Pesquisa Rapida</h3></div>
-		
-		<hr class="divisão_hr">
-
-	</div>
-	
-	<div class="row box_color2" style="margin-top:20px; height:45px">
-        
-		<div class="span12 text-center box_color2" >
-			<div class="fundo_classes" style="">
-				<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
-				<span style="cursor: pointer;">Leiloes Judiciais</span>
-				</b></font>
-			</div>
-		</div>
-		
-    
-    </div>
-	
-	<div class="row box_color2" style="margin-top:20px; height:45px">
-        
-		<div class="span12 text-center box_color2" >
-			<div class="fundo_classes" style="">
-				<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
-				<span style="cursor: pointer;">Leiloes Judiciais</span>
-				</b></font>
-			</div>
-		</div>
-		
-    
-    </div>
-	
-	<div class="row box_color2" style="margin-top:20px; height:45px">
-        
-		<div class="span12 text-center box_color2" >
-			<div class="fundo_classes" style="">
-				<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
-				<span style="cursor: pointer;">Leiloes Judiciais</span>
-				</b></font>
-			</div>
-		</div>
-		
-    
-    </div>
-	
-	<div class="row box_color2" style="margin-top:20px; height:45px">
-        
-		<div class="span12 text-center box_color2" >
-			<div class="fundo_classes" style="">
-				<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
-				<span style="cursor: pointer;">Leiloes Judiciais</span>
-				</b></font>
-			</div>
-		</div>
-		
-    
-    </div>
-	
-	<div class="row box_color2" style="margin-top:20px; height:45px">
-        
-		<div class="span12 text-center box_color2" >
-			<div class="fundo_classes" style="">
-				<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
-				<span style="cursor: pointer;">Leiloes Judiciais</span>
-				</b></font>
-			</div>
-		</div>
-		
-    
-    </div>
-	
-	<div class="row box_color2" style="margin-top:20px; height:45px">
-        
-		<div class="span12 text-center box_color2" >
-			<div class="fundo_classes" style="">
-				<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
-				<span style="cursor: pointer;">Leiloes Judiciais</span>
-				</b></font>
-			</div>
-		</div>
-		
-    
-    </div>
-	
-	<div class="row box_color2" style="margin-top:20px; height:45px">
-        
-		<div class="span12 text-center box_color2" >
-			<div class="fundo_classes" style="">
-				<font class="font_protudo" style="margin-top:20px" face="arial" ><b>
-				<span style="cursor: pointer;">Leiloes Judiciais</span>
-				</b></font>
-			</div>
-		</div>
-		
-    
-    </div>
 
 </div>
 
