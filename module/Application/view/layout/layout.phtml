@@ -47,17 +47,27 @@
 	
 	<div id="page">
 	
-		<div id="main-nav-tabs" class="hidden-phone" style="margin-top:0px">
+		<div id="main-nav-tabs" class="hidden-phone menu_topo" style="margin-top:0px; margin-bottom:16px">
 			<div class="container">
 				<div class="navbar">					
 					<ul class="nav pull-right">
-					  <li style="line-height:10px"><a href="/" style="font-size:10px">PORTAL DO CLIENTE</a></li>
-					  <li style="line-height:10px"><a href="/" style="font-size:10px">OUVIDORIA</a></li>
-					  <li style="line-height:10px"><a href="/" style="font-size:10px">PORTAL DO COLABORADOR</a></li>
-					  <li style="line-height:10px"><a href="/" style="font-size:10px">TRABALHE CONOSCO</a></li>
+					  <li><a href="/portal">PORTAL DO CLIENTE</a></li>
+					  <li><a href="/ouvidoria">OUVIDORIA</a></li>
+					  <li><a href="/colaborador">PORTAL DO COLABORADOR</a></li>
+					  <li><a href="/fale">TRABALHE CONOSCO</a></li>
 					</ul>
 				</div>
 			</div>
+		</div>
+		
+		<div id="menu-phone" class="visible-phone">
+		
+			<div class="container">
+				<ul class="nav nav-tabs nav-stacked text-center">
+					<li class=""><a href="/portal">Portal do Cliente</a></li>
+				</ul>		
+			</div>
+		
 		</div>
 	
 		<div id="main-nav">
@@ -134,12 +144,12 @@
 		</div>
 		
 		
-		<div id="main-nav-tabs" class="hidden-phone">
-			<div class="container">
-				<div class="navbar">
+		<div id="main-nav-tabs" class="hidden-phone" style="margin-top:-5px">
+			<div class="container" style="height:50px">
+				<div class="navbar" style="margin-top:5px">
 					<ul class="nav">
 
-						<li class=""><a href="#">NOSSOS SITES:</a></li>
+						<li class="rm_border"><a href="#">NOSSOS SITES:</a></li>
 						<li>
 						<div class="btn-toolbar">
 						<div class="btn-group">
@@ -180,9 +190,8 @@
 					<li><a href="/leilao">Leilões</a></li>
 					<li><a href="/blog">Blog</a></li>
 					<li><a href="/contato">Contato</a></li>
-					<li style="text-align:left; color:white"><a>
-						Nossos Sites: 
-						<select style="margin-left:10px; width:216px">
+					<li style="color:white"><a>
+						<select class="" style="width:100%">
 						
 							<option>Leilão MD</option>
 							<option>Leilão MD</option>
@@ -199,102 +208,12 @@
 			</div>
 		
 		</div>
-		
-		
-		
-		
-		<!--<div id="main-nav-tabs">
-			<div class="container">
-				<div id="sti">
-					<ul id="yw5" class="nav nav-tabs">
-						<li class="active"><a href="/">INICIO</a></li>
-						<li><a href="/empresa">EMPRESA</a></li>
-						<li><a href="/servicos">SERVIÇOS</a></li>
-						<li><a href="/leilao">LEILÕES</a></li>
-						<li><a href="/blog">BLOG</a></li>
-						<li><a href="/contato">CONTATO</a></li>
-						<li title="Entrar" class="pull-right hidden-desktop"><a href="/login"><i class="icon-signin"></i> </a></li>
-					</ul>
-					<div class="tab-content">
-						<div id="sti_tab_1" class="tab-pane fade active in">
-							<div class="search-categories" style="">
-								<form class="form-vertical" id="search-simple-form" action="/search/index" method="GET">
-									<div class="row-fluid">
-									<div class="span3">
-									<select class="span12" name="Search[category]" id="Search_category">
-									<option value="">Todas as categorias</option>
-									<option value="imoveis">Imóveis</option>
-									<option value="veiculos">Veículos</option>
-									<option value="industrial">Industrial</option>
-									<option value="bens-de-consumo">Bens de Consumo</option>
-									<option value="outros">Outros</option>
-									</select>    </div>
-									<div class="span3">
-									<select class="span12" disabled="disabled" name="Search[subcategory]" id="Search_subcategory">
-									<option value="">Todas subcategorias</option>
-									</select>    </div>
-									<div class="span2">
-									<select class="span12" name="Search[state]" id="Search_state">
-									<option value="">Todos os Estados</option>
-									<option value="ce">Ceará</option>
-									<option value="df">Distrito Federal</option>
-									<option value="go">Goiás</option>
-									<option value="mt">Mato Grosso</option>
-									<option value="ms">Mato Grosso do Sul</option>
-									<option value="mg">Minas Gerais</option>
-									<option value="pa">Pará</option>
-									<option value="pb">Paraíba</option>
-									<option value="pr">Paraná</option>
-									<option value="pi">Piauí</option>
-									<option value="rj">Rio de Janeiro</option>
-									<option value="rs">Rio Grande do Sul</option>
-									<option value="sp">São Paulo</option>
-									<option value="se">Sergipe</option>
-									</select>    </div>
-
-									<div class="span2">
-									<select class="span12" disabled="disabled" name="Search[city]" id="Search_city">
-									<option value="">Todas as cidades</option>
-									</select>    </div>
-
-									<div class="span2">
-									<button class="btn btn-block btn-primary" type="submit" id="fast-search"><i class="icon-white icon-search" style="font-size: 14px;"></i> Filtrar</button>
-									</div>
-									</div>
-
-								</form>
-							</div>
-						</div>
-						<div id="sti_tab_2" class="tab-pane fade"><form class="inline-form form-vertical" id="search-text-form" action="/pesquisa/text" method="GET">
-						<div class="row-fluid">
-						<div class="span10"><input placeholder="Busca por palavra chave. Ex: Código do leilão; Código do lote; Rua; Bairro; Cidade; Categoria; Subcategoria; Outros..." class="span12" maxlength="255" name="Search[q]" id="Search_q" type="text"></div>
-						<div class="span2">
-						<input type="hidden" value="2" name="type" id="type">        <button class="btn btn-block btn-primary" type="submit"><i class="icon-white icon-search"></i> BUSCAR</button>
-						</div>
-						</div>
-
-						</form>
-						</div>
-						<div id="sti_tab_3" class="tab-pane fade"></div>
-						<div id="sti_tab_4" class="tab-pane fade"></div>
-						<div id="sti_tab_5" class="tab-pane fade"></div>
-					</div>
-				</div> 
-			</div>
-		</div>-->
-		
-		
-		
+				
 			<?= $this->content ?>
 		
-		</div>
+		</div>		
 		
-		
-		
-		
-		
-		
-		<div class="footer">
+		<div class="footer hidden-phone">
 			<div class="container">
 				<div class="row">
 					<div class="span2">
@@ -340,37 +259,158 @@
 							<li class="title">PORTAL DO CLIENTE</li>
 							<li><a href="/">CADASTRA-SE</a></li>
 							<li><a href="/">FAZER LOGIN</a></li>
-							<li class="title">SUPORTE</li>
+							<li class="title" style="margin-top:20px">SUPORTE</li>
 							<li><a href="/">REGRAS BASICAS</a></li>
 							<li><a href="/">DUVIDAS FREQUENTES</a></li>
 							<li><a href="/">SEGURANÇA</a></li>
 						</ul>
 					</div>
-					<div class="span2">
-						<ul>
+					<div class="span2 wrapper">
+						<ul class="midia_social social-icons icon-rounded  list-unstyled list-inline" style="list-style-type: none;">
 							<li class="title">Nossos canais</li>
 							<li>
-								<i class="icon icon-facebook-sign"></i> 
+								<!--<i class="icon icon-facebook-sign"></i>-->
+								<a href="#"><i class="fa fa-facebook"></i>
 								<a href="/" target="_blank">FACEBOOK</a>
 							</li>
 							<li>
-								<i class="icon icon-instagram"></i> 
+								<!--<i class="icon icon-instagram"></i>-->
+								<a href="#"><i class="fa fa-instagram"></i></a>
 								<a href="/" target="_blank">INSTAGRAM</a>
 							</li>
 							<li>
-								<i class="icon icon-google-plus"></i> 
+								<!--<i class="icon icon-google-plus"></i>-->
+								<a href="#"><i class="fa fa-google-plus"></i></a>
 								<a href="/" target="_blank">GOOGLE PLUS</a>
 							</li>
 							<li>
-								<i class="icon icon-youtube-play"></i> 
+								<!--<i class="icon icon-youtube-play"></i>-->
+								<a href="#"><i class="fa fa-youtube-square"></i></a>
 								<a href="/" target="_blank">YouTube</a>
 							</li>
 							<li>
-								<i class="icon icon-pinterest"></i> 
+								<!--<i class="icon icon-pinterest"></i>-->
+								<a href="#"><i class="fa fa-pinterest"></i></a>
 								<a href="/" target="_blank">PINTEREST</a>
 							</li>
 							<li>
+								<!--<i class="icon icon-twitter"></i>-->
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="/" target="_blank">Twitter</a>
+							</li>
+						</ul>
+					</div>
+					
+					<!--<div class="span2">
+						<ul class="midia_social">
+							<li class="title">Nossos canais</li>
+							<li>
+								<i class="icon icon-facebook-sign"></i> 
+								<i class="icon icon-instagram"></i> 
+								<i class="icon icon-google-plus"></i> 
+								<i class="icon icon-youtube-play"></i> 
+								<i class="icon icon-pinterest"></i>
 								<i class="icon icon-twitter"></i> 
+								
+							</li>
+						</ul>
+					</div>-->
+
+					<!--<div class="span2 pull-right">
+						<img src="https://cdn.megaleiloes.com.br/assets/img/poder_judiciario.png" width="134" height="68" 
+						style="margin-right: 30px;" alt="Site e sistema homologado pelo tribunal de justíça." 
+						title="Site e sistema homologado pelo tribunal de justíça." data-toggle="tooltip"><br class="visible-tablet">
+					</div>-->
+				</div>
+				<div class="copy">Copyright © Mega Leilões 2013. Todos os direitos reservados.</div>
+			</div>
+			
+		</div>		
+		
+		
+		<div class="footer text-center visible-phone">
+			<div class="container">
+				<div class="row">
+					<div class="span2">
+						<ul>
+							<li class="title">EMPRESA</li>
+							<li><a href="/empresa">QUEM SOMOS</a></li>
+							<li><a href="/empresa">MISSÃO</a></li>
+							<li><a href="/empresa">VALORES</a></li>
+							<li><a href="/empresa">VISÃO</a></li>
+						</ul>
+					</div>
+					<div class="span2">
+					
+						<ul>
+							<li class="title">LEILÕES</li>
+							<li><a href="/">AERONAVES</a></li>
+							<li><a href="/">VEICULOS</a></li>
+							<li><a href="/">IMOVEIS</a></li>
+							<li><a href="/">EMBARCAÇÕES</a></li>
+						</ul>
+
+					</div>
+					<div class="span2">
+						<ul>
+							<li class="title">SERVIÇO</li>
+							<li><a href="/">VENDA DIRETA</a></li>
+							<li><a href="/">LEILÕES JUDICIAIS</a></li>
+							<li><a href="/">LEILÕES EXTRAS-JUDICIAIS</a></li>
+							<li><a href="/">LEILÕES DE FINANCEIRA</a></li>
+						</ul>
+					</div>
+					<div class="span2">
+						<ul>
+							<li class="title">CONTATO</li>
+							<li><a href="/">ATENDIMENTO ONLINE</a></li>
+							<li><a href="/">QUERO COMPRAR</a></li>
+							<li><a href="/">QUERO VENDER</a></li>
+							<li><a href="/contato">LOCALIZAÇÃO</a></li>
+						</ul>
+					</div>
+					<div class="span2">
+						<ul>
+							<li class="title">PORTAL DO CLIENTE</li>
+							<li><a href="/">CADASTRA-SE</a></li>
+							<li><a href="/">FAZER LOGIN</a></li>
+							<li class="title" style="margin-top:10px">SUPORTE</li>
+							<li><a href="/">REGRAS BASICAS</a></li>
+							<li><a href="/">DUVIDAS FREQUENTES</a></li>
+							<li><a href="/">SEGURANÇA</a></li>
+						</ul>
+					</div>
+					<div class="span2 wrapper text-left">
+						<ul class="midia_social_phone social-icons icon-rounded  list-unstyled list-inline">
+							<li class="title" style="margin-left:30%">Nossos canais</li>
+							<li>
+								<!--<i class="icon icon-facebook-sign"></i>-->
+								<a href="#"><i class="fa fa-facebook"></i>
+								<a href="/" target="_blank">FACEBOOK</a>
+							</li>
+							<li>
+								<!--<i class="icon icon-instagram"></i>-->
+								<a href="#"><i class="fa fa-instagram"></i></a>
+								<a href="/" target="_blank">INSTAGRAM</a>
+							</li>
+							<li>
+								<!--<i class="icon icon-google-plus"></i>-->
+								<a href="#"><i class="fa fa-google-plus"></i></a>
+								<a href="/" target="_blank">GOOGLE PLUS</a>
+							</li>
+							<li>
+								<!--<i class="icon icon-youtube-play"></i>-->
+								<a href="#"><i class="fa fa-youtube-square"></i></a>
+								<a href="/" target="_blank">YouTube</a>
+							</li>
+							<li>
+								<!--<i class="icon icon-pinterest"></i>-->
+								<a href="#"><i class="fa fa-pinterest"></i></a>
+								<a href="/" target="_blank">PINTEREST</a>
+							</li>
+							<li>
+								<!--<i class="icon icon-twitter"></i>-->
+								<a href="#"><i class="fa fa-twitter"></i></a>
 								<a href="/" target="_blank">Twitter</a>
 							</li>
 						</ul>
@@ -385,7 +425,7 @@
 				<div class="copy">Copyright © Mega Leilões 2013. Todos os direitos reservados.</div>
 			</div>
 			
-		</div>		
+		</div>
 	
 	</div>
 	

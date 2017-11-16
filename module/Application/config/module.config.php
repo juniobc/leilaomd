@@ -83,6 +83,46 @@ return [
                     ],
                 ],
             ],
+			'portal' => [
+                'type' => Literal::class,
+                'options' => [
+                    'route'    => '/portal',
+                    'defaults' => [
+                        'controller' => Controller\PortalController::class,
+                        'action'     => 'index',
+                    ],
+                ],
+            ],
+			'ouvidoria' => [
+                'type' => Literal::class,
+                'options' => [
+                    'route'    => '/ouvidoria',
+                    'defaults' => [
+                        'controller' => Controller\OuvidoriaController::class,
+                        'action'     => 'index',
+                    ],
+                ],
+            ],
+			'colaborador' => [
+                'type' => Literal::class,
+                'options' => [
+                    'route'    => '/colaborador',
+                    'defaults' => [
+                        'controller' => Controller\ColaboradorController::class,
+                        'action'     => 'index',
+                    ],
+                ],
+            ],
+			'fale' => [
+                'type' => Literal::class,
+                'options' => [
+                    'route'    => '/fale',
+                    'defaults' => [
+                        'controller' => Controller\FaleController::class,
+                        'action'     => 'index',
+                    ],
+                ],
+            ],
         ],
     ],
     'controllers' => [
@@ -93,6 +133,10 @@ return [
 			Controller\BlogController::class => InvokableFactory::class,
 			Controller\ServicoController::class => InvokableFactory::class,
 			Controller\EmpresaController::class => InvokableFactory::class,
+			Controller\PortalController::class => InvokableFactory::class,
+			Controller\OuvidoriaController::class => InvokableFactory::class,
+			Controller\ColaboradorController::class => InvokableFactory::class,
+			Controller\FaleController::class => InvokableFactory::class,
         ],
     ],
     'view_manager' => [

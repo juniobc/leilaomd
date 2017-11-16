@@ -1,4 +1,6 @@
-
+<link rel="stylesheet" type="text/css"
+     href="<?php echo $this->basePath('css/application/blog_pagina.css'); ?>" />
+	 
 <div id="content" class="container">
 
 <div id="page-batch-detail">
@@ -38,9 +40,19 @@
 			</p>
 		</div>
 		
+		<div id="batch-description" class="box_color" style="line-height: 25px; margin-top:20px">
+			<p class="margem">
+			Palavras chaves Palavras chaves Palavras chaves Palavras chaves Palavras chaves Palavras chaves Palavras chaves Palavras chaves Palavras chaves 
+			Palavras chaves Palavras chaves Palavras chaves Palavras chaves Palavras chaves Palavras chaves Palavras chaves Palavras chaves Palavras chaves 
+			Palavras chaves Palavras chaves Palavras chaves Palavras chaves Palavras chaves Palavras chaves Palavras chaves Palavras chaves Palavras chaves 
+			Palavras chaves Palavras chaves Palavras chaves Palavras chaves Palavras chaves Palavras chaves Palavras chaves Palavras chaves Palavras chaves 
+			Palavras chaves Palavras chaves Palavras chaves Palavras chaves Palavras chaves Palavras chaves Palavras chaves Palavras chaves Palavras chaves 
+			</p>                                                    
+		</div>
+		
 		<h5 style="margin-top:20px"><b>Compartilhe:</b></h5>
-		<div class="wrapper">
-			<ul class="social-icons icon-circle list-unstyled list-inline" style="margin-left:0px">
+		<div id="midia_social_div" class="wrapper">
+			<ul class="social-icons icon-rounded  list-unstyled list-inline" style="margin-left:0px">
 				<li> <a href="#"><i class="fa fa-facebook"></i></a></li>
 				<li> <a href="#"><i class="fa fa-pinterest"></i></a></li>
 				<li> <a href="#"><i class="fa fa-google-plus"></i></a></li>
@@ -52,23 +64,23 @@
 		
 		<h5 style="margin-top:20px"><b>Leia Também:</b></h5>
 		
-		<h4 style="margin-top:200px"><b>Deixar um comentario</b></h4>
+		<h4 class="linha_destaque" style="margin-top:200px"><b>Deixar um comentario</b></h4>
 		<hr class="divisão_hr">
 		
-		<form class="form-vertical" id="contact-form" action="/contato" method="post">
+		<form class="form-vertical box_color margem" id="contact-form" action="/contato" method="post">
 			<label for="Contact_name" class="required">Nome</label>
-			<input class="span8" name="Contact[name]" id="Contact_name" type="text">
+			<input style="width:95%" name="Contact[name]" id="Contact_name" type="text">
 			<span class="help-block error" id="Contact_name_em_" style="display: none"></span>
 
 			<label for="Contact_email" class="required">Email</label>
-			<input class="span8" name="Contact[email]" id="Contact_email" type="text">
+			<input style="width:95%" name="Contact[email]" id="Contact_email" type="text">
 			<span class="help-block error" id="Contact_email_em_" style="display: none"></span>
 			
 			<label for="Contact_body" class="required">Mensagem </label>
-			<textarea rows="7" cols="8" class="span8" name="Contact[body]" id="Contact_body"></textarea>
+			<textarea rows="7" cols="8" style="width:95%" name="Contact[body]" id="Contact_body"></textarea>
 			<span class="help-block error" id="Contact_body_em_" style="display: none"></span>
 			
-			<div class="form-actions">
+			<div class="form-actions" style="margin-bottom:10px">
 				<input class="btn btn-primary" type="submit" name="yt1" value="Enviar mensagem">            
 				<button class="btn" id="yw2" type="reset" name="yt2">Limpar</button>        
 			</div>
@@ -78,11 +90,11 @@
 	
 	<div class="span4">
 		
-		<div class="label label-success marcador hidden-phone" >
+		<div class="label label-padrao marcador hidden-phone" >
 			<span>Especialista</span>
 		</div>
 		
-		<div class="label label-success marcador visible-phone" style="margin-top:20px" >
+		<div class="label label-padrao marcador visible-phone" style="margin-top:20px" >
 			<span>Especialista</span>
 		</div>
 	
@@ -92,39 +104,42 @@
 
 		<img src="https://cdn.megaleiloes.com.br/public/batches/16226/9ae1198fbfd4b93fbcadf8dd463c4432_320x240.jpg"  class="w-100">
 		
-		<div class="right-text px-3">
+		<div class="box_color margem">
 			<p class="card-text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 			Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
 		</div>
 		
-		<div class="label label-success marcador-topo">
+		<div class="label label-padrao marcador-topo">
 			<span>Buscar</span>
 		</div>
 			
-			<div class="form-vertical">
-                <div class="icon-addon addon-lg ">
-                    <input type="text" placeholder="Buscar" class="form-control " id="email">
-                    <label for="email" class="fa fa-search" rel="tooltip" title="email"></label>
-                </div>
-            </div>
+		<div class="form-vertical box_color margem">
+			<div class="icon-addon addon-lg ">
+				<input type="text" style="width:92%" placeholder="Buscar" class="form-control " id="email">
+				<label for="email" class="fa fa-search" rel="tooltip" title="email"></label>
+			</div>
+		</div>
 		
-		<div class="label label-success marcador-topo">
+		<div class="label label-padrao marcador-topo">
 			<span>Temas</span>
 		</div>
 		
-		teste, teste, teste ,teste, teste
+		<div class="box_color margem">
+			<p class="card-text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+			Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+		</div>
 		
-		<div class="label label-success marcador-topo">
+		<div class="label label-padrao marcador-topo">
 			<span>Receba nossas novidades</span>
 		</div>
 		
-		<div class="right-text px-3">
+		<div class="box_color margem">
 			<p class="card-text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 								Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
 		</div>
 		
 		
-		<form class="form-vertical" id="contact-form" action="/contato" method="post">
+		<form class="form-vertical box_color margem" id="contact-form" action="/contato" method="post">
 			<label for="Contact_name" class="required">Nome</label>
 			<input class="span3" name="Contact[name]" id="Contact_name" type="text">
 			<span class="help-block error" id="Contact_name_em_" style="display: none"></span>
@@ -135,7 +150,7 @@
 			
 			<span class="help-block error" id="Contact_body_em_" style="display: none"></span>
 			
-			<div class="form-actions">
+			<div class="form-actions" style="margin-bottom:10px">
 				<input class="btn btn-primary" type="submit" name="yt1" value="Enviar">            
 				<button class="btn" id="yw2" type="reset" name="yt2">Limpar</button>        
 			</div>

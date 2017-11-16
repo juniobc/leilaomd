@@ -34,7 +34,7 @@
 </div>
 
 <div id="page-batch-detail">
-<div class="row" style="margin-bottom: 20px;">
+<div class="row" style="margin-bottom: 0px;">
 	<div class="span8">
 		<div id="main-carousel" class="carousel slide">
 			<ol class="carousel-indicators">
@@ -61,12 +61,17 @@
 	
 	<div class="span4">
 	
-		<div class="label label-success" style="padding: 10px; font-size: 12px; display: block; margin-bottom: 20px;">
+		<div class="label label-destaque visible-phone" style="padding: 10px; margin-top:20px; font-size: 12px; display: block; margin-bottom: 0px;">
 			<span>ABERTO PARA LANCES</span>
 			<div class="pull-right">1<sup>a</sup> <span style=" text-transform: uppercase;">Praça</span></div>
 		</div>
-		<div class="batch-details">
-			<ul class="description" style="margin-bottom: 10px; font-size: 16px;">
+	
+		<div class="label label-destaque hidden-phone" style="padding: 10px; font-size: 12px; display: block; margin-bottom: 0px;">
+			<span>ABERTO PARA LANCES</span>
+			<div class="pull-right">1<sup>a</sup> <span style=" text-transform: uppercase;">Praça</span></div>
+		</div>
+		<div class="batch-details margem box_color">
+			<ul class="description margem" style="font-size: 16px;">
 				<li><strong>Leilão Judicial</strong></li>
 				<li><div class="th">Leilão:</div> ML07052</li>
 				<li><div class="th">Lance inicial:</div> R$ 223.972,08</li>
@@ -83,8 +88,8 @@
 
 			<div class="clearfix"></div>
 		</div>
-		<div id="countdown-holder">
-			<div style="text-align: center;">APROVEITE E DE SEU LANCE. TERMINA EM:</div>
+		<div id="countdown-holder" style="margin-top:10px">
+			<div style="text-align: center; color:#fff">APROVEITE E DE SEU LANCE. TERMINA EM:</div>
 			<div id="countdown_end" class="is-countdown">
 				<span class="countdown-row countdown-show3">
 					<span class="countdown-section">
@@ -103,29 +108,8 @@
 			</div>
 		</div>
 		
-		<!--<div style="text-align: center; margin-top:20px">
-			<a class="btn btn-social-icon btn-facebook media-social">
-			<span class="fa fa-facebook"></span>
-			</a>
-			<a class="btn btn-social-icon btn-instagram media-social">
-			<span class="fa fa-instagram"></span>
-			</a>
-			<a class="btn btn-social-icon btn-google media-social">
-			<span class="fa fa-google"></span>
-			</a>
-			<a class="btn btn-social-icon btn-twitter media-social">
-			<span class="fa fa-twitter"></span>
-			</a>
-			<a class="btn btn-social-icon btn-pinterest media-social">
-			<span class="fa fa-pinterest"></span>
-			</a>
-			<a class="btn btn-social-icon btn-youtube-square media-social">
-			<span class="fa fa-youtube-square"></span>
-			</a>
-		</div>-->
-		
-		<div class="wrapper">
-			<ul id="leilao-social" class="social-icons icon-circle list-unstyled list-inline" style="">
+		<div id="midia_social_div" class="wrapper">
+			<ul class="social-icons icon-rounded  list-unstyled list-inline" style="margin-left:0px">
 				<li> <a href="#"><i class="fa fa-facebook"></i></a></li>
 				<li> <a href="#"><i class="fa fa-pinterest"></i></a></li>
 				<li> <a href="#"><i class="fa fa-google-plus"></i></a></li>
@@ -134,29 +118,6 @@
 				<li> <a href="#"><i class="fa fa-youtube-square"></i></a></li>
 			</ul>
 		</div>
-		
-		<!--<a class="btn btn-block btn-social btn-facebook">
-		<span class="fa fa-facebook"></span> Sign in with Twitter
-		</a>
-		<a class="btn btn-block btn-social btn-instagram">
-		<span class="fa fa-instagram"></span> Sign in with Twitter
-		</a>
-		<a class="btn btn-block btn-social btn-google">
-		<span class="fa fa-google"></span> Sign in with Twitter
-		</a>
-		<a class="btn btn-block btn-social btn-twitter">
-		<span class="fa fa-twitter"></span> Sign in with Twitter
-		</a>
-		<a class="btn btn-block btn-social btn-pinterest">
-		<span class="fa fa-pinterest"></span> Sign in with Twitter
-		</a>-->
-		
-		
-		<!--<div class="stats" style="margin-top: 20px;">
-			<div class="share" data-url="https://www.megaleiloes.com.br/imoveis/sp/apartamento-51-m2-jardim-umarizal-sao-paulo-sp-j16190" 
-			data-title="Apartamento 51 m² - Jardim Umarizal - São Paulo - SP" data-description="Viste nosso site e saiba mais.">		
-		</div>
-		</div>-->
 		
 		<div class="visible-phone" style="margin: 10px 0 40px;" id="">
 		   <ul id="yw3" class="nav nav-tabs">
@@ -190,9 +151,20 @@
 		   </div>
 		</div>
 		
-		<a class="signup btn btn-danger light-btn visible-phone" href="/cadastro">
+		<a class="signup btn btn-destaque visible-phone" href="/cadastro">
 			CRIAR CONTA <i class="icon-chevron-right"></i><br><span class="small">Cadastre-se e participe dos leilões.</span>
 		</a>
+		
+		<form class="form-inline box_color margem visible-phone" style="margin-bottom:10px; margin-top:10px" id="yw1" action="/login" method="post">
+			<div class="title" style="margin-left:2px; margin-bottom:3px"><b>Acesse sua conta</b></div>
+			<input style="width: 95%; margin-bottom: 2px; border-color: #F1F1F1;" placeholder="Nome de usuário ou email" name="Login[username]" id="Login_username" type="text" maxlength="45">
+			<br>
+			<input style="width: 47%; border-color: #F1F1F1;" placeholder="Senha" name="Login[password]" id="Login_password" type="password" maxlength="45">
+			<input value="https://www.megaleiloes.com.br/" name="Login[returnUrl]" id="Login_returnUrl" type="hidden">
+			<button style="width: 47%; border: 1px solid #DDD; margin: 0;" class="btn btn-padrao" id="yw2" type="submit" name="yt0">Entrar</button>
+			<br>
+			<a href="/recuperar-senha" style="margin-left:2px; margin-top:5px"><b>Esqueceu sua senha?</b></a>
+		</form>
 		
 	</div>
 </div>
@@ -271,12 +243,93 @@
 			</tbody>
 		</table>
 		
+		<div class="pg_produto" style="margin: 20px 0 40px;">
+		   <ul class="nav nav-tabs">
+			  <li class="active" style="color:#003862"><a data-toggle="tab"><b>Condições de Pagamento</b></a></li>
+		   </ul>
+		   <div class="tab-content box_color margem box_color" style="height: 300px">
+				 CONDIÇÕES DE VENDA E PAGAMENTO
+				 7ª Vara Cível do Foro Regional de Santo Amaro/SP
+				 DAS REGRAS DO LEILÃO/PRAÇA - As regras aqui dispostas são estabelecidas pelo MM. Juiz de Direito da 7ª Vara Cível do Foro Regional de Santo Amaro/SP, de acordo com a legislação pertinente e normas referentes a leilões judiciais eletrônicos.
+				 DA ACEITAÇÃO DESTAS REGRAS – Para participar dos leilões divulgados no Portal da MEGA LEILÕES GESTOR JUDICIAL o usuário deverá ACEITAR os termos e condições adiante estabelecidos:
+				 DAS CONDIÇÕES PARA OFERTAR LANCES – O usuário deverá ser capaz de exercer atos da vida civil, conforme determina a legislação em vigor – menores de 18 anos não serão admitidos a participar dos leilões/praças.
+				 O usuário declara ter capacidade, autoridade e legitimidade para assumir as responsabilidades e obrigações descritas neste documento.
+				 Mesmo que o usuário tenha capacidade civil e jurídica para contratar, necessariamente deverá ter a livre disposição de seus bens para ofertar lances nos leilões divulgados no Portal da Mega Leilões – Gestor Judicial. 
+				 Não poderão ofertar lances:
+				 1.	tutores, curadores, testamenteiros, administradores, síndicos ou liquidantes, quanto aos bens confiados a sua guarda e responsabilidade;
+				 2.	os mandatários, quanto aos bens de cuja administração ou alienação estejam encarregados;
+				 3.	o juiz, os membros do Ministério Público e da Defensoria Pública, o escrivão, o depositário, o avaliador e o oficial de justiça;
+				 4. 	menores, serventuários da justiça ligados ao leilão, leiloeiro/pregoeiro/porteiro de auditório e equipe, parentes e/ou afins dos mesmos.
+				 DOS BENS IMÓVEIS – Os imóveis serão vendidos em caráter "AD CORPUS", sendo que as áreas mencionadas nos Editais, Catálogos e outros veículos de comunicação são meramente enunciativas e repetitivas das dimensões constantes do registro imobiliário, não sendo cabível qualquer pleito com relação ao cancelamento da arrematação, abatimento de preço ou complemento de área, por eventual divergência entre o que constar da descrição do imóvel e a realidade existente. Através do Portal www.megaleiloes.com.br o usuário tem acesso as fotos e a descrição detalhada do imóvel a ser apregoado.
+				 DOS BENS MÓVEIS – Os bens móveis serão vendidos no estado em que se encontram, sendo que as descrições mencionadas nos Editais, Catálogos e outros veículos de comunicação são meramente enunciativas, não sendo cabível qualquer pleito com relação ao cancelamento da arrematação ou abatimento de preço, por eventual divergência entre o que constar na descrição do bem e a realidade existente. Através do Portal www.megaleiloes.com.br o usuário tem acesso as fotos e a descrição detalhada do imóvel a ser apregoado.
+				 O arrematante adquire os bens no estado de conservação em que os mesmos se encontram e declara que tem pleno conhecimento de suas condições e instalações, nada tendo a reclamar quanto a eventual vício, ainda que oculto, ou defeito decorrente de uso, a qualquer título e a qualquer tempo, assumindo a responsabilidade pela eventual regularização que se fizer necessária.
+				 O arrematante deverá se cientificar previamente das restrições impostas aos imóveis apregoados pelas legislações municipal, estadual e federal, no tocante ao uso do solo ou zoneamento e, ainda, das obrigações decorrentes das convenções e especificações de condomínio, quando for o caso, as quais estará obrigado a respeitar em decorrência da arrematação do imóvel.
+				 DA VISITAÇÃO - Constituiu ônus dos interessados em participar da praça vistoriar o imóvel a ser apregoado antes da arrematação. As visitas deverão ser agendadas junto a MEGA LEILÕES GESTOR JUDICIAL, mediante o envio de solicitação formal via e-mail contato@megaleiloes.com.br, com a informação do bem de interesse, nome, telefone, RG e CPF/MF do visitante.
+				 DA PRAÇA – O 1º Leilão terá início no dia 09/10/2017 às 11:00h e se encerrará dia 11/10/2017 às 11:00h, onde somente serão aceitos lances iguais ou superiores ao valor da avaliação; não havendo lance igual ou superior ao valor da avaliação, seguir-se-á sem interrupção o 2º Leilão, que terá início no dia 11/10/2017 às 11:01h e se encerrará no dia 01/11/2017 às 11:00h, onde serão aceitos lances com no mínimo 50% do valor da avaliação.
+				 DO LEILOEIRO – A praça será realizada pelo Leiloeiro Oficial Sr. Fernando José Cerello Gonçalves Pereira, matriculado na Junta Comercial do Estado de São Paulo JUCESP sob o nº 844, por MEIO ELETRÔNICO através do Portal www.megaleiloes.com.br.
+				 DOS LANCES – Os lances serão ofertados somente através do Portal www.megaleiloes.com.br e divulgados on line, em tempo real, de modo a viabilizar a preservação do tempo real das ofertas.
+				 DO LANCE CONDICIONAL - Caso a oferta vencedora seja abaixo do valor de avaliação, sua concretização ficará condicionada à autorização do Juízo responsável.
+				 DO LANCE AUTOMÁTICO - É uma facilidade do Portal Mega Leilões – Gestor Judicial que permite a programação de lances automáticos até um limite máximo pré-determinado pelo ofertante. Com esta opção, caso outro participante oferte um lance maior, o sistema gerará outro lance acrescido de um incremento mínimo, até o limite máximo definido. Este mecanismo permite que o usuário possa ofertar lances até o limite estipulado, sem a necessidade de acompanhamento da praça.
+				 DA IRRETRATABILIDADE DO LANCE – Os lances ofertados são irretratáveis e irrevogáveis.
+				 DO TEMPO EXTRA - Toda vez que um lance é ofertado durante os últimos 03 (três) minutos de apregoamento de um lote, será concedido um tempo extra, retroagindo o cronômetro disponível na seção “tela de lance” do Portal MEGA LEILÕES - GESTOR JUDICIAL a 3 (três) minutos do encerramento, de forma a permitir que todos os interessados tenham tempo hábil para ofertar novos lances.
+				 DOS DÉBITOS – Eventuais ônus sobre o imóvel correrão por conta do arrematante, exceto eventuais débitos de IPTU e demais taxas e impostos que serão sub-rogados no valor da arrematação nos termos do art. 130, “caput” e parágrafo único, do CTN, bem como por qualquer ônus relativo à baixa da hipoteca, nos termos do artigo 1.499, do Código Civil.
+				 DA COMISSÃO DO LEILOEIRO OFICIAL - O arrematante deverá pagar ao Leiloeiro Oficial, a título de comissão, o valor correspondente a 5% (cinco por cento) sobre o preço de arrematação do imóvel.
+				 A comissão do leiloeiro não está inclusa no valor do lance e não será devolvida ao arrematante em nenhuma hipótese, salvo se a arrematação for desfeita por determinação judicial, por razões alheias à vontade do arrematante.
+				 DO PAGAMENTO – O arrematante deverá efetuar o pagamento do preço do imóvel arrematado no prazo de até 24 (vinte quatro) horas após o leilão, através do pagamento da guia de depósito judicial do Banco do Brasil em favor do Juízo correspondente, a qual será disponibilizada ao arrematante através do Portal www.megaleiloes.com.br, sob pena de se desfazer a arrematação.
+				 O pagamento da comissão do Leiloeiro Oficial deverá ser realizado igualmente em até 24 (vinte e quatro) horas a contar do encerramento da praça, através de boleto bancário a ser disponibilizado ao arrematante através de e-mail ou do Portal www.megaleiloes.com.br, na seção “Minha Conta”.
+				 DA PROPOSTA - Os interessados poderão apresentar proposta de pagamento parcelado, encaminhando parecer por escrito para o e-mail: proposta@megaleiloes.com.br (Art. 895, I e II, CPC). A apresentação de proposta não suspende o leilão (Art. 895, § 6º, CPC) e o pagamento do lance à vista sempre prevalecerá sobre o parcelado, ainda que mais vultoso (Art. 895, § 7º, CPC). PENALIDADES PELO DESCUMPRIMENTO DAS PROPOSTAS - Em caso de atraso no pagamento de qualquer das prestações, incidirá multa de dez por cento sobre a soma da parcela inadimplida com as parcelas vincendas; O inadimplemento autoriza o exequente a pedir a resolução da arrematação ou promover, em face do arrematante, a execução do valor devido, devendo ambos os pedidos serem formulados nos autos da execução em que se deu a arrematação; (Art. 895, § 4º e 5º do CPC).
+				 DO AUTO DE ARREMATAÇÃO - O Auto de Arrematação será assinado pelo juiz após a comprovação efetiva do pagamento do valor da arrematação e da comissão do leiloeiro, dispensadas as demais assinaturas referidas no artigo 694, do Código de Processo Civil, conforme dispõe o artigo 20 do Provimento CSM nº 1.625/2009 do Tribunal de Justiça do Estado de São Paulo.
+				 Após a realização do depósito judicial, o arrematante deverá encaminhar o respectivo comprovante por fax: 11 - 3149-4609 ou por e-mail (sandra@megaleiloes.com.br), para que esse documento seja juntado aos autos do processo.
+				 Assim que forem confirmados os pagamentos realizados pelo arrematante, e cumpridos os trâmites legais, será expedido o competente Mandado Judicial, para que sejam efetuados os devidos registros públicos (artigo 140, parágrafo quarto, da Lei nº 11.101/2.005).
+				 Desfeita a arrematação pelo Juiz, por motivos alheios à vontade do arrematante, serão integralmente restituídos ao mesmo os valores pagos e relativos ao preço dos bens arrematados e à comissão do Leiloeiro.
+				 DA FALTA DE PAGAMENTO – O não pagamento do preço do imóvel arrematado e da comissão do Leiloeiro Oficial, no prazo aqui estipulado, configurará desistência ou arrependimento por parte do arrematante, ficando este impedido de participar de novos leilões judiciais (artigo 695, do Código de Processo Civil), bem como obrigado a pagar o valor da comissão devida ao Leiloeiro (5%).
+				 O Leiloeiro Oficial poderá emitir título de crédito para a cobrança da sua comissão, encaminhando-o a protesto, por falta de pagamento, se for o caso, sem prejuízo da execução prevista no artigo 39, do Decreto nº 21.981/32.
+				 DO REGISTRO – O usuário autoriza o registro da presente “Condições de Venda e Pagamento” perante qualquer Cartório de Registro de títulos e documentos de São Paulo /SP.
+				 DA ENTREGA DOS BENS – A transferência dos bens será feita através do Juízo responsável e o registro do imóvel para o nome do arrematante ocorrerá após a retirada em cartório da Carta de Arrematação, nos termos do art. 693 e § único do Código de Processo Civil.
+				 DA RETIRADA – Correrão por conta do arrematante as despesas ou custos relativos à remoção, transporte e transferência patrimonial do(s) bem(ns) arrematado(s). 
+				 Para retirar o(s) bem(ns) arrematado(s), o arrematante deverá primeiramente retirar em cartório o respectivo “Mandado de Entrega do Bem”. 
+				 As demais condições obedecerão ao que dispõe o Código de Processo Civil, a Lei nº 5.741/71, o Decreto nº 21.981/32, com as alterações introduzidas pelo Decreto nº 22.427/33 e a Instrução Normativa nº 113 de 28 de Abril de 2010, que regulamenta a profissão de Leiloeiro Oficial, bem como caput do artigo 335, do Código Penal.
+				 RELAÇÃO DO IMÓVEL
+				 Matrícula nº 194.409 do 11º Cartório de Registro de Imóveis de São Paulo/SP - IMÓVEL: Apartamento nº 41 localizado no 4º andar do bloco BL-17, 
+				 integrante do empreendimento denominado Condomínio  Residencial Parque das Orquídeas, situado à Rua Jaracatiá nº 431 antigo s/nº, 
+				 Estrada de Campo Limpo nº 6.056 e Estrada dos Mirandas s/nº, no 29º Subdistrito-Santo Amaro, tendo o bloco acesso à 
+				 Rua Jaracatiá através da Rua 3 (de circulação interna), possuindo a área útil de 51,715375 m2, a área comum de 29,180971 m2 já incluída a correspondente a uma vaga 
+				 indeterminada no estacionamento descoberto, e a área total de 80,896346 m2, correspondendo-lhe a fração ideal de 0,03434066% no terreno do condomínio. Consta no R.5 
+				 desta matrícula que o imóvel objeto desta matrícula foi hipotecado à CAIXA ECONÔMICA FEDERAL - CEF. Consta no R.6 desta matrícula que nos autos da Ação de Prestação de Contas, 
+				 Processo nº 544/92, em trâmite na 32ª Vara Cível do Foro Central da Comarca de São Paulo/SP, requerida por MARCO ANTONIO BASSO e outro contra ANTONIO JACKSON PEREIRA, 
+				 foi penhorado o imóvel objeto desta matrícula, sendo nomeado depositário o executado. Consta no R.7 desta matrícula que nos autos da Reclamação Trabalhista, 
+				 Processo nº 2161/1997, em trâmite na 56ª Vara do Trabalho da Comarca de São Paulo/SP - TRT 2ª Região, requerida por GENIVAL DA SILVA OLIVEIRA contra COMPANHIA PAULISTA DE 
+				 PINTURAS LTDA e outros, foi penhorado o imóvel objeto desta matrícula, sendo nomeado depositário JOSÉ WYRON CORREIA DINIZ. Observação: Cumpre informar que há recurso 
+				 pendente de julgamento (Agravo de Instrumento nº 2162211-56.2017.8.26.0000 - 28ª Câmara de Direito Privado). Contribuinte nº 169.009.0695-7 (em área maior). Valor da Avaliação 
+				 do Imóvel: R$ 215.000,00 (duzentos e quinze mil reais) para maio de 2016, que será atualizado até a data da alienação conforme tabela de atualização monetária do TJ/SP.
+				
+		   </div>
+		</div>
+		
+		<div id="buttons" class="visible-phone">
+			<a class="signup btn btn-destaque hidden-phone" style="margin-bottom:10px" href="/cadastro">
+				CRIAR CONTA <i class="icon-chevron-right"></i><br><span class="small">Cadastre-se e participe dos leilões.</span>
+			</a>
+
+			<a class="btn btn-block btn-destaque" data-type="batch" data-id="16190" data-auction="7052" href="javascript:void(0);">
+				<i class="icon icon-legal"></i> Apresentação
+			</a>
+			
+			<a class="btn btn-block btn-destaque" data-type="batch" data-id="16190" data-auction="7052" href="javascript:void(0);">
+				<i class="icon icon-legal"></i> Edital
+			</a>
+			
+			<a class="btn btn-block btn-destaque" data-type="batch" data-id="16190" data-auction="7052" href="javascript:void(0);">
+				<i class="icon icon-legal"></i> Avaliação
+			</a>
+		</div>
+		
 		<div class="hidden-phone" style="margin: 20px 0 40px;" id="batch-detail-tabs2">
 			<ul id="yw32" class="nav nav-tabs">
-			<li class="active"><a data-toggle="tab" href="#batch-detail-tabs2_tab_1">Fotos</a></li>
+			<li class="active"><a data-toggle="tab" href="#batch-detail-tabs2_tab_1"><b>Fotos</b></a></li>
 			</ul>
 			
-			<div class="tab-content">
+			<div class="tab-content pg_prod_tab">
 			
 				<div class="row">
 					<div class="span2">
@@ -336,10 +389,10 @@
 		
 		<div class="visible-phone" style="margin: 20px 0 40px;" id="batch-detail-tabs2">
 			<ul id="yw32" class="nav nav-tabs">
-			<li class="active"><a data-toggle="tab" href="#batch-detail-tabs2_tab_1">Fotos</a></li>
+			<li class="active"><a data-toggle="tab" href="#batch-detail-tabs2_tab_1"><b>Fotos</b></a></li>
 			</ul>
 			
-			<div class="tab-content">
+			<div class="tab-content pg_prod_tab">
 			
 				<div class="row">
 					<div class="span12">
@@ -364,10 +417,10 @@
 		
 		<div style="margin: 20px 0 40px;" id="batch-detail-tabs2">
 			<ul id="yw32" class="nav nav-tabs">
-			<li class="active"><a data-toggle="tab" href="#batch-detail-tabs2_tab_1">Video</a></li>
+			<li class="active"><a data-toggle="tab" href="#batch-detail-tabs2_tab_1"><b>Video</b></a></li>
 			</ul>
 			
-			<div class="tab-content">
+			<div class="tab-content pg_prod_tab">
 			
 				<iframe style="width:100%; height:350px" src="https://www.youtube.com/embed/aeZ4xSTFSOw" frameborder="0" allowfullscreen></iframe>
 			 
@@ -379,10 +432,10 @@
 		
 		<div style="margin: 20px 0 40px;" id="batch-detail-tabs2">
 			<ul id="yw32" class="nav nav-tabs">
-			<li class="active"><a data-toggle="tab" href="#batch-detail-tabs2_tab_1">Mapa</a></li>
+			<li class="active"><a data-toggle="tab" href="#batch-detail-tabs2_tab_1"><b>Mapa</b></a></li>
 			</ul>
 			
-			<div class="tab-content">
+			<div class="tab-content pg_prod_tab">
 			
 				<div id="map" class="google-maps" style="width: 100%; height: 350px; position: relative; overflow: hidden;">
 					<div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);">
@@ -635,109 +688,59 @@
 	
 	
 	
-		<div id="buttons">
-			<a class="signup btn btn-danger light-btn hidden-phone" style="margin-bottom:10px" href="/cadastro">
+		<div id="buttons" class="hidden-phone">
+			<a class="signup btn btn-destaque hidden-phone" style="margin-bottom:10px" href="/cadastro">
 				CRIAR CONTA <i class="icon-chevron-right"></i><br><span class="small">Cadastre-se e participe dos leilões.</span>
 			</a>
+			
+			<form class="form-inline box_color margem hidden-phone" style="margin-bottom:10px" id="yw1" action="/login" method="post">
+				<div class="title" style="margin-left:2px; margin-bottom:3px"><b>Acesse sua conta</b></div>
+				<input style="width: 95%; margin-bottom: 2px; border-color: #F1F1F1;" placeholder="Nome de usuário ou email" name="Login[username]" id="Login_username" type="text" maxlength="45">
+				<br>
+				<input style="width: 47%; border-color: #F1F1F1;" placeholder="Senha" name="Login[password]" id="Login_password" type="password" maxlength="45">
+				<input value="https://www.megaleiloes.com.br/" name="Login[returnUrl]" id="Login_returnUrl" type="hidden">
+				<button style="width: 47%; border: 1px solid #DDD; margin: 0;" class="btn btn-padrao" id="yw2" type="submit" name="yt0">Entrar</button>
+				<br>
+				<a href="/recuperar-senha" style="margin-left:2px; margin-top:5px"><b>Esqueceu sua senha?</b></a>
+			</form>
 
-			<a class="btn btn-block btn-success btn-auditorium-view" data-type="batch" data-id="16190" data-auction="7052" href="javascript:void(0);">
+			<a class="btn btn-block btn-destaque" data-type="batch" data-id="16190" data-auction="7052" href="javascript:void(0);">
 				<i class="icon icon-legal"></i> Acompanhe a disputa
 			</a>
 			
-			<a class="btn btn-block btn-success btn-auditorium-view" data-type="batch" data-id="16190" data-auction="7052" href="javascript:void(0);">
+			<a class="btn btn-block btn-destaque" data-type="batch" data-id="16190" data-auction="7052" href="javascript:void(0);">
 				<i class="icon icon-legal"></i> Edital
 			</a>
 			
-			<a class="btn btn-block btn-success btn-auditorium-view" data-type="batch" data-id="16190" data-auction="7052" href="javascript:void(0);">
+			<a class="btn btn-block btn-destaque" data-type="batch" data-id="16190" data-auction="7052" href="javascript:void(0);">
 				<i class="icon icon-legal"></i> Avaliação
 			</a>
 		</div>
 		
-		<div class="label label-success" style="padding: 10px; font-size: 12px; display: block; margin-bottom: 20px; margin-top: 20px;">
+		<div class="label label-padrao" style="padding: 10px; font-size: 12px; display: block; margin-bottom: 0px; margin-top: 20px;">
 			<span>SOLICITE MAIS INFORMAÇÕES</span>
 		</div>
 		
-		<form class="form-vertical" id="contact-form" action="/contato" method="post">
-			<label for="Contact_name" class="required">Nome</label>
-			<input class="span4" name="Contact[name]" id="Contact_name" type="text">
+		<form class="form-vertical box_color margem" id="contact-form" action="/contato" method="post">
+			<label for="Contact_name" class="required"><b>Nome</b></label>
+			<input style="width:95%" name="Contact[name]" id="Contact_name" type="text">
 			<span class="help-block error" id="Contact_name_em_" style="display: none"></span>
 
-			<label for="Contact_email" class="required">Email</label>
-			<input class="span4" name="Contact[email]" id="Contact_email" type="text">
+			<label for="Contact_email" class="required"><b>Email</b></label>
+			<input style="width:95%" name="Contact[email]" id="Contact_email" type="text">
 			<span class="help-block error" id="Contact_email_em_" style="display: none"></span>
 			
-			<label for="Contact_body" class="required">Mensagem </label>
-			<textarea rows="7" cols="8" class="span4" name="Contact[body]" id="Contact_body"></textarea>
+			<label for="Contact_body" class="required"><b>Mensagem</b></label>
+			<textarea rows="7" cols="8" style="width:95%" name="Contact[body]" id="Contact_body"></textarea>
 			<span class="help-block error" id="Contact_body_em_" style="display: none"></span>
 			
-			<div class="form-actions">
+			<div class="form-actions" style="margin-bottom:10px">
 				<input class="btn btn-primary" type="submit" name="yt1" value="Enviar mensagem">            
 				<button class="btn" id="yw2" type="reset" name="yt2">Limpar</button>        
 			</div>
-		</form>
-		
-		<div style="margin: 20px 0 40px;">
-		   <ul class="nav nav-tabs">
-			  <li class="active"><a data-toggle="tab">Condições de Pagamento</a></li>
-		   </ul>
-		   <div class="tab-content" style="height: 300px">
-				 CONDIÇÕES DE VENDA E PAGAMENTO
-				 7ª Vara Cível do Foro Regional de Santo Amaro/SP
-				 DAS REGRAS DO LEILÃO/PRAÇA - As regras aqui dispostas são estabelecidas pelo MM. Juiz de Direito da 7ª Vara Cível do Foro Regional de Santo Amaro/SP, de acordo com a legislação pertinente e normas referentes a leilões judiciais eletrônicos.
-				 DA ACEITAÇÃO DESTAS REGRAS – Para participar dos leilões divulgados no Portal da MEGA LEILÕES GESTOR JUDICIAL o usuário deverá ACEITAR os termos e condições adiante estabelecidos:
-				 DAS CONDIÇÕES PARA OFERTAR LANCES – O usuário deverá ser capaz de exercer atos da vida civil, conforme determina a legislação em vigor – menores de 18 anos não serão admitidos a participar dos leilões/praças.
-				 O usuário declara ter capacidade, autoridade e legitimidade para assumir as responsabilidades e obrigações descritas neste documento.
-				 Mesmo que o usuário tenha capacidade civil e jurídica para contratar, necessariamente deverá ter a livre disposição de seus bens para ofertar lances nos leilões divulgados no Portal da Mega Leilões – Gestor Judicial. 
-				 Não poderão ofertar lances:
-				 1.	tutores, curadores, testamenteiros, administradores, síndicos ou liquidantes, quanto aos bens confiados a sua guarda e responsabilidade;
-				 2.	os mandatários, quanto aos bens de cuja administração ou alienação estejam encarregados;
-				 3.	o juiz, os membros do Ministério Público e da Defensoria Pública, o escrivão, o depositário, o avaliador e o oficial de justiça;
-				 4. 	menores, serventuários da justiça ligados ao leilão, leiloeiro/pregoeiro/porteiro de auditório e equipe, parentes e/ou afins dos mesmos.
-				 DOS BENS IMÓVEIS – Os imóveis serão vendidos em caráter "AD CORPUS", sendo que as áreas mencionadas nos Editais, Catálogos e outros veículos de comunicação são meramente enunciativas e repetitivas das dimensões constantes do registro imobiliário, não sendo cabível qualquer pleito com relação ao cancelamento da arrematação, abatimento de preço ou complemento de área, por eventual divergência entre o que constar da descrição do imóvel e a realidade existente. Através do Portal www.megaleiloes.com.br o usuário tem acesso as fotos e a descrição detalhada do imóvel a ser apregoado.
-				 DOS BENS MÓVEIS – Os bens móveis serão vendidos no estado em que se encontram, sendo que as descrições mencionadas nos Editais, Catálogos e outros veículos de comunicação são meramente enunciativas, não sendo cabível qualquer pleito com relação ao cancelamento da arrematação ou abatimento de preço, por eventual divergência entre o que constar na descrição do bem e a realidade existente. Através do Portal www.megaleiloes.com.br o usuário tem acesso as fotos e a descrição detalhada do imóvel a ser apregoado.
-				 O arrematante adquire os bens no estado de conservação em que os mesmos se encontram e declara que tem pleno conhecimento de suas condições e instalações, nada tendo a reclamar quanto a eventual vício, ainda que oculto, ou defeito decorrente de uso, a qualquer título e a qualquer tempo, assumindo a responsabilidade pela eventual regularização que se fizer necessária.
-				 O arrematante deverá se cientificar previamente das restrições impostas aos imóveis apregoados pelas legislações municipal, estadual e federal, no tocante ao uso do solo ou zoneamento e, ainda, das obrigações decorrentes das convenções e especificações de condomínio, quando for o caso, as quais estará obrigado a respeitar em decorrência da arrematação do imóvel.
-				 DA VISITAÇÃO - Constituiu ônus dos interessados em participar da praça vistoriar o imóvel a ser apregoado antes da arrematação. As visitas deverão ser agendadas junto a MEGA LEILÕES GESTOR JUDICIAL, mediante o envio de solicitação formal via e-mail contato@megaleiloes.com.br, com a informação do bem de interesse, nome, telefone, RG e CPF/MF do visitante.
-				 DA PRAÇA – O 1º Leilão terá início no dia 09/10/2017 às 11:00h e se encerrará dia 11/10/2017 às 11:00h, onde somente serão aceitos lances iguais ou superiores ao valor da avaliação; não havendo lance igual ou superior ao valor da avaliação, seguir-se-á sem interrupção o 2º Leilão, que terá início no dia 11/10/2017 às 11:01h e se encerrará no dia 01/11/2017 às 11:00h, onde serão aceitos lances com no mínimo 50% do valor da avaliação.
-				 DO LEILOEIRO – A praça será realizada pelo Leiloeiro Oficial Sr. Fernando José Cerello Gonçalves Pereira, matriculado na Junta Comercial do Estado de São Paulo JUCESP sob o nº 844, por MEIO ELETRÔNICO através do Portal www.megaleiloes.com.br.
-				 DOS LANCES – Os lances serão ofertados somente através do Portal www.megaleiloes.com.br e divulgados on line, em tempo real, de modo a viabilizar a preservação do tempo real das ofertas.
-				 DO LANCE CONDICIONAL - Caso a oferta vencedora seja abaixo do valor de avaliação, sua concretização ficará condicionada à autorização do Juízo responsável.
-				 DO LANCE AUTOMÁTICO - É uma facilidade do Portal Mega Leilões – Gestor Judicial que permite a programação de lances automáticos até um limite máximo pré-determinado pelo ofertante. Com esta opção, caso outro participante oferte um lance maior, o sistema gerará outro lance acrescido de um incremento mínimo, até o limite máximo definido. Este mecanismo permite que o usuário possa ofertar lances até o limite estipulado, sem a necessidade de acompanhamento da praça.
-				 DA IRRETRATABILIDADE DO LANCE – Os lances ofertados são irretratáveis e irrevogáveis.
-				 DO TEMPO EXTRA - Toda vez que um lance é ofertado durante os últimos 03 (três) minutos de apregoamento de um lote, será concedido um tempo extra, retroagindo o cronômetro disponível na seção “tela de lance” do Portal MEGA LEILÕES - GESTOR JUDICIAL a 3 (três) minutos do encerramento, de forma a permitir que todos os interessados tenham tempo hábil para ofertar novos lances.
-				 DOS DÉBITOS – Eventuais ônus sobre o imóvel correrão por conta do arrematante, exceto eventuais débitos de IPTU e demais taxas e impostos que serão sub-rogados no valor da arrematação nos termos do art. 130, “caput” e parágrafo único, do CTN, bem como por qualquer ônus relativo à baixa da hipoteca, nos termos do artigo 1.499, do Código Civil.
-				 DA COMISSÃO DO LEILOEIRO OFICIAL - O arrematante deverá pagar ao Leiloeiro Oficial, a título de comissão, o valor correspondente a 5% (cinco por cento) sobre o preço de arrematação do imóvel.
-				 A comissão do leiloeiro não está inclusa no valor do lance e não será devolvida ao arrematante em nenhuma hipótese, salvo se a arrematação for desfeita por determinação judicial, por razões alheias à vontade do arrematante.
-				 DO PAGAMENTO – O arrematante deverá efetuar o pagamento do preço do imóvel arrematado no prazo de até 24 (vinte quatro) horas após o leilão, através do pagamento da guia de depósito judicial do Banco do Brasil em favor do Juízo correspondente, a qual será disponibilizada ao arrematante através do Portal www.megaleiloes.com.br, sob pena de se desfazer a arrematação.
-				 O pagamento da comissão do Leiloeiro Oficial deverá ser realizado igualmente em até 24 (vinte e quatro) horas a contar do encerramento da praça, através de boleto bancário a ser disponibilizado ao arrematante através de e-mail ou do Portal www.megaleiloes.com.br, na seção “Minha Conta”.
-				 DA PROPOSTA - Os interessados poderão apresentar proposta de pagamento parcelado, encaminhando parecer por escrito para o e-mail: proposta@megaleiloes.com.br (Art. 895, I e II, CPC). A apresentação de proposta não suspende o leilão (Art. 895, § 6º, CPC) e o pagamento do lance à vista sempre prevalecerá sobre o parcelado, ainda que mais vultoso (Art. 895, § 7º, CPC). PENALIDADES PELO DESCUMPRIMENTO DAS PROPOSTAS - Em caso de atraso no pagamento de qualquer das prestações, incidirá multa de dez por cento sobre a soma da parcela inadimplida com as parcelas vincendas; O inadimplemento autoriza o exequente a pedir a resolução da arrematação ou promover, em face do arrematante, a execução do valor devido, devendo ambos os pedidos serem formulados nos autos da execução em que se deu a arrematação; (Art. 895, § 4º e 5º do CPC).
-				 DO AUTO DE ARREMATAÇÃO - O Auto de Arrematação será assinado pelo juiz após a comprovação efetiva do pagamento do valor da arrematação e da comissão do leiloeiro, dispensadas as demais assinaturas referidas no artigo 694, do Código de Processo Civil, conforme dispõe o artigo 20 do Provimento CSM nº 1.625/2009 do Tribunal de Justiça do Estado de São Paulo.
-				 Após a realização do depósito judicial, o arrematante deverá encaminhar o respectivo comprovante por fax: 11 - 3149-4609 ou por e-mail (sandra@megaleiloes.com.br), para que esse documento seja juntado aos autos do processo.
-				 Assim que forem confirmados os pagamentos realizados pelo arrematante, e cumpridos os trâmites legais, será expedido o competente Mandado Judicial, para que sejam efetuados os devidos registros públicos (artigo 140, parágrafo quarto, da Lei nº 11.101/2.005).
-				 Desfeita a arrematação pelo Juiz, por motivos alheios à vontade do arrematante, serão integralmente restituídos ao mesmo os valores pagos e relativos ao preço dos bens arrematados e à comissão do Leiloeiro.
-				 DA FALTA DE PAGAMENTO – O não pagamento do preço do imóvel arrematado e da comissão do Leiloeiro Oficial, no prazo aqui estipulado, configurará desistência ou arrependimento por parte do arrematante, ficando este impedido de participar de novos leilões judiciais (artigo 695, do Código de Processo Civil), bem como obrigado a pagar o valor da comissão devida ao Leiloeiro (5%).
-				 O Leiloeiro Oficial poderá emitir título de crédito para a cobrança da sua comissão, encaminhando-o a protesto, por falta de pagamento, se for o caso, sem prejuízo da execução prevista no artigo 39, do Decreto nº 21.981/32.
-				 DO REGISTRO – O usuário autoriza o registro da presente “Condições de Venda e Pagamento” perante qualquer Cartório de Registro de títulos e documentos de São Paulo /SP.
-				 DA ENTREGA DOS BENS – A transferência dos bens será feita através do Juízo responsável e o registro do imóvel para o nome do arrematante ocorrerá após a retirada em cartório da Carta de Arrematação, nos termos do art. 693 e § único do Código de Processo Civil.
-				 DA RETIRADA – Correrão por conta do arrematante as despesas ou custos relativos à remoção, transporte e transferência patrimonial do(s) bem(ns) arrematado(s). 
-				 Para retirar o(s) bem(ns) arrematado(s), o arrematante deverá primeiramente retirar em cartório o respectivo “Mandado de Entrega do Bem”. 
-				 As demais condições obedecerão ao que dispõe o Código de Processo Civil, a Lei nº 5.741/71, o Decreto nº 21.981/32, com as alterações introduzidas pelo Decreto nº 22.427/33 e a Instrução Normativa nº 113 de 28 de Abril de 2010, que regulamenta a profissão de Leiloeiro Oficial, bem como caput do artigo 335, do Código Penal.
-				 RELAÇÃO DO IMÓVEL
-				 Matrícula nº 194.409 do 11º Cartório de Registro de Imóveis de São Paulo/SP - IMÓVEL: Apartamento nº 41 localizado no 4º andar do bloco BL-17, 
-				 integrante do empreendimento denominado Condomínio  Residencial Parque das Orquídeas, situado à Rua Jaracatiá nº 431 antigo s/nº, 
-				 Estrada de Campo Limpo nº 6.056 e Estrada dos Mirandas s/nº, no 29º Subdistrito-Santo Amaro, tendo o bloco acesso à 
-				 Rua Jaracatiá através da Rua 3 (de circulação interna), possuindo a área útil de 51,715375 m2, a área comum de 29,180971 m2 já incluída a correspondente a uma vaga 
-				 indeterminada no estacionamento descoberto, e a área total de 80,896346 m2, correspondendo-lhe a fração ideal de 0,03434066% no terreno do condomínio. Consta no R.5 
-				 desta matrícula que o imóvel objeto desta matrícula foi hipotecado à CAIXA ECONÔMICA FEDERAL - CEF. Consta no R.6 desta matrícula que nos autos da Ação de Prestação de Contas, 
-				 Processo nº 544/92, em trâmite na 32ª Vara Cível do Foro Central da Comarca de São Paulo/SP, requerida por MARCO ANTONIO BASSO e outro contra ANTONIO JACKSON PEREIRA, 
-				 foi penhorado o imóvel objeto desta matrícula, sendo nomeado depositário o executado. Consta no R.7 desta matrícula que nos autos da Reclamação Trabalhista, 
-				 Processo nº 2161/1997, em trâmite na 56ª Vara do Trabalho da Comarca de São Paulo/SP - TRT 2ª Região, requerida por GENIVAL DA SILVA OLIVEIRA contra COMPANHIA PAULISTA DE 
-				 PINTURAS LTDA e outros, foi penhorado o imóvel objeto desta matrícula, sendo nomeado depositário JOSÉ WYRON CORREIA DINIZ. Observação: Cumpre informar que há recurso 
-				 pendente de julgamento (Agravo de Instrumento nº 2162211-56.2017.8.26.0000 - 28ª Câmara de Direito Privado). Contribuinte nº 169.009.0695-7 (em área maior). Valor da Avaliação 
-				 do Imóvel: R$ 215.000,00 (duzentos e quinze mil reais) para maio de 2016, que será atualizado até a data da alienação conforme tabela de atualização monetária do TJ/SP.
-				
-		   </div>
-		</div>
+		</form>	
+
+		<?php echo $this->partial('application/partials/facebook'); ?>
 		
 	</div>
 </div>
