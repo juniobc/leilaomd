@@ -26,6 +26,5 @@ return [
     'Zend\Router',
     'Zend\Validator',
     'ZendDeveloperTools',
-    'Application',
-	'SGS',
+    'Application'
 ];
