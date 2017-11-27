@@ -123,6 +123,36 @@ return [
                     ],
                 ],
             ],
+			'agenda' => [
+                'type' => Literal::class,
+                'options' => [
+                    'route'    => '/agenda',
+                    'defaults' => [
+                        'controller' => Controller\AgendaController::class,
+                        'action'     => 'index',
+                    ],
+                ],
+            ],
+			'usuario' => [
+                'type' => Literal::class,
+                'options' => [
+                    'route'    => '/usuario',
+                    'defaults' => [
+                        'controller' => Controller\UsuarioController::class,
+                        'action'     => 'index',
+                    ],
+                ],
+            ],
+			'funciona' => [
+                'type' => Literal::class,
+                'options' => [
+                    'route'    => '/funciona',
+                    'defaults' => [
+                        'controller' => Controller\FuncionaController::class,
+                        'action'     => 'index',
+                    ],
+                ],
+            ],
         ],
     ],
     'controllers' => [
@@ -137,6 +167,9 @@ return [
 			Controller\OuvidoriaController::class => InvokableFactory::class,
 			Controller\ColaboradorController::class => InvokableFactory::class,
 			Controller\FaleController::class => InvokableFactory::class,
+			Controller\AgendaController::class => InvokableFactory::class,
+			Controller\UsuarioController::class => InvokableFactory::class,
+			Controller\FuncionaController::class => InvokableFactory::class
         ],
     ],
     'view_manager' => [

@@ -1,0 +1,133 @@
+<div id="content" class="container">
+
+	<div class="row hidden-phone">
+	
+		<div class="span3">
+		
+			<div class="label label-padrao marcador">
+				<span>Data dos Leilões</span>
+			</div>
+			
+			<div id="box-filtro" class="box_color margem">
+			
+				<div class="lista-datas">
+					
+						<?php echo $this->partial('application/partials/data_agenda'); ?>
+						<?php echo $this->partial('application/partials/data_agenda'); ?>
+						<?php echo $this->partial('application/partials/data_agenda'); ?>
+						
+				</div>
+			
+			</div>
+			
+			<div class="label label-padrao marcador marcador_margem">
+				<span>Estados/Cidades</span>
+			</div>
+			
+			<div class="box_color margem">
+			
+				<div class="lista_tipo">
+					<?php echo $this->partial('application/partials/lista_tipo_checkbox'); ?>
+					<?php echo $this->partial('application/partials/lista_tipo_checkbox'); ?>
+					<?php echo $this->partial('application/partials/lista_tipo_checkbox'); ?>
+				</div>
+				
+			</div>
+			
+			<div class="label label-padrao marcador marcador_margem">
+				<span>Tipo do Bem</span>
+			</div>
+			
+			<div class="box_color margem">
+			
+				<div class="lista_tipo">
+					<?php echo $this->partial('application/partials/lista_tipo_checkbox'); ?>
+					<?php echo $this->partial('application/partials/lista_tipo_checkbox'); ?>
+					<?php echo $this->partial('application/partials/lista_tipo_checkbox'); ?>
+				</div>
+				
+			</div>
+		
+		</div>
+		
+		<div class="span9 hidden-phone">
+		
+			<?php echo $this->partial('application/partials/card_agenda'); ?>
+			<?php echo $this->partial('application/partials/card_agenda'); ?>
+			<?php echo $this->partial('application/partials/card_agenda'); ?>
+			<?php echo $this->partial('application/partials/card_agenda'); ?>
+			<?php echo $this->partial('application/partials/card_agenda'); ?>
+		
+		</div>
+	
+	</div>
+	
+	<div id="main-nav-tabs" class="visible-phone">
+		<div class="container">
+			<div id="sti">
+				<div class="tab-content">
+					<div id="sti_tab_1" class="tab-pane fade active in">
+						<div class="search-categories " style="">
+							<form class="form-vertical " id="search-simple-form" action="/search/index" method="GET">
+								<div class="row-fluid">
+									<div class="span2">
+										<label style="color:#fff"><b>Dia dos Leilões</b></label>
+										<select class="span12" name="Search[category]" id="Search_category">
+											<option value="">Data dos Leilões</option>
+											<option value="outros">22/11/2017</option>
+											<option value="outros">22/11/2017</option>
+											<option value="outros">22/11/2017</option>
+											<option value="outros">22/11/2017</option>
+										</select>    
+									</div>
+									<div class="span2">
+										<label style="color:#fff"><b>Estado/Cidades</b></label>
+										<select class="span12" disabled="disabled" name="Search[subcategory]" id="Search_subcategory">
+											<option value="">Estado</option>
+										</select>    
+									</div>
+									<div class="span2">
+										<select class="span12" name="Search[state]" id="Search_state">
+										<option value="">Cidade</option>
+										</select>    
+									</div>
+
+									<div class="span2">
+										<label style="color:#fff"><b>Tipo do Bem</b></label>
+										<select class="span12" disabled="disabled" name="Search[city]" id="Search_city">
+										<option value="">Categoria</option>
+										</select>    
+									</div>
+									
+									<div class="span2">
+										<select class="span12" name="Search[category]" id="Search_category">
+											<option value="">SubCategoria</option>
+											<option value="outros">Outros</option>
+										</select>    
+									</div>
+
+									<div class="span2" style="margin-top:20px">
+									<button class="btn btn-block btn-primary" type="submit" id="fast-search"><i class="icon-white icon-search" style="font-size: 14px;"></i> Filtrar</button>
+									</div>
+								</div>
+
+							</form>
+						</div>
+					</div>
+				</div>
+			</div> 
+		</div>
+	</div>
+	
+	<div class="row">
+	
+		<?php echo $this->partial('application/partials/card_agenda_phone'); ?>
+		<?php echo $this->partial('application/partials/card_agenda_phone'); ?>
+		<?php echo $this->partial('application/partials/card_agenda_phone'); ?>
+		<?php echo $this->partial('application/partials/card_agenda_phone'); ?>
+		<?php echo $this->partial('application/partials/card_agenda_phone'); ?>
+		<?php echo $this->partial('application/partials/card_agenda_phone'); ?>
+	
+	</div>
+
+</div>
