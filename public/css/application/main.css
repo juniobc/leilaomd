@@ -202,9 +202,9 @@ input[type=color], .uneditable-input { color: #577B97 !important; }
 
 .fundo_classes2 {
     margin-top: 12px;
-    background-color: #DDDDDD;
+    background-color: #FB720C;
     padding: 0px;
-	color:#003862;
+	color:#fff;
     width: 100%;
 }
 
@@ -9777,7 +9777,7 @@ body {
 #main-nav-tabs-baixo {
     background-color: #FE821F;
 	margin-top:60px;
-    /*margin-bottom: -20px;*/
+    margin-bottom: -40px;
 	
 }
 #main-nav-tabs-baixo .navbar .nav>li>a {
