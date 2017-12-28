@@ -14,8 +14,6 @@ class HomeController extends AbstractActionController
 {
     public function indexAction()
     {
-		echo "teste";
-		exit(1);
         return new ViewModel();
     }
 }

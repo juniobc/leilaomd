@@ -13,10 +13,10 @@ use Zend\ServiceManager\Factory\InvokableFactory;
 return [
     'router' => [
         'routes' => [
-            'home' => [
+            'admin' => [
                 'type' => Literal::class,
                 'options' => [
-                    'route'    => '/sgs/admin',
+                    'route'    => '/admin',
                     'defaults' => [
                         'controller' => Controller\IndexController::class,
                         'action'     => 'index',
@@ -32,7 +32,7 @@ return [
     ],
     'view_manager' => [
 		'template_map' => [
-            'layout/sgsLayout'           => __DIR__ . '/../view/layout/layout.phtml'
+            'layout/sgsLayout'           => __DIR__ . '/../view/layout/sgsLayout.phtml'
         ],
         'template_path_stack' => [
             __DIR__ . '/../view',

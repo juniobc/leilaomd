@@ -26,7 +26,7 @@ class Module {
         $controllerClass = get_class($controller);
 		
         $moduleNamespace = substr($controllerClass, 0, strpos($controllerClass, '\\'));
-        
+		        
         if ($moduleNamespace == __NAMESPACE__) {
             $viewModel = $event->getViewModel();
             $viewModel->setTemplate('layout/sgsLayout');  
