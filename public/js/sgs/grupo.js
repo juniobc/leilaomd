@@ -1,7 +1,6 @@
 $( document ).ready(function() {
 	
-	
-	$('.dropify').dropify({
+	/*$('.dropify').dropify({
 		tpl: {
 			wrap:'<div class="dropify-wrapper" style="height: 93px; width:285px"></div>'
 		},
@@ -13,13 +12,14 @@ $( document ).ready(function() {
 		},
 		error: {
 			'fileSize': 'Arquivo muito grande ({{ value }} max).',
-			'minWidth': 'Largura minima permitida ({{ value }}px).',
-			'maxWidth': 'Largura máxima permitida ({{ value }}px).',
-			'minHeight': 'Altura minima permitida ({{ value }}px).',
-			'maxHeight': 'Altura maxima permitida ({{ value }}px).',
-			'imageFormat': 'Somente os formatos ({{ value }} são permitidos).'
+			'minWidth': 'Largura minima permitida {{ value }}px.',
+			'maxWidth': 'Largura máxima permitida {{ value }}px.',
+			'minHeight': 'Altura minima permitida {{ value }}px.',
+			'maxHeight': 'Altura maxima permitida {{ value }}px.',
+			'imageFormat': 'Somente os formatos {{ value }} são permitidos.',
+			'fileExtension': 'Somente os formatos {{ value }} são permitidos.'
 		}
-	});
+	});*/
 	
 	$('#grupo_form').validate({
 		rules: {

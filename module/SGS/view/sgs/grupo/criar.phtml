@@ -1,6 +1,6 @@
 <?php
 
-$this->headLink()->prependStylesheet($this->basePath('css/dropify.min.css'));
+//$this->headLink()->prependStylesheet($this->basePath('css/dropify.min.css'));
 
 ?>
 
@@ -200,11 +200,11 @@ $this->headLink()->prependStylesheet($this->basePath('css/dropify.min.css'));
 						<?= $this->formElement($form->get('desc_valor_gpr')); ?>
 					</div>
 					
-					<div class="form-group">
+					<!--<div class="form-group">
 						<label for="desc_valor_gpr">Logo</label>
 						<input type="file" id="input-file-now" class="dropify" data-width="285" data-max-height="93" 
-						data-min-height="93" data-min-width="285" data-max-width="285">
-					</div>
+						data-min-height="93" data-min-width="285" data-max-width="285" data-allowed-file-extensions="png jpeg jpg jpg2">
+					</div>-->
 				
 				</div>
 			
@@ -236,7 +236,7 @@ $this->headLink()->prependStylesheet($this->basePath('css/dropify.min.css'));
 <?php
 
 $this->headScript()->appendFile($this->basePath('adminlte/plugins/input-mask/jquery.inputmask.js'), 'text/javascript');
-$this->headScript()->appendFile($this->basePath('js/dropify.min.js'), 'text/javascript');
+//$this->headScript()->appendFile($this->basePath('js/dropify.min.js'), 'text/javascript');
 $this->headScript()->appendFile($this->basePath('js/sgs/grupo.js'), 'text/javascript');
 
 ?>
