@@ -8,6 +8,7 @@
 namespace SGS;
 
 use Zend\Router\Http\Literal;
+use Zend\Router\Http\Segment;
 use Zend\ServiceManager\Factory\InvokableFactory;
 
 return [
@@ -23,11 +24,21 @@ return [
                     ],
                 ],
             ],
+			'grupo' => [
+                'type' => Segment::class,
+                'options' => [
+                    'route'    => '/admin/grupo/:action',
+					'defaults' => [
+                        'controller' => Controller\GrupoController::class
+                    ],
+                ],
+            ],
         ],
     ],
     'controllers' => [
         'factories' => [
-            Controller\IndexController::class => InvokableFactory::class
+            Controller\IndexController::class => InvokableFactory::class,
+			Controller\GrupoController::class => InvokableFactory::class
         ],
     ],
     'view_manager' => [

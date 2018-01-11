@@ -1,0 +1,242 @@
+<?php
+
+$this->headLink()->prependStylesheet($this->basePath('css/dropify.min.css'));
+
+?>
+
+
+<section class="content-header">
+  <h1>
+	Criar Grupo
+  </h1>
+</section>
+
+<section class="content">
+
+	<?= $this->form()->openTag($form); ?>
+
+	<div class="row">
+	
+		<div class="col-md-6">
+		
+			<div class="box box-primary">
+				
+				<div class="box-body">
+					<div class="form-group">
+						<?= $this->formLabel($form->get('nm_grupo')); ?>
+						<?= $this->formElement($form->get('nm_grupo')); ?>
+					</div>
+					<div class="form-group">
+						<?= $this->formLabel($form->get('desc_atua_gpr')); ?>
+						<?= $this->formElement($form->get('desc_atua_gpr')); ?>
+					</div>
+				
+				
+					<div class="row">
+						<div class="col-md-6">
+							
+							<div class="form-group">
+								<?= $this->formLabel($form->get('nr_tel_fixo')); ?>
+
+								<div class="input-group">
+									<div class="input-group-addon"><i class="fa fa-phone"></i></div>
+									<?= $this->formElement($form->get('nr_tel_fixo')); ?>
+								</div>
+							</div>
+																					
+						</div>
+						
+						<div class="col-md-6">
+							
+							<div class="form-group">
+								<?= $this->formLabel($form->get('nr_tel_whats')); ?>
+
+								<div class="input-group">
+									<div class="input-group-addon"><i class="fa fa-phone"></i></div>
+									<?= $this->formElement($form->get('nr_tel_whats')); ?>
+								</div>
+							</div>
+																				
+						</div>
+					</div>
+											
+					<div class="form-group">
+						<div class="row">
+							<?= $this->formLabel($form->get('link_facebook')); ?>
+							<div class="col-md-10">
+								<?= $this->formElement($form->get('link_facebook')); ?>
+							</div>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<div class="row">
+							<?= $this->formLabel($form->get('link_instagram')); ?>
+							<div class="col-md-10">
+								<?= $this->formElement($form->get('link_instagram')); ?>
+							</div>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<div class="row">
+							<?= $this->formLabel($form->get('link_google_plus')); ?>
+							<div class="col-md-10">
+								<?= $this->formElement($form->get('link_google_plus')); ?>
+							</div>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<div class="row">
+							<?= $this->formLabel($form->get('link_you_tube')); ?>
+							<div class="col-md-10">
+								<?= $this->formElement($form->get('link_you_tube')); ?>
+							</div>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<div class="row">
+							<?= $this->formLabel($form->get('link_pinterest')); ?>
+							<div class="col-md-10">
+								<?= $this->formElement($form->get('link_pinterest')); ?>
+							</div>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<div class="row">
+							<?= $this->formLabel($form->get('link_twitter')); ?>
+							<div class="col-md-10">
+								<?= $this->formElement($form->get('link_twitter')); ?>
+							</div>
+						</div>
+					</div>
+					
+					<!--<div class="form-group">
+						<label>Cidades:</label>
+					</div>
+					
+					<div class="form-group">
+						<label>Estado</label>
+						<select class="form-control">
+						<option>option 1</option>
+						<option>option 2</option>
+						<option>option 3</option>
+						<option>option 4</option>
+						<option>option 5</option>
+						</select>
+					</div>
+					
+					<div class="form-group">
+						<label>Cidade</label>
+						<select class="form-control" disabled>
+						<option>option 1</option>
+						<option>option 2</option>
+						<option>option 3</option>
+						<option>option 4</option>
+						<option>option 5</option>
+						</select>
+					</div>
+					
+					<div class="form-group">
+					
+						<button type="submit" class="btn btn-primary"><i class="fa fa-plus" onclick="alert('teste')"></i></button>
+						
+						<button type="submit" class="btn btn-primary"><i class="fa fa-minus" onclick="alert('teste')"></i></button>
+					
+					</div>
+					
+					<div class="form-group">									
+						<table class="table table-condensed">
+							<tbody>
+								<tr>
+									<th style="width: 10px">Tipo</th>
+									<th>Descrição</th>
+									<th>Número</th>
+								</tr>
+								<tr>
+									<td>Fixo</td>
+									<td>Update software</td>
+									<td>(62) 98155 - 5555</td>
+								</tr>
+								<tr>
+									<td>Celular</td>
+									<td>Update software</td>
+									<td>(62) 98155 - 5555</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>-->
+				
+				</div>				
+			</div>
+
+		</div>
+		
+		<div class="col-md-6">
+			<div class="box box-primary">
+			
+				<div class="box-body">
+					
+					<div class="form-group">
+						<?= $this->formLabel($form->get('desc_empresa_gpr')); ?>
+						<?= $this->formElement($form->get('desc_empresa_gpr')); ?>
+					</div>
+					
+					<div class="form-group">
+						<?= $this->formLabel($form->get('desc_missao_gpr')); ?>
+						<?= $this->formElement($form->get('desc_missao_gpr')); ?>
+					</div>
+					
+					<div class="form-group">
+						<?= $this->formLabel($form->get('desc_visao_gpr')); ?>
+						<?= $this->formElement($form->get('desc_visao_gpr')); ?>
+					</div>
+					
+					<div class="form-group">
+						<?= $this->formLabel($form->get('desc_valor_gpr')); ?>
+						<?= $this->formElement($form->get('desc_valor_gpr')); ?>
+					</div>
+					
+					<div class="form-group">
+						<label for="desc_valor_gpr">Logo</label>
+						<input type="file" id="input-file-now" class="dropify" data-width="285" data-max-height="93" 
+						data-min-height="93" data-min-width="285" data-max-width="285">
+					</div>
+				
+				</div>
+			
+			</div>
+		</div>
+
+	</div>
+	
+	<div class="row">
+	
+		<div class="col-md-12 text-center">
+				
+			<div class="box">
+				<div class="box-body">
+					<button type="submit" class="btn btn-primary">Incluir</button>
+					<button type="submit" class="btn btn-warning" disabled>Alterar</button>
+					<button type="submit" class="btn btn-danger" disabled>Excluir</button>
+				</div>
+			</div>
+		
+		</div>
+	
+	</div>
+	
+	<?= $this->form()->closeTag(); ?>
+
+</section>
+
+<?php
+
+$this->headScript()->appendFile($this->basePath('adminlte/plugins/input-mask/jquery.inputmask.js'), 'text/javascript');
+$this->headScript()->appendFile($this->basePath('js/dropify.min.js'), 'text/javascript');
+$this->headScript()->appendFile($this->basePath('js/sgs/grupo.js'), 'text/javascript');
+
+?>
