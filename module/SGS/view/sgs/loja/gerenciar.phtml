@@ -1,21 +1,7 @@
 <?php
-$this->adminMenu()->setActiveItemId('criarGrupo');
-//$this->headLink()->prependStylesheet($this->basePath('css/dropify.min.css'));
+$this->adminMenu()->setActiveItemId('gerenciarLoja');
 $this->headLink()->prependStylesheet($this->basePath('css/bootstrap-table.min.css'));
-
 ?>
-
-
-
-	
-
-
-<!--<div style="padding: 20px 30px; background: rgb(243, 156, 18); z-index: 999999; font-size: 16px; font-weight: 600;">
-	<a class="pull-right" href="#" data-toggle="tooltip" data-placement="left" title="" style="color: rgb(255, 255, 255); font-size: 20px;" data-original-title="Never show me this again!">×</a>
-	<a href="https://themequarry.com" style="color: rgba(255, 255, 255, 0.9); display: inline-block; margin-right: 10px; text-decoration: none;">
-		Ready to sell your theme? Submit your theme to our new marketplace now and let over 200k visitors see it!</a><a class="btn btn-default btn-sm" 
-	href="https://themequarry.com" style="margin-top: -5px; border: 0px; box-shadow: none; color: rgb(243, 156, 18); font-weight: 600; background: rgb(255, 255, 255);">Let's Do It!</a>
-</div>-->
 
 <div id='msg_sucesso' class="alert alert-success alert-dismissible text-center" style="display:none">
 	<button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
@@ -27,7 +13,7 @@ $this->headLink()->prependStylesheet($this->basePath('css/bootstrap-table.min.cs
 
 <section class="content-header">
   <h1>
-	Criar Grupo
+	Criar Loja
   </h1>
 </section>
 
@@ -35,7 +21,7 @@ $this->headLink()->prependStylesheet($this->basePath('css/bootstrap-table.min.cs
 
 	<?= $this->form()->openTag($form); ?>
 	
-		<?= $this->formElement($form->get('cd_grupo')); ?>
+		<?= $this->formElement($form->get('cd_loja')); ?>
 
 	<div class="row">
 	
@@ -45,14 +31,18 @@ $this->headLink()->prependStylesheet($this->basePath('css/bootstrap-table.min.cs
 				
 				<div class="box-body">
 					<div class="form-group">
-						<?= $this->formLabel($form->get('nm_grupo')); ?>
-						<?= $this->formElement($form->get('nm_grupo')); ?>
+						<?= $this->formLabel($form->get('nm_loja')); ?>
+						<?= $this->formElement($form->get('nm_loja')); ?>
 					</div>
 					<div class="form-group">
-						<?= $this->formLabel($form->get('desc_atua_gpr')); ?>
-						<?= $this->formElement($form->get('desc_atua_gpr')); ?>
-					</div>
-				
+						<?= $this->formLabel($form->get('desc_atua_loja')); ?>
+						<?= $this->formElement($form->get('desc_atua_loja')); ?>
+					</div>		
+					
+					<div class="form-group">
+						<?= $this->formLabel($form->get('cd_cidade')); ?>
+						<?= $this->formElement($form->get('cd_cidade')); ?>
+					</div>	
 				
 					<div class="row">
 						<div class="col-md-6">
@@ -179,34 +169,115 @@ $this->headLink()->prependStylesheet($this->basePath('css/bootstrap-table.min.cs
 				<div class="box-body">
 					
 					<div class="form-group">
-						<?= $this->formLabel($form->get('desc_empresa_gpr')); ?>
-						<?= $this->formElement($form->get('desc_empresa_gpr')); ?>
+						<?= $this->formLabel($form->get('desc_empresa_loja')); ?>
+						<?= $this->formElement($form->get('desc_empresa_loja')); ?>
 					</div>
 					
 					<div class="form-group">
-						<?= $this->formLabel($form->get('desc_missao_gpr')); ?>
-						<?= $this->formElement($form->get('desc_missao_gpr')); ?>
+						<?= $this->formLabel($form->get('desc_missao_loja')); ?>
+						<?= $this->formElement($form->get('desc_missao_loja')); ?>
 					</div>
 					
 					<div class="form-group">
-						<?= $this->formLabel($form->get('desc_visao_gpr')); ?>
-						<?= $this->formElement($form->get('desc_visao_gpr')); ?>
+						<?= $this->formLabel($form->get('desc_visao_loja')); ?>
+						<?= $this->formElement($form->get('desc_visao_loja')); ?>
 					</div>
 					
 					<div class="form-group">
-						<?= $this->formLabel($form->get('desc_valor_gpr')); ?>
-						<?= $this->formElement($form->get('desc_valor_gpr')); ?>
+						<?= $this->formLabel($form->get('desc_valor_loja')); ?>
+						<?= $this->formElement($form->get('desc_valor_loja')); ?>
 					</div>
 					
-					<!--<div class="form-group">
-						<label for="desc_valor_gpr">Logo</label>
-						<input type="file" id="input-file-now" class="dropify" data-width="285" data-max-height="93" 
-						data-min-height="93" data-min-width="285" data-max-width="285" data-allowed-file-extensions="png jpeg jpg jpg2">
-					</div>-->
+					<div class="form-group">
+					
+						<button id='add_ciade' type="button" class="btn btn-primary"><i class="fa fa-plus"></i></button>
+						<button id='remove_cidade' type="button" class="btn btn-primary"><i class="fa fa-minus"></i></button>
+					
+					</div>
+					
+					<div class="form-group">									
+						<table id="table_cidade" class="table table-hover">
+						</table>
+					</div>
 				
 				</div>
 			
 			</div>
+			
+			<!--<div class="box box-primary">
+			
+				<div class="box-header with-border">
+				  <h3 class="box-title">Endereço</h3>
+				</div>
+			
+				<div class="box-body">
+						
+					<div class="form-group">
+						<label for="cep_loja">Cep</label>
+						<input type="text" name="cep_loja" id="cep_loja" maxlength="8" class="form-control" placeholder="Cep" value="">
+					</div>
+					
+					<div class="form-group">								
+						<label for="cidade">Estado</label>
+						<select class="form-control">
+						
+							<option>Selecione um Estado</option>
+						
+						</select>
+					</div>
+					
+					<div class="form-group">								
+						<label for="cidade">Cidade</label>
+						<select class="form-control">
+						
+							<option>Selecione uma cidade</option>
+						
+						</select>
+					</div>
+					
+					<div class="row">
+						<div class="col-md-6">
+							
+							<div class="form-group">
+								<label for="cep_loja">Bairro</label>
+								<input type="text" name="cep_loja" id="cep_loja" maxlength="8" class="form-control" placeholder="Cep" value="">
+							</div>
+							
+						</div>
+						
+						<div class="col-md-6">
+							
+							<div class="form-group">
+								<label for="cep_loja">Numero</label>
+								<input type="text" name="cep_loja" id="cep_loja" maxlength="8" class="form-control" placeholder="Cep" value="">
+							</div>
+							
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-md-6">
+							
+							<div class="form-group">
+								<label for="cep_loja">Logradouro</label>
+								<input type="text" name="cep_loja" id="cep_loja" maxlength="8" class="form-control" placeholder="Cep" value="">
+							</div>
+							
+						</div>
+						
+						<div class="col-md-6">
+							
+							<div class="form-group">
+								<label for="cep_loja">Complemento</label>
+								<input type="text" name="cep_loja" id="cep_loja" maxlength="8" class="form-control" placeholder="Cep" value="">
+							</div>
+							
+						</div>
+					</div>
+					
+				</div>
+			
+			</div>-->
 		</div>
 
 	</div>
@@ -230,7 +301,7 @@ $this->headLink()->prependStylesheet($this->basePath('css/bootstrap-table.min.cs
 	
 	<section class="content-header">
 	  <h1>
-		Grupos Cadastrados
+		Lojas Cadastradas
 	  </h1>
 	</section>
 	
@@ -240,7 +311,7 @@ $this->headLink()->prependStylesheet($this->basePath('css/bootstrap-table.min.cs
 				
 			<div class="box">
 				<div class="box-body">
-					<table id="table_gpr" class="table table-hover" >
+					<table id="table_listagem" class="table table-hover" >
 						<!--<thead>
 							<tr>
 								<th data-field="cdGpr" data-visible="false"></th>
@@ -262,66 +333,12 @@ $this->headLink()->prependStylesheet($this->basePath('css/bootstrap-table.min.cs
 
 </div>
 
-<script>
-	
-document.onreadystatechange = () => {
-	
-	if (document.readyState === 'complete') {		
-		var $table = $('#table_email');
-        $remove = $('#remove'),
-        selections = [];
-
-		function initTable() {
-			$table.bootstrapTable({
-				height: getHeight(),
-				columns: [
-					{
-						field: 'id',
-						visible:false,
-						align: 'center',
-						valign: 'middle'
-					}, 
-					{
-						field: 'state',
-						checkbox: true,
-						align: 'center',
-						valign: 'middle'
-					}, 
-					{
-						title: 'Descrição',
-						field: 'descricao',
-						align: 'center',
-						valign: 'middle',
-						sortable: true
-					},
-					{
-						title: 'E-mail',
-						field: 'email',
-						align: 'center',
-						valign: 'middle',
-						sortable: true
-					}
-				],
-				formatNoMatches:function(){return '';}				
-			});
-		}
-		
-		initTable();
-		function getHeight() {
-			return 200;
-		}
-	}
-};
-	
-    
-</script>
-
 <?php
 
 $this->headScript()->appendFile($this->basePath('js/bootstrap-table.min.js'), 'text/javascript');
 $this->headScript()->appendFile($this->basePath('js/bootstrap-table-pt-BR.min.js'), 'text/javascript');
 $this->headScript()->appendFile($this->basePath('adminlte/plugins/input-mask/jquery.inputmask.js'), 'text/javascript');
 //$this->headScript()->appendFile($this->basePath('js/dropify.min.js'), 'text/javascript');
-$this->headScript()->appendFile($this->basePath('js/sgs/grupo/criar.js'), 'text/javascript');
+$this->headScript()->appendFile($this->basePath('js/sgs/loja/gerenciar.js'), 'text/javascript');
 
 ?>

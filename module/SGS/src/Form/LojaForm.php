@@ -4,11 +4,11 @@ namespace SGS\Form;
 use Zend\Form\Form;
 use Zend\InputFilter\InputFilter;
 
-class GrupoForm extends Form{
+class LojaForm extends Form{
 
 	public function __construct(){
 
-		parent::__construct('grupo_form');
+		parent::__construct('loja_form');
 
 		$this->setAttribute('method', 'post');
 
@@ -16,28 +16,58 @@ class GrupoForm extends Form{
 		$this->addInputFilter();
 
 	}
-
+	
 	protected function addElements(){
 	
 		$this->add([     
 			'type'  => 'hidden',
-			'name' => 'cd_grupo',
+			'name' => 'cd_loja',
 			'attributes' => [
-				'id' => 'cd_grupo'
+				'id' => 'cd_loja'
 			]
 		]);
-
+		
 		$this->add([     
 			'type'  => 'text',
-			'name' => 'nm_grupo',
+			'name' => 'nm_loja',
 			'attributes' => [
-				'id' => 'nm_grupo',
+				'id' => 'nm_loja',
 				'maxlength' => '50',
 				'class'=>'form-control', 
-				'placeholder'=>'Nome do Grupo'
+				'placeholder'=>'Nome da Loja'
 			],
 			'options' => [
-			'label' => 'Nome do Grupo',
+			'label' => 'Nome da Loja',
+			],
+		]);
+		
+		$this->add([     
+			'type'  => 'select',
+			'name' => 'cd_estado',
+			'attributes' => [
+				'id' => 'cd_estado',
+				'maxlength' => '50',
+				'class'=>'form-control', 
+				'placeholder'=>'Estado da Loja'
+			],
+			'options' => [
+			'label' => 'Nome da Loja',
+			'empty_option' => 'Informe um Estado',
+			],
+		]);
+		
+		$this->add([     
+			'type'  => 'select',
+			'name' => 'cd_cidade',
+			'attributes' => [
+				'id' => 'cd_cidade',
+				'maxlength' => '50',
+				'class'=>'form-control', 
+				'placeholder'=>'Cidade da Loja'
+			],
+			'options' => [
+			'label' => 'Nome da Loja',
+			'empty_option' => 'Informe um Estado',
 			],
 		]);
 		
@@ -71,16 +101,16 @@ class GrupoForm extends Form{
 		
 		$this->add([     
 			'type'  => 'textarea',
-			'name' => 'desc_atua_gpr',
+			'name' => 'desc_atua_loja',
 			'attributes' => [
-				'id' => 'desc_atua_gpr',
+				'id' => 'desc_atua_loja',
 				'maxlength' => '255',
 				'class'=>'form-control', 
-				'placeholder'=>'Atuação do Grupo',
+				'placeholder'=>'Atuação da Loja',
 				'rows' => '3'
 			],
 			'options' => [
-			'label' => 'Descrição',
+			'label' => 'Atuação da Loja',
 			],
 		]);
 		
@@ -125,12 +155,12 @@ class GrupoForm extends Form{
 		
 		$this->add([     
 			'type'  => 'textarea',
-			'name' => 'desc_empresa_gpr',
+			'name' => 'desc_empresa_loja',
 			'attributes' => [
-				'id' => 'desc_empresa_gpr',
+				'id' => 'desc_empresa_loja',
 				'maxlength' => '255',
 				'class'=>'form-control', 
-				'placeholder'=>'Atuação do Grupo',
+				'placeholder'=>'Empresa',
 				'rows' => '3'
 			],
 			'options' => [
@@ -140,12 +170,12 @@ class GrupoForm extends Form{
 		
 		$this->add([     
 			'type'  => 'textarea',
-			'name' => 'desc_visao_gpr',
+			'name' => 'desc_visao_loja',
 			'attributes' => [
-				'id' => 'desc_visao_gpr',
+				'id' => 'desc_visao_loja',
 				'maxlength' => '255',
 				'class'=>'form-control', 
-				'placeholder'=>'Atuação do Grupo',
+				'placeholder'=>'Visão',
 				'rows' => '3'
 			],
 			'options' => [
@@ -155,12 +185,12 @@ class GrupoForm extends Form{
 		
 		$this->add([     
 			'type'  => 'textarea',
-			'name' => 'desc_missao_gpr',
+			'name' => 'desc_missao_loja',
 			'attributes' => [
-				'id' => 'desc_missao_gpr',
+				'id' => 'desc_missao_loja',
 				'maxlength' => '255',
 				'class'=>'form-control', 
-				'placeholder'=>'Atuação do Grupo',
+				'placeholder'=>'Missão',
 				'rows' => '3'
 			],
 			'options' => [
@@ -170,31 +200,19 @@ class GrupoForm extends Form{
 		
 		$this->add([     
 			'type'  => 'textarea',
-			'name' => 'desc_valor_gpr',
+			'name' => 'desc_valor_loja',
 			'attributes' => [
-				'id' => 'desc_valor_gpr',
+				'id' => 'desc_valor_loja',
 				'maxlength' => '255',
 				'class'=>'form-control', 
-				'placeholder'=>'Atuação do Grupo',
+				'placeholder'=>'Valor',
 				'rows' => '3'
 			],
 			'options' => [
 			'label' => 'Valor',
 			],
 		]);
-		
-		$this->add([
-			'type'  => 'file',
-			'name' => 'file',
-			'attributes' => [                
-				'id' => 'file'
-			],
-			'options' => [
-				'label' => 'Image file',
-			],
-		]);
-		
-
+	
 	}
 	
 	private function addElementMidia($nome, $label, $placeholder){
@@ -219,12 +237,12 @@ class GrupoForm extends Form{
 	}
 	
 	protected function addInputFilter(){
-
+	
 		$inputFilter = new InputFilter();        
 		$this->setInputFilter($inputFilter);
 		
 		$inputFilter->add([
-			'name'     => 'nm_grupo',
+			'name'     => 'nm_loja',
 			'required' => true,
 			'filters'  => [
 				['name' => 'StringTrim'],                    
@@ -235,25 +253,7 @@ class GrupoForm extends Form{
 					'breakChainOnFailure' => true,
 					'name' => 'StringLength',
 					'options' => [
-					'min' => 1,
 					'max' => 50
-					],
-				],
-			],
-		]);
-		
-		$inputFilter->add([
-			'name'     => 'desc_atua_gpr',
-			'filters'  => [
-				['name' => 'StringTrim'],                    
-				['name' => 'StringToUpper'],                    
-			],
-			'validators' => [
-				[
-					'breakChainOnFailure' => true,
-					'name' => 'StringLength',
-					'options' => [
-					'max' => 255
 					],
 				],
 			],
@@ -305,7 +305,7 @@ class GrupoForm extends Form{
 		$this->addInputFilterMidia($inputFilter, 'link_twitter');
 		
 		$inputFilter->add([
-			'name'     => 'desc_empresa_gpr',
+			'name'     => 'desc_empresa_loja',
 			'required' => true,
 			'filters'  => [
 				['name' => 'StringTrim'],                    
@@ -323,7 +323,7 @@ class GrupoForm extends Form{
 		]);
 		
 		$inputFilter->add([
-			'name'     => 'desc_valor_gpr',
+			'name'     => 'desc_valor_loja',
 			'required' => true,
 			'filters'  => [
 				['name' => 'StringTrim'],                    
@@ -341,7 +341,7 @@ class GrupoForm extends Form{
 		]);
 		
 		$inputFilter->add([
-			'name'     => 'desc_missao_gpr',
+			'name'     => 'desc_missao_loja',
 			'required' => true,
 			'filters'  => [
 				['name' => 'StringTrim'],                    
@@ -359,7 +359,7 @@ class GrupoForm extends Form{
 		]);
 		
 		$inputFilter->add([
-			'name'     => 'desc_visao_gpr',
+			'name'     => 'desc_visao_loja',
 			'required' => true,
 			'filters'  => [
 				['name' => 'StringTrim'],                    
@@ -375,7 +375,7 @@ class GrupoForm extends Form{
 				],
 			],
 		]);
-
+	
 	}
 	
 	private function addInputFilterMidia($inputFilter, $nome){
@@ -403,5 +403,6 @@ class GrupoForm extends Form{
 		]);
 		
 	}
+
 
 }

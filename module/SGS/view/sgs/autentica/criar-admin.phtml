@@ -1,0 +1,117 @@
+<?=$this->flashMessenger()
+->setMessageOpenFormat('<div class="alert text-center alert-danger alert-dismissible">
+<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>')
+->setMessageSeparatorString('</p><p>')
+->setMessageCloseString('</div>')
+->render('error', array('alert', 'alert-danger'));?>
+
+<div class="box_overlay">
+	
+	<div class="overlay" style="display:none">
+	  <i class="fa fa-refresh fa-spin"></i>
+	</div>
+
+<div class="register-box">
+	
+  <div class="register-logo">
+    <b>Leilão</b>MD
+  </div>
+
+  <div class="register-box-body">
+    <p class="register-box-msg"><b>Criar Administrador</b></p>
+
+    <?= $this->form()->openTag($form); ?>
+		<div class="form-group row">
+			<?= $this->formLabel($form->get('cpf_usr')); ?>
+			<div class="col-xs-9">
+				<?= $this->formElement($form->get('cpf_usr')); ?>
+			</div>
+		</div>
+		<div class="form-group row">
+			<?= $this->formLabel($form->get('email_usr')); ?>
+			<div class="col-xs-9">
+				<?= $this->formElement($form->get('email_usr')); ?>
+			</div>
+		</div>
+		<div class="form-group row">
+			<?= $this->formLabel($form->get('nm_usr')); ?>
+			<div class="col-xs-9">
+				<?= $this->formElement($form->get('nm_usr')); ?>
+			</div>
+		</div>
+		<div class="form-group row">
+			<?= $this->formLabel($form->get('sbr_nm_usr')); ?>
+			<div class="col-xs-9">
+				<?= $this->formElement($form->get('sbr_nm_usr')); ?>
+			</div>
+		</div>
+		<div class="form-group row">
+			<?= $this->formLabel($form->get('rg_usr')); ?>
+			<div class="col-xs-3">
+				<?= $this->formElement($form->get('orgao_rg_usr')); ?>
+			</div>
+			<div class="col-xs-3">
+				<?= $this->formElement($form->get('uf_rg_usr')); ?>
+			</div>
+			<div class="col-xs-3">
+				<?= $this->formElement($form->get('rg_usr')); ?>
+			</div>
+			<!--<span id="cpf_usr-error" class="help-block col-xs-offset-3 col-xs-9">Este campo não pode ser vazio</span>-->
+			
+		</div>
+		<div class="form-group row">
+			<?= $this->formLabel($form->get('sexo_usr')); ?>
+			<div class="col-xs-9">
+				<?= $this->formElement($form->get('sexo_usr')); ?>
+			</div>
+		</div>
+		<div class="form-group row">
+			<?= $this->formLabel($form->get('senha_usr')); ?>
+			<div class="col-xs-9">
+				<?= $this->formElement($form->get('senha_usr')); ?>
+			</div>
+		</div>
+		<div class="form-group row">
+			<?= $this->formLabel($form->get('confirm_senha_usr')); ?>
+			<div class="col-xs-9">
+				<?= $this->formElement($form->get('confirm_senha_usr')); ?>
+			</div>
+		</div>
+		<div class="form-group row">
+			<?= $this->formLabel($form->get('status_usr')); ?>
+			<div class="col-xs-9">
+				<?= $this->formElement($form->get('status_usr')); ?>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<?= $this->formElement($form->get('btn_registrar')); ?>
+			</div>
+		</div>
+    
+	<?= $this->form()->closeTag(); ?>
+	
+  </div>
+</div>
+</div>
+
+
+
+<?php
+
+$this->headScript()->appendFile($this->basePath('js/sgs/autentica/criar_admin.js'), 'text/javascript');
+$this->headScript()->appendFile($this->basePath('js/sgs/funcoes.js'), 'text/javascript');
+
+?>
+
+<script>
+
+document.onreadystatechange = () => {
+	
+	/*if (document.readyState === 'complete') {		
+		validator.showErrors({
+		  "email_usr": "I know that your firstname is Pete, Pete!"
+		});
+	}*/
+};
+</script>
